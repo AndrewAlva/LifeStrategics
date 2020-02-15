@@ -54,6 +54,7 @@ $secondary-font: "FreightNeo B", sans-serif;
 .p2{
 	font-family: $main-font;
 	font-size: 24px;
+	@include smoothFont;
 }
 
 .p3{

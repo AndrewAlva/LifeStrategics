@@ -1,0 +1,63 @@
+#header-nav{
+		// opacity: .5;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	padding: 41px 35px 0;
+	background-color: #202020;
+
+	.inner-wrap{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.logo-wrap{
+		position: relative;
+		display: inline-block;
+
+		img{
+			height: 30px;
+			vertical-align: middle;
+		}
+	}
+
+	.slogan-wrap{
+		position: absolute;
+		display: inline-block;
+		width: 340px;
+		margin: auto;
+		left: 0; right: 0;
+		text-align: center;
+
+		._blue{color: $blue;}
+		._yellow{color: $yellow;}
+		._red{color: $red;}
+
+		._dot{
+			display: inline-block;
+			margin: 0 8px;
+		}
+	}
+
+	.pages-wrap{
+		position: relative;
+		display: inline-block;
+		float: right;
+
+		li{
+			display: inline-block;
+
+			&:not(:last-child){
+				margin-right: 56px;
+			}
+		}
+
+		a{
+			color: inherit;
+			text-decoration: none;
+			padding-right: 41px;
+			// border: 1px solid $red;
+		}
+	}
+}
