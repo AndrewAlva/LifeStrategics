@@ -17,3 +17,50 @@
 		url("../fonts/FreightNeo W03 Book.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 		url("../fonts/FreightNeo W03 Book.svg#FreightNeo W03 Book") format("svg"); /* iOS 4.1- */
 }
+
+
+$main-font: "FreightNeo", sans-serif;
+$secondary-font: "FreightNeo B", sans-serif;
+
+
+.h1{
+	font-family: $secondary-font;
+	font-size: 120px;
+	line-height: 0.83em;
+}
+
+.h2{
+	font-family: $secondary-font;
+	font-size: 60px;
+	line-height: 1em;
+}
+
+.h3{
+	font-family: $secondary-font;
+	font-size: 48px;
+	line-height: 1em;
+}
+
+.h4{
+	font-family: $main-font;
+	font-size: 32px;
+}
+
+.p1{
+	font-family: $main-font;
+	font-size: 28px;
+}
+
+.p2{
+	font-family: $main-font;
+	font-size: 24px;
+}
+
+.p3{
+	font-family: $main-font;
+	font-size: 18px;
+}
+
+
+
+
