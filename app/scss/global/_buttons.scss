@@ -1,0 +1,30 @@
+.arrow-button{
+	position: relative;
+	font-family: $main-font;
+	font-size: 24px;
+	@include smoothFont;
+
+	._icon{
+		position: absolute;
+		right: 0;
+		width: 21px;
+		height: 100%;
+		@include transitions-ease(.4s);
+		opacity: 0;
+		@include translate(-5px, 0);
+
+		svg{
+			position: absolute;
+			margin: auto;
+			top: 0; bottom: 0;
+			width: 100%;
+		}
+	}
+
+	&:hover{
+		._icon{
+			opacity: 1;
+			@include translate(0, 0);
+		}
+	}
+}
