@@ -1,16 +1,9 @@
-# OG_Brunch
-My first brunch boilerplate created from scratch.
-
-
-## Some cool features
-* Grid system based on SCSS vars and formulas/functions to set and calculate:
-	* Columns
-	* Gutters
-	* Left/right margin of the whole grid
+# LifeStrategics informative website
+LifeStrategics is a company resolved to help people to improve their business and their lives at the same time they help the environment and the society surrounding them through Creative Problem Solving, Strategic Communication and Socio–Environmental Businesses practices.
 
 
 ## Development Environment
-Hi there, this project is built by npm and brunch. It's coded oriented to use "modules" and "objects" of HTML and CSS with Jade and SCSS.
+This project is built by npm and brunch. It's coded oriented to use "modules" and "objects" of HTML and CSS with Jade and SCSS.
 
 ### Getting to know Brunch
 
