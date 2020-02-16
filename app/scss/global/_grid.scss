@@ -40,6 +40,7 @@
 			position: relative;
 			padding-left: $mobile-grid__gutterHalfWidth;
 			padding-right: $mobile-grid__gutterHalfWidth;
+			display: inline-block;
 		}
 		.col-1{width: getColWidth_Mobile(1);}
 		.col-2{width: getColWidth_Mobile(2);}
@@ -119,6 +120,7 @@
 			position: relative;
 			padding-left: $desktop-grid__gutterHalfWidth;
 			padding-right: $desktop-grid__gutterHalfWidth;
+			display: inline-block;
 		}
 		.col-lg-1{width:getColWidth_Desktop(1);}
 		.col-lg-2{width:getColWidth_Desktop(2);}

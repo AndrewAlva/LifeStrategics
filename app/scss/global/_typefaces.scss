@@ -34,18 +34,24 @@ $secondary-font: "FreightNeo B", sans-serif;
 .h2{
 	font-family: $secondary-font;
 	font-size: 60px;
-	line-height: 1em;
+	line-height: .94em;
+	font-weight: lighter;
+	@include smoothFont;
 }
 
 .h3{
 	font-family: $secondary-font;
 	font-size: 48px;
-	line-height: 1em;
+	line-height: .94em;
+	font-weight: lighter;
+	@include smoothFont;
 }
 
 .h4{
 	font-family: $main-font;
 	font-size: 32px;
+	font-weight: lighter;
+	@include smoothFont;
 }
 
 .p1{
