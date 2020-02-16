@@ -29,6 +29,7 @@ $secondary-font: "FreightNeo B", sans-serif;
 	line-height: 0.83em;
 	font-weight: lighter;
 	@include smoothFont;
+	text-transform: uppercase;
 }
 
 .h2{

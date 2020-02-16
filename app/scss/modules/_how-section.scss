@@ -1,0 +1,59 @@
+#how-section{
+	border: 1px solid $yellow;
+
+	.section-name{
+		color: $yellow;
+		margin-bottom: 80px;
+	}
+
+	.bullet-row{
+		&:not(:last-child){
+			margin-bottom: 170px;
+		}
+
+		.name-wrap{
+			position: relative;
+			display: inline-block;
+
+			._index{
+				position: absolute;
+				bottom: 5px;
+				left: -.8em;
+				line-height: 1em;
+				text-transform: lowercase;
+				color: $yellow;
+			}
+		}
+
+		.line-wrap{
+			position: relative;
+			display: inline-block;
+			vertical-align: bottom;
+			width: 150px;
+			height: 99px;
+			margin-left: 55px;
+			margin-right: 90px;
+
+			&:after{
+				content: '';
+				position: absolute;
+				margin: auto;
+				top: 0; bottom: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $body-text-color;
+			}
+		}
+
+		.bullets-wrap{
+			display: inline-block;
+			height: 99px;
+
+			.center-container{
+				position: absolute;
+				top: 50%;
+				@include translate(0, -50%);
+			}
+		}
+	}
+}
