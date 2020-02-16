@@ -38,6 +38,7 @@
 			position: relative;
 			width: 100%;
 			padding: 32px 0;
+			cursor: pointer;
 
 			.toggle-info-button{
 				position: absolute;
@@ -45,6 +46,20 @@
 				top: 0;
 				bottom: 0;
 				right: 0;
+				@include transitions-ease(.4s);
+			}
+
+			&:hover{
+				.toggle-info-button{
+					&:before{
+						@include transitions-ease(.4s);
+						@include rotate(90deg);
+					}
+					&:after{
+						@include transitions-ease(.6s);
+						@include rotate(180deg);
+					}
+				}
 			}
 		}
 
@@ -52,6 +67,9 @@
 			position: relative;
 			width: 70.37%;
 			min-width: 780px;
+			overflow: hidden;
+			max-height: 300px;
+			@include transitions-ease(1s);
 
 			._description{
 				margin-bottom: 56px;
@@ -102,15 +120,31 @@
 			}
 		}
 
+		&[data-show=false]{
+			.text-wrap{
+				max-height: 0px;
+			}
+		}
 
-		&.opened{
+
+		&[data-show=true]{
 			&:after{
 				@include scale(1,1);
 			}
 
-			.toggle-info-button{
-				&:before{@include transitions-ease(.4s);}
-				&:after{@include rotate(360deg);}
+			.toggle-wrap{
+				.toggle-info-button{
+					// &:before{@include transitions-ease(.4s);}
+					&:after{@include rotate(360deg);}
+				}
+
+				&:hover{
+					.toggle-info-button{
+						@include scale(0.7, 1);
+
+						&:before{@include rotate(0deg);}
+					}
+				}
 			}
 		}
 	}

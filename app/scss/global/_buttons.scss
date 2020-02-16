@@ -88,17 +88,6 @@
 	&:after{
 		@include rotate(90deg);
 	}
-
-	&:hover{
-		&:before{
-			@include transitions-ease(.4s);
-			@include rotate(90deg);
-		}
-		&:after{
-			@include transitions-ease(.6s);
-			@include rotate(180deg);
-		}
-	}
 }
 
 
