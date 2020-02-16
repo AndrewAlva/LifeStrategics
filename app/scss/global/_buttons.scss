@@ -1,30 +1,64 @@
 .arrow-button{
+	cursor: pointer;
 	position: relative;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
 	font-family: $main-font;
 	font-size: 24px;
+	line-height: 1.2em;
 	@include smoothFont;
+	background: none;
+	color: $body-text-color;
+	white-space: nowrap;
+	text-decoration: none;
 
 	._icon{
 		position: absolute;
 		right: 0;
-		width: 21px;
 		height: 100%;
 		@include transitions-ease(.4s);
-		opacity: 0;
-		@include translate(-5px, 0);
+
+		&.right{
+			width: 21px;
+			@include translate(-5px, 0);
+		}
+
+		&.down{
+			width: 28px;
+			// @include translate(0, -5px);
+		}
 
 		svg{
 			position: absolute;
 			margin: auto;
 			top: 0; bottom: 0;
+			left: 0;
 			width: 100%;
 		}
 	}
 
 	&:hover{
 		._icon{
-			opacity: 1;
-			@include translate(0, 0);
+			&.right{
+				@include translate(0,0);
+			}
+			&.down{
+				@include translate(0,5px);
+			}
+		}
+	}
+
+	&.hidden-arrow{
+		._icon{
+			opacity: 0;
+		}
+
+		&:hover{
+			._icon{
+				opacity: 1;
+			}
 		}
 	}
 }

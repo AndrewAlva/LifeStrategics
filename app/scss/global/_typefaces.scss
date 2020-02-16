@@ -27,6 +27,8 @@ $secondary-font: "FreightNeo B", sans-serif;
 	font-family: $secondary-font;
 	font-size: 120px;
 	line-height: 0.83em;
+	font-weight: lighter;
+	@include smoothFont;
 }
 
 .h2{
@@ -49,6 +51,7 @@ $secondary-font: "FreightNeo B", sans-serif;
 .p1{
 	font-family: $main-font;
 	font-size: 28px;
+	@include smoothFont;
 }
 
 .p2{

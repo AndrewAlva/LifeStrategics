@@ -1,0 +1,41 @@
+#hero-section{
+	height: 100%;
+	min-height: 850px;
+	border: 1px solid $blue;
+
+	.title-wrap{
+		position: relative;
+		padding-top: 100px;
+		// margin-bottom: 160px;
+
+		.h1{
+			text-transform: uppercase;
+			text-align: center;
+
+			._line{
+				display: block;
+			}
+		}
+	}
+
+	.bottom-wrap{
+		position: absolute;
+		bottom: 100px;
+
+		.intro-wrap{
+			position: relative;
+			width: 42.26%;
+		}
+		
+		.cta{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			.arrow-button{
+				padding-right: 58px;
+			}
+		}
+	}
+
+}
