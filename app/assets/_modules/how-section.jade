@@ -13,37 +13,38 @@ mixin how-bullet(index, name, width, offset, ...bullets)
 					li.p2 #{fixedIndex}. #{bullet}
 
 section#how-section.page-section.inner-padded
-	.desktop-grid
-		h4.h4.section-name.col-lg-22.offset-lg-1 ii. How we do it
+	.ls-container
+		.ls-row
+			h4.h4.section-name.ls-col-22.offset-1 ii. How we do it
 
-		+how-bullet(
-			"a.",
-			"Consulting",
-			"col-lg-20",
-			"offset-lg-4",
-			"Inicial diagnosis",
-			"Goals setting",
-			"Solutions crafting",
-			"Plan implementation"
-		)
+			+how-bullet(
+				"a.",
+				"Consulting",
+				"ls-col-19",
+				"offset-4",
+				"Inicial diagnosis",
+				"Goals setting",
+				"Solutions crafting",
+				"Plan implementation"
+			)
 
-		+how-bullet(
-			"b.",
-			"Training",
-			"col-lg-16",
-			"offset-lg-8",
-			"Custom designed courses",
-			"Pre-made modules to specific goals",
-			"Interactive workshops",
-			"Processes alignment"
-		)
+			+how-bullet(
+				"b.",
+				"Training",
+				"ls-col-15",
+				"offset-8",
+				"Custom designed courses",
+				"Pre-made modules to specific goals",
+				"Interactive workshops",
+				"Processes alignment"
+			)
 
-		+how-bullet(
-			"c.",
-			"Facilitation",
-			"col-lg-23",
-			"offset-lg-1",
-			"In-house work sessions with specific end goals",
-			"Creation of In-house sessions linked to a consulting process"
-		)
+			+how-bullet(
+				"c.",
+				"Facilitation",
+				"ls-col-22",
+				"offset-1",
+				"In-house work sessions with specific end goals",
+				"Creation of In-house sessions linked to a consulting process"
+			)
 
