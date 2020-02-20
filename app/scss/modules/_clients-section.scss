@@ -30,12 +30,8 @@
 		.logo-cell{
 			position: relative;
 			display: inline-block;
-			width: 16%;
 			height: 80px;
-			margin: 0 6% 100px;
-
-			&:first-child{margin-left: 0;}
-			&:last-child{margin-right: 0;}
+			margin-bottom: 100px;
 
 			svg{
 				position: absolute;
