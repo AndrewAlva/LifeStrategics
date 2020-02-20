@@ -1,0 +1,53 @@
+#clients-section{
+	border: 1px solid $yellow;
+
+	.section-name{
+		color: $yellow;
+		margin-bottom: 80px;
+	}
+
+	.title-indexed{
+		.name-wrap{
+			position: relative;
+			display: inline-block;
+			margin-bottom: 40px;
+
+			._index{
+				position: absolute;
+				bottom: 5px;
+				left: -.8em;
+				line-height: 1em;
+				text-transform: lowercase;
+				color: $yellow;
+			}
+		}
+	}
+
+	.projects-grid{
+		margin-bottom: 100px;
+
+		.logo-cell{
+			position: relative;
+			display: inline-block;
+			width: 16%;
+			height: 80px;
+			margin: 0 6% 100px;
+
+			&:first-child{margin-left: 0;}
+			&:last-child{margin-right: 0;}
+
+			svg{
+				position: absolute;
+				margin: auto;
+				top: 0; bottom: 0;
+				left: 0; right: 0;
+				height: 60px;
+				opacity: .65;
+			}
+
+			&.tall{
+				svg{height: 80px;}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+mixin title-indexed(index, name, width, offset)
+	div(class="title-indexed #{width} #{offset}")
+		h2.h1.name-wrap
+			span._index.h4 #{index}
+			|!{name}
+
+
+
+section#clients-section.page-section.inner-padded
+	.desktop-grid
+		h4.h4.section-name.col-lg-22.offset-lg-1 iv. People who decided to trust us
+
+
+		+title-indexed("a.", "Branding", "col-lg-21", "offset-lg-2")
+
+		.projects-grid.col-lg-18.offset-lg-3
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+
+
+
+		+title-indexed("b.", "Digital Projects", "col-lg-18", "offset-lg-5")
+
+		.projects-grid.col-lg-18.offset-lg-3
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+
+		+title-indexed("c.", "Collaboration & Consulting", "col-lg-15", "offset-lg-8")
+
+		.projects-grid.col-lg-18.offset-lg-3
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+
+			.inner-row
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
+				.logo-cell
+					+webgl-logo("#f7f7f7")
