@@ -25,340 +25,341 @@ mixin service-card(title, opened, description, projectsMethods, peopleMethods)
 
 
 section#services-section.page-section.inner-padded
-	.desktop-grid
-		h4.h4.section-name.col-lg-22.offset-lg-1 iii. What you'll get
+	.ls-container
+		.ls-row
+			h4.h4.section-name.ls-col-22.offset-1 iii. What you'll get
 
-		.title-wrap.col-lg-20.offset-lg-2
-			h1.h1
-				|Our 
-				span.highlight Services
+			.title-wrap.ls-col-20.offset-2
+				h1.h1
+					|Our 
+					span.highlight Services
 
-		.services-wrap.col-lg-17.offset-lg-6
-			+service-card(
-				"Business Plan Creation",
-				"true", 
-				"Brief description of how this service works, what would users should expect and why it’s something they should request, what would be the ultimate benefits.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					}
-				],
-				[
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "red",
-						"name": "Co-design"
-					}
-				]
-			)
+			.services-wrap.ls-col-17.offset-6
+				+service-card(
+					"Business Plan Creation",
+					"true", 
+					"Brief description of how this service works, what would users should expect and why it’s something they should request, what would be the ultimate benefits.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						}
+					],
+					[
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "red",
+							"name": "Co-design"
+						}
+					]
+				)
 
-			+service-card(
-				"Strategic & Implementation Planning",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Strategic & Implementation Planning",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Value Proposition Design",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Value Proposition Design",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Customer Journey & <br> Customer Experience Design",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Customer Journey & <br> Customer Experience Design",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Marketing Plan Online & Offline",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Marketing Plan Online & Offline",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Marketing Strategy & <br> Commercial Processes",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Marketing Strategy & <br> Commercial Processes",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Training on Strategic & <br> Creative Leadership",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Training on Strategic & <br> Creative Leadership",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Training on Creative Thinking <br> for Entrepreneurship",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Training on Creative Thinking <br> for Entrepreneurship",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Team Building & <br> Organizational Communication",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Team Building & <br> Organizational Communication",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Change Management",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Change Management",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
-			+service-card(
-				"Facilitation for Product or Service <br> Innovation & Development",
-				"false", 
-				"Brief description of how this service works.",
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				],
-				[
-					{
-						"color": "blue",
-						"name": "Facilitation"
-					},
-					{
-						"color": "red",
-						"name": "Back office"
-					},
-					{
-						"color": "yellow",
-						"name": "Implementation"
-					}
-				]
-			)
+				+service-card(
+					"Facilitation for Product or Service <br> Innovation & Development",
+					"false", 
+					"Brief description of how this service works.",
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					],
+					[
+						{
+							"color": "blue",
+							"name": "Facilitation"
+						},
+						{
+							"color": "red",
+							"name": "Back office"
+						},
+						{
+							"color": "yellow",
+							"name": "Implementation"
+						}
+					]
+				)
 
 
 
