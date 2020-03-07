@@ -1,0 +1,82 @@
+#events-section{
+	border-bottom: 1px solid $blue;
+
+	.section-name{
+		color: $blue;
+		margin-bottom: 80px;
+	}
+
+	.title-wrap{
+		text-align: center;
+		margin-bottom: 160px;
+
+		._line{
+			display: block;
+		}
+	}
+}
+
+.event-row{
+	margin-bottom: 80px;
+
+	._title{
+		@include flexIt;
+		@include flexAlign-center;
+		line-height: 1.2em;
+		padding-bottom: 10px;
+
+		._wrap{
+			position: relative;
+		}
+
+		._index{
+			position: absolute;
+			top: 1.39em;
+			right: 101.3%;
+			line-height: 1em;
+			color: $blue;
+			text-align: right;
+		}
+	}
+
+	._cover{
+		@include flexIt;
+		@include flexAlign-center;
+		overflow: hidden;
+
+		img{
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	._abstract{
+		@include flexIt;
+		@include flexWrap;
+
+		._date{
+			line-height: .9em;
+			white-space: nowrap;
+			margin-bottom: 7px;
+		}
+
+		._location{
+			position: relative;
+			line-height: 1em;
+		}
+
+		._cta{
+			position: relative;
+			padding-right: 60px;
+			bottom: -8px;
+			text-align: left;
+			@include flexSelf-bottom;
+
+			._label, ._icon{
+				vertical-align: baseline;
+			}
+		}
+
+	}
+	
+}

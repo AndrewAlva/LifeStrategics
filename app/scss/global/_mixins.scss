@@ -142,6 +142,27 @@
 	align-items: baseline;
 }
 
+@mixin flexAlign-center{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+@mixin flexSelf-center{
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+}
+
+@mixin flexSelf-bottom{
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
 @mixin flexWrap{
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
