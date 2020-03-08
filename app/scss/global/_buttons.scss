@@ -34,6 +34,11 @@
 			// @include translate(0, -5px);
 		}
 
+		&.up{
+			width: 21px;
+			@include translate(0, 5px);
+		}
+
 		svg{
 			position: absolute;
 			margin: auto;
@@ -50,6 +55,9 @@
 			}
 			&.down{
 				@include translate(0,5px);
+			}
+			&.up{
+				@include translate(0, 0);
 			}
 		}
 	}

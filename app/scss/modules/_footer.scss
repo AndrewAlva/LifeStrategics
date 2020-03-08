@@ -1,0 +1,64 @@
+#footer{
+	padding: 85px 0 40px;
+	background-color: #161618;
+
+	.nav-col{
+		._title{
+			margin-bottom: 40px;
+			line-height: 1em;
+		}
+
+		li{
+			display: block;
+			position: relative;
+			width: 100%;
+
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+
+			button, a{
+				position: relative;
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+		}
+
+		&.understand{
+			li{
+				button, a{
+					&:hover{
+						color: $yellow;
+					}
+				}
+			}
+		}
+
+		&.decide{
+			li{
+				button, a{
+					&:hover{
+						color: $blue;
+					}
+				}
+			}
+		}
+
+		&.takeaction{
+			li{
+				button, a{
+					&:hover{
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	.copyright{
+		margin-top: 65px;
+		text-align: right;
+		opacity: .6;
+	}
+}
