@@ -1,0 +1,64 @@
+#contact-section{
+	border-bottom: 1px solid $red;
+	padding-bottom: 330px;
+
+	.section-name{
+		color: $red;
+		margin-bottom: 80px;
+	}
+
+	.title-wrap{
+		margin-bottom: 260px;
+
+		._line{
+			display: block;
+		}
+	}
+
+	.cta-wrap{
+		@include flexIt;
+		@include flexJustify;
+
+		._arrow{
+			position: relative;
+			// width: 34.675%;
+			width: 34.675%;
+			height: 52px;
+			@include flexIt;
+
+
+			._body{
+				width: 100%;
+				height: 100%;
+
+				&:before{
+					content: '';
+					position: absolute;
+					margin: auto;
+					top: 8px;
+					bottom: 0;
+					width: 99.2%;
+					height: 4px;
+					border-radius: 2px;
+					background-color: $body-text-color;
+				}
+			}
+
+			._chevron{
+				width: 30px;
+				@include flexShrink(0);
+				height: 100%;
+
+				svg{
+					width: 100%;
+				}
+			}
+		}
+
+		._mail-btn{
+			text-align: right;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}

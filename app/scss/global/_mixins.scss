@@ -175,3 +175,15 @@
 		flex-wrap: nowrap;
 }
 
+@mixin flexBasis($length){
+	-webkit-flex-basis: $length;
+	-ms-flex-preferred-size: $length;
+	flex-basis: $length;
+}
+
+@mixin flexShrink($proportion){
+	-webkit-flex-shrink: $proportion;
+	-ms-flex-negative: $proportion;
+	flex-shrink: $proportion;
+}
+
