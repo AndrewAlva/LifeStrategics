@@ -1,27 +1,74 @@
+.footer-fixed-holder{
+	z-index: -1;
+	position: relative;
+	width: 100%;
+	height: 480px;
+}
+
 #footer{
-	padding: 85px 0 40px;
+	/* Possible fixed footer */
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 480px;
+
+	padding: 85px 0 60px;
 	background-color: #161618;
+
+	.info-col{
+		.p2{
+			line-height: 1.5em;
+		}
+
+		._copyright{
+			position: absolute;
+			bottom: 8px;
+
+			img{
+				position: relative;
+				width: 22px;
+				margin-bottom: 17px;
+			}
+			p{
+				opacity: .6;
+			}
+		}
+	}
 
 	.nav-col{
 		._title{
-			margin-bottom: 40px;
+			margin-bottom: 32px;
 			line-height: 1em;
+			font-weight: lighter;
+		}
+
+		ul{
+			&:hover{
+				li{
+					opacity: .25;
+
+					&:hover{
+						opacity: 1;
+					}
+				}
+			}
 		}
 
 		li{
 			display: block;
 			position: relative;
 			width: 100%;
-
-			&:not(:last-child){
-				margin-bottom: 10px;
-			}
+			@include transitions-ease(.4s);
 
 			button, a{
 				position: relative;
 				display: block;
 				width: 100%;
+				padding: 5px 0;
 				text-align: left;
+				@include transitions-ease(.4s);
+
+				path{@include transitions-ease(.4s);}
 			}
 		}
 
@@ -29,7 +76,11 @@
 			li{
 				button, a{
 					&:hover{
-						color: $yellow;
+						// color: $yellow;
+
+						path {
+							fill: $yellow;
+						}
 					}
 				}
 			}
@@ -39,7 +90,11 @@
 			li{
 				button, a{
 					&:hover{
-						color: $blue;
+						// color: $blue;
+
+						svg, path {
+							fill: $blue;
+						}
 					}
 				}
 			}
@@ -49,16 +104,14 @@
 			li{
 				button, a{
 					&:hover{
-						color: $red;
+						// color: $red;
+
+						svg, path {
+							fill: $red;
+						}
 					}
 				}
 			}
 		}
-	}
-
-	.copyright{
-		margin-top: 65px;
-		text-align: right;
-		opacity: .6;
 	}
 }

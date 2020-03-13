@@ -21,6 +21,8 @@
 	._icon{
 		position: absolute;
 		right: 0;
+		margin: auto;
+		top: 0; bottom: 0;
 		height: 100%;
 		@include transitions-ease(.4s);
 
@@ -46,6 +48,12 @@
 			left: 0;
 			width: 100%;
 		}
+
+		&.sm{
+			&.up, &.right{
+				width: 16px;
+			}
+		}
 	}
 
 	&:hover{
@@ -65,6 +73,18 @@
 	&.hidden-arrow{
 		._icon{
 			opacity: 0;
+		}
+
+		&:hover{
+			._icon{
+				opacity: 1;
+			}
+		}
+	}
+
+	&.semihidden-arrow{
+		._icon{
+			opacity: 0.03;
 		}
 
 		&:hover{
