@@ -5,15 +5,18 @@
 	&.underline{
 		svg{
 			position: absolute;
-			bottom: -15%;
+			bottom: -17%;
 			left: 50%;
 			@include translate(-50%, 0);
 			width: 120%;
 		}
 
 		$underline-draw-speed: 0.15s;
+		$underline-long-draw-speed: 0.19s;
 
 		path, line{
+			stroke-width: 6;
+
 			&:first-child{@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 0);}
 			&:nth-child(2){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 1);}
 			&:nth-child(3){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 2);}
@@ -43,6 +46,28 @@
 		._text{
 			position: relative;
 			// opacity: 0;
+		}
+
+		._scaleDown{
+			svg{
+				@include translate-scale(-50%, 0, 1, 0.52);
+			}
+		}
+
+		._rotate{
+			svg{
+				@include translate-rotate(-50%, 0, 2deg);
+			}
+		}
+
+		&.long{
+			path, line {
+				// stroke-width: 3;
+				&:first-child{@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 0);}
+				&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 1);}
+				&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 2);}
+				&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, $underline-long-draw-speed * 3);}
+			}
 		}
 	}
 

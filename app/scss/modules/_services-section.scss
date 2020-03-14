@@ -11,6 +11,14 @@
 	.title-wrap{
 		text-align: center;
 		margin-bottom: 120px;
+
+		.dw-highlight{
+			&.underline{
+				svg{
+					bottom: -28%;
+				}
+			}
+		}
 	}
 
 	.services-wrap{

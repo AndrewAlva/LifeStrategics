@@ -54,6 +54,15 @@
 	transform: scale($X, $Y);
 }
 
+@mixin translate-scale($Xmove, $Ymove, $Xscale, $Yscale){
+	-webkit-transform: -webkit-translate($Xmove, $Ymove) -webkit-scale($Xscale, $Yscale);
+	-webkit-transform: translate($Xmove, $Ymove) scale($Xscale, $Yscale);
+	-moz-transform: translate($Xmove, $Ymove) scale($Xscale, $Yscale);
+	-ms-transform: translate($Xmove, $Ymove) scale($Xscale, $Yscale);
+	-o-transform: translate($Xmove, $Ymove) scale($Xscale, $Yscale);
+	transform: translate($Xmove, $Ymove) scale($Xscale, $Yscale);
+}
+
 @mixin transform-origin($X, $Y){
 	-webkit-transform-origin: $X $Y;
 	-ms-transform-origin: $X $Y;
