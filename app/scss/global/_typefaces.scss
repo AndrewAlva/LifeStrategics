@@ -26,7 +26,8 @@ $secondary-font: "FreightNeo B", sans-serif;
 .h1{
 	font-family: $secondary-font;
 	font-size: 120px;
-	line-height: 0.83em;
+	// line-height: 0.83em;
+	line-height: 1em;
 	font-weight: lighter;
 	@include smoothFont;
 	text-transform: uppercase;

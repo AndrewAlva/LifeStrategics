@@ -1,0 +1,61 @@
+.dw-highlight{
+	position: relative;
+	display: inline-block;
+
+	&.underline{
+		svg{
+			position: absolute;
+			bottom: -15%;
+			left: 50%;
+			@include translate(-50%, 0);
+			width: 120%;
+		}
+
+		$underline-draw-speed: 0.15s;
+
+		path, line{
+			&:first-child{@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 0);}
+			&:nth-child(2){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 1);}
+			&:nth-child(3){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 2);}
+			&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, $underline-draw-speed * 3);}
+		}
+
+		._p-top{
+			stroke-dashoffset: 240;
+			stroke-dasharray: 240;
+		}
+
+		._p-middle-top{
+			stroke-dashoffset: 265;
+			stroke-dasharray: 265;
+		}
+
+		._p-middle-bottom{
+			stroke-dashoffset: 290;
+			stroke-dasharray: 290;
+		}
+
+		._p-bottom{
+			stroke-dashoffset: 302;
+			stroke-dasharray: 302;
+		}
+
+		._text{
+			position: relative;
+			// opacity: 0;
+		}
+	}
+
+	&.circle-close{}
+
+	&.circle-open{}
+
+
+	&.drawn{
+		&.underline{
+			path, line{
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+}
