@@ -33,6 +33,24 @@
 		.h4{
 			cursor: default;
 		}
+
+		._underlined{
+			position: relative;
+			display: inline-block;
+
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				display: block;
+				width: 100%;
+				height: 2px;
+				@include scale(1.1, 1);
+			}
+
+			&._blue:before{background-color: $blue;}
+			&._yellow:before{background-color: $yellow;}
+		}
 	}
 
 	.graph-wrap{
@@ -43,14 +61,27 @@
 			margin: 0 auto;
 			width: 488px;
 			height: 100%;
+			pointer-events: none;
+
+			&:hover{
+				.graph-circle{
+					opacity: .2;
+
+					&:hover{
+						opacity: 1;
+					}
+				}
+			}
 		}
 
 		.graph-circle{
+			pointer-events: auto;
 			position: absolute;
 			width: 306px;
 			height: 306px;
 			border-radius: 50%;
 			cursor: pointer;
+			@include transitions-ease(.4s);
 
 			&.seb{
 				margin: auto;
@@ -90,7 +121,7 @@
 				height: 100%;
 				border-radius: 50%;
 				border: 3px solid $blue;
-				opacity: .5;
+				opacity: .35;
 				@include transitions-ease(.4s);
 			}
 
@@ -108,6 +139,12 @@
 
 				._outline{
 					opacity: 1;
+					border-color: $yellow;
+					@include drawShadow(2px, 2px, 5px, 2px, #202020)
+				}
+
+				._line{
+					text-shadow: 0px 0px 4px $bg-color;
 				}
 			}
 		}
