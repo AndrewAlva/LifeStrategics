@@ -19,8 +19,23 @@
 	}
 }
 
+.events-list-container{
+	pointer-events: none;
+	&:hover{
+		.event-row{
+			opacity: .35;
+		}
+	}
+
+	.event-row{
+		pointer-events: auto;
+		@include transitions-ease(.4s);
+		&:hover{opacity: 1;}
+	}
+}
+
 .event-row{
-	margin-bottom: 80px;
+	margin-bottom: 160px;
 
 	._title{
 		@include flexIt;
@@ -34,7 +49,7 @@
 
 		._index{
 			position: absolute;
-			top: 1.39em;
+			top: 1.56em;
 			right: 101.3%;
 			line-height: 1em;
 			color: $blue;
@@ -79,7 +94,6 @@
 				vertical-align: baseline;
 			}
 		}
-
 	}
 	
 }
