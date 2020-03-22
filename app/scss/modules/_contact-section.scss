@@ -61,6 +61,14 @@
 			text-align: right;
 			text-decoration: none;
 			color: inherit;
+
+			&:hover{
+				.circle-open, .circle-open-round{
+					path{
+						stroke-dashoffset: 0;
+					}
+				}
+			}
 		}
 	}
 }

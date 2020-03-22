@@ -1,10 +1,10 @@
 #services-section{
-	border: 1px solid $red;
+	border: 1px solid $yellow;
 	
 	background-color: $bg-color;
 
 	.section-name{
-		color: $red;
+		color: $yellow;
 		margin-bottom: 80px;
 	}
 
@@ -68,6 +68,12 @@
 					&:after{
 						@include transitions-ease(.6s);
 						@include rotate(180deg);
+					}
+				}
+
+				.circle-open, .circle-open-round, .circle-open-long{
+					path{
+						stroke-dashoffset: 0;
 					}
 				}
 			}
@@ -146,6 +152,12 @@
 				.toggle-info-button{
 					// &:before{@include transitions-ease(.4s);}
 					&:after{@include rotate(360deg);}
+				}
+
+				.circle-open{
+					svg path{
+						stroke-dashoffset: 0;
+					}
 				}
 
 				&:hover{

@@ -43,11 +43,6 @@
 			stroke-dasharray: 302;
 		}
 
-		._text{
-			position: relative;
-			// opacity: 0;
-		}
-
 		._scaleDown{
 			svg{
 				@include translate-scale(-50%, 0, 1, 0.52);
@@ -57,6 +52,12 @@
 		._rotate{
 			svg{
 				@include translate-rotate(-50%, 0, 2deg);
+			}
+		}
+
+		._rotate3{
+			svg{
+				@include translate-rotate(-50%, 0, 3deg);
 			}
 		}
 
@@ -71,16 +72,120 @@
 		}
 	}
 
-	&.circle-close{}
+	&.circle-open{
+		svg{
+			position: absolute;
+			bottom: -10%;
+			left: 50%;
+			@include translate(-55%, 0);
+			height: 120%;
 
-	&.circle-open{}
+			path{
+				stroke-width: 4;
+				stroke-dashoffset: 642;
+				stroke-dasharray: 642;
+				@include transitions-ease(.4s);
+			}
+		}
+
+		&.long{
+			svg{
+				height: auto;
+				width: 130%;
+				bottom: -42%;
+				@include translate(-53%, 0);
+
+				path{
+					stroke-width: 2;
+				}
+			}
+		}
+
+		&.bolder{
+			svg path{
+				stroke-width: 3;
+			}
+		}
+	}
+
+	&.circle-open-round{
+		svg{
+			position: absolute;
+			bottom: -45%;
+			left: 50%;
+			@include translate(-52%, 0);
+			width: 120%;
+
+			path{
+				stroke-width: 3;
+				stroke-dashoffset: -435;
+				stroke-dasharray: 435;
+				@include transitions-ease(.4s);
+			}
+		}
+
+		&.lighter{
+			svg path{
+				stroke-width: 2;
+			}
+		}
+
+		&.lifted{
+			svg {
+				bottom: -32%;
+			}
+		}
+	}
+
+	&.circle-open-long{
+		svg{
+			position: absolute;
+			bottom: -50%;
+			left: 50%;
+			@include translate(-50%, 0);
+			width: 108%;
+
+			path{
+				stroke-width: 3;
+				stroke-dashoffset: -1000;
+				stroke-dasharray: 1000;
+				@include transitions-ease(.4s);
+			}
+		}
+
+		&.lifted{
+			svg{
+				bottom: -20%;
+			}
+		}
+
+		&.larger{
+			svg{
+				width: 120%;
+				@include translate(-52%, 0);
+			}
+		}
+
+		&.bolder{
+			svg path{
+				stroke-width: 4;
+			}
+		}
+	}
+
+	&.circle-close{}
 
 
 	&.drawn{
-		&.underline{
+		&.underline, &.circle-open, &.circle-open-round, &.circle-open-long{
 			path, line{
 				stroke-dashoffset: 0;
 			}
 		}
+	}
+
+	._text{
+		position: relative;
+		// opacity: 0;
 	}
 }
