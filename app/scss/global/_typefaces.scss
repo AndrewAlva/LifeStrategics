@@ -66,6 +66,7 @@ $secondary-font: "FreightNeo B", sans-serif;
 	font-family: $main-font;
 	font-size: 24px;
 	@include smoothFont;
+	font-weight: 400;
 }
 
 .p3{
