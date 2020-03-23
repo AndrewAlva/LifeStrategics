@@ -5,43 +5,72 @@
 
 	.section-name{
 		color: $yellow;
-		margin-bottom: 80px;
+		
+		margin-bottom: 20px;
+		
+		@include tablet {
+			margin-bottom: 80px;
+		}
 	}
 
 	.title-indexed{
 		.name-wrap{
 			position: relative;
 			display: inline-block;
-			margin-bottom: 40px;
+			margin-bottom: 20px;
+			
+			@include tablet {
+				margin-bottom: 40px;
+			}
 
 			._index{
 				position: absolute;
 				// bottom: 5px;
-				top: 2.38em;
-				left: -.8em;
+				top: 1.06em;
+				left: -1em;
 				line-height: 1em;
 				text-transform: lowercase;
 				color: $yellow;
+				
+				@include tablet {
+					top: 2.38em;
+					left: -.8em;
+				}
 			}
 		}
 	}
 
 	.projects-grid{
-		margin-bottom: 100px;
+		&:not(:last-child){
+			margin-bottom: 80px;
+
+			@include tablet {
+				margin-bottom: 100px;
+			}
+		}
 
 		.logo-cell{
 			position: relative;
 			display: inline-block;
 			height: 80px;
-			margin-bottom: 100px;
+			margin-bottom: 40px;
+
+			@include tablet {
+				margin-bottom: 100px;
+			}
 
 			svg{
 				position: absolute;
 				margin: auto;
 				top: 0; bottom: 0;
 				left: 0; right: 0;
-				height: 60px;
+				width: 100%;
 				opacity: .65;
+
+				@include tablet {
+					width: auto;
+					height: 60px;
+				}
 			}
 
 			&.tall{

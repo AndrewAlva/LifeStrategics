@@ -6,7 +6,7 @@
 	border: 0;
 	border-radius: 0;
 	font-family: $main-font;
-	font-size: 24px;
+	font-size: 16px;
 	line-height: 1.2em;
 	@include smoothFont;
 	background: none;
@@ -14,8 +14,16 @@
 	white-space: nowrap;
 	text-decoration: none;
 
+	@include tablet {
+		font-size: 24px;
+	}
+
 	&.--big{
-		font-size: 32px;
+		font-size: 24px;
+
+		@include tablet {
+			font-size: 32px;
+		}
 	}
 
 	._icon{
@@ -27,18 +35,30 @@
 		@include transitions-ease(.4s);
 
 		&.right{
-			width: 21px;
+			width: 16px;
 			@include translate(-5px, 0);
+
+			@include tablet {
+				width: 21px;
+			}
 		}
 
 		&.down{
-			width: 28px;
+			width: 21px;
 			// @include translate(0, -5px);
+
+			@include tablet {
+				width: 28px;
+			}
 		}
 
 		&.up{
-			width: 21px;
+			width: 16px;
 			@include translate(0, 5px);
+
+			@include tablet {
+				width: 21px;
+			}
 		}
 
 		svg{

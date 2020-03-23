@@ -25,54 +25,82 @@ $secondary-font: "FreightNeo B", sans-serif;
 
 .h1{
 	font-family: $secondary-font;
-	font-size: 120px;
+	font-size: 40px;
 	// line-height: 0.83em;
 	line-height: 1em;
 	font-weight: lighter;
 	@include smoothFont;
 	text-transform: uppercase;
+
+	@include tablet {
+		font-size: 120px;
+	}
 }
 
 .h2{
 	font-family: $secondary-font;
-	font-size: 60px;
+	font-size: 32px;
 	line-height: .94em;
 	font-weight: lighter;
 	@include smoothFont;
+
+	@include tablet {
+		font-size: 60px;
+	}
 }
 
 .h3{
 	font-family: $secondary-font;
-	font-size: 48px;
+	font-size: 28px;
 	line-height: .94em;
 	font-weight: lighter;
 	@include smoothFont;
+
+	@include tablet {
+		font-size: 48px;
+	}
 }
 
 .h4{
 	font-family: $main-font;
-	font-size: 32px;
+	font-size: 18px;
 	font-weight: lighter;
 	@include smoothFont;
+
+	@include tablet {
+		font-size: 32px;
+	}
 }
 
 .p1{
 	font-family: $main-font;
-	font-size: 28px;
+	font-size: 18px;
 	@include smoothFont;
+
+	@include tablet {
+		font-size: 28px;
+	}
 }
 
 .p2{
 	font-family: $main-font;
-	font-size: 24px;
+	font-size: 16px;
 	@include smoothFont;
 	font-weight: 400;
+
+	@include tablet {
+		font-size: 24px;
+	}
 }
 
 .p3{
 	font-family: $main-font;
-	font-size: 18px;
+	font-size: 12px;
 	@include smoothFont;
+
+	@include tablet {
+		font-size: 18px;
+	}
 }
 
 

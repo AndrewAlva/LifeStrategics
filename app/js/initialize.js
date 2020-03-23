@@ -12,4 +12,12 @@ window.onload = function() {
     // Do something, remove preloader perhaps
     console.log("Page fully loaded.");
     console.log("Initialize.js");
+
+    var circles = document.getElementsByClassName('graph-circle');
+
+    for (var i = 0; i < circles.length; i++) {
+    	circles[i].addEventListener("click", function(){
+    	// 	alert("circle clicked")
+    	})
+    }
 }

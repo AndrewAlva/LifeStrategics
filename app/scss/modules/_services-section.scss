@@ -5,12 +5,22 @@
 
 	.section-name{
 		color: $yellow;
-		margin-bottom: 80px;
+		
+		margin-bottom: 20px;
+		
+		@include tablet {
+			margin-bottom: 80px;
+		}
 	}
 
 	.title-wrap{
 		text-align: center;
-		margin-bottom: 120px;
+		
+		margin-bottom: 60px;
+		
+		@include tablet {
+			margin-bottom: 120px;
+		}
 
 		.dw-highlight{
 			&.underline{
