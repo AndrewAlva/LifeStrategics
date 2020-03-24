@@ -1,16 +1,28 @@
 #contact-section{
-	padding-bottom: 330px;
+	padding-bottom: 120px;
+
+	@include tablet {
+		padding-bottom: 330px;
+	}
 
 	/* Possible fixed footer */
 	background-color: $bg-color;
 
 	.section-name{
 		color: $red;
-		margin-bottom: 80px;
+		margin-bottom: 20px;
+		
+		@include tablet {
+			margin-bottom: 80px;
+		}
 	}
 
 	.title-wrap{
-		margin-bottom: 260px;
+		margin-bottom: 20px;
+
+		@include tablet {
+			margin-bottom: 260px;
+		}
 
 		._line{
 			display: block;
@@ -23,10 +35,14 @@
 
 		._arrow{
 			position: relative;
-			// width: 34.675%;
-			width: 34.675%;
-			height: 52px;
-			@include flexIt;
+			width: 30px;
+			height: 100px;
+			
+			@include tablet {
+				width: 34.675%;
+				height: 52px;
+				@include flexIt;
+			}
 
 
 			._body{
@@ -37,30 +53,63 @@
 					content: '';
 					position: absolute;
 					margin: auto;
-					top: 8px;
-					bottom: 0;
-					width: 99.2%;
-					height: 4px;
+					left: 0; right: 0;
+					bottom: 8px;
+					width: 2px;
+					height: 80%;
 					border-radius: 2px;
 					background-color: $body-text-color;
+
+					@include tablet {
+						top: 8px;
+						bottom: 0;
+						width: 99.2%;
+						height: 4px;
+					}
 				}
 			}
 
 			._chevron{
-				width: 30px;
-				@include flexShrink(0);
-				height: 100%;
+				@include mobile {
+					position: absolute;
+					bottom: 0;
+				}
 
+				width: 100%;
+				
+				@include tablet {
+					width: 30px;
+					@include flexShrink(0);
+					height: 100%;
+				}
+
+
+				.chevron-right{
+					@include mobile {display: none;}
+				}
+
+				.chevron-down{
+					@include tablet {display: none;}
+				}
+				
 				svg{
+					@include mobile {vertical-align: bottom;}
 					width: 100%;
 				}
 			}
 		}
 
 		._mail-btn{
-			text-align: right;
+			@include mobile {
+				width: 100%;
+			}
+
 			text-decoration: none;
 			color: inherit;
+
+			@include tablet {
+				text-align: right;
+			}
 
 			&:hover{
 				.circle-open, .circle-open-round{

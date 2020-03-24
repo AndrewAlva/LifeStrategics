@@ -6,12 +6,21 @@
 
 	.section-name{
 		color: $blue;
-		margin-bottom: 80px;
+		
+		margin-bottom: 20px;
+		
+		@include tablet {
+			margin-bottom: 80px;
+		}
 	}
 
 	.title-wrap{
 		text-align: center;
-		margin-bottom: 160px;
+		margin-bottom: 60px;
+		
+		@include tablet {
+			margin-bottom: 160px;
+		}
 
 		._line{
 			display: block;
@@ -20,28 +29,42 @@
 }
 
 .events-list-container{
-	pointer-events: none;
-	&:hover{
-		.event-row{
-			opacity: .35;
+	@include tablet {
+		pointer-events: none;
+		&:hover{
+			.event-row{
+				opacity: .35;
+			}
 		}
-	}
 
-	.event-row{
-		pointer-events: auto;
-		@include transitions-ease(.4s);
-		&:hover{opacity: 1;}
+		.event-row{
+			pointer-events: auto;
+			@include transitions-ease(.4s);
+			&:hover{opacity: 1;}
+		}
 	}
 }
 
 .event-row{
-	margin-bottom: 160px;
+	margin-bottom: 60px;
+		
+	@include tablet {
+		margin-bottom: 160px;
+	}
 
 	._title{
+		@include mobile {
+			margin-bottom: 12px;
+		}
+
 		@include flexIt;
 		@include flexAlign-center;
-		line-height: 1.2em;
+		line-height: 1em;
 		padding-bottom: 10px;
+
+		@include tablet {
+			line-height: 1.2em;
+		}
 
 		._wrap{
 			position: relative;
@@ -49,11 +72,15 @@
 
 		._index{
 			position: absolute;
-			top: 1.56em;
+			top: .85em;
 			right: 101.3%;
 			line-height: 1em;
 			color: $blue;
 			text-align: right;
+
+			@include tablet {
+				top: 1.56em;
+			}
 		}
 	}
 
@@ -69,6 +96,7 @@
 	}
 
 	._abstract{
+
 		@include flexIt;
 		@include flexWrap;
 
@@ -84,11 +112,19 @@
 		}
 
 		._cta{
+			@include mobile {
+				width: 100%;
+			}
+
 			position: relative;
 			padding-right: 60px;
-			bottom: -8px;
+			bottom: -2px;
 			text-align: left;
 			@include flexSelf-bottom;
+
+			@include tablet {
+				bottom: -8px;
+			}
 
 			._label, ._icon{
 				vertical-align: baseline;

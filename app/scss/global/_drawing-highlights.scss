@@ -92,8 +92,12 @@
 			svg{
 				height: auto;
 				width: 130%;
-				bottom: -42%;
+				bottom: -28%;
 				@include translate(-53%, 0);
+
+				@include tablet {
+					bottom: -42%;
+				}
 
 				path{
 					stroke-width: 2;
@@ -111,10 +115,14 @@
 	&.circle-open-round{
 		svg{
 			position: absolute;
-			bottom: -45%;
+			bottom: -30%;
 			left: 50%;
 			@include translate(-52%, 0);
 			width: 120%;
+
+			@include tablet {
+				bottom: -45%;
+			}
 
 			path{
 				stroke-width: 3;
@@ -132,7 +140,11 @@
 
 		&.lifted{
 			svg {
-				bottom: -32%;
+				bottom: -20%;
+
+				@include tablet {
+					bottom: -32%;
+				}
 			}
 		}
 	}
@@ -140,10 +152,14 @@
 	&.circle-open-long{
 		svg{
 			position: absolute;
-			bottom: -50%;
+			bottom: -35%;
 			left: 50%;
 			@include translate(-50%, 0);
 			width: 108%;
+
+			@include tablet {
+				bottom: -50%;
+			}
 
 			path{
 				stroke-width: 3;
@@ -155,7 +171,11 @@
 
 		&.lifted{
 			svg{
-				bottom: -20%;
+				bottom: -16%;
+
+				@include tablet {
+					bottom: -20%;
+				}
 			}
 		}
 
