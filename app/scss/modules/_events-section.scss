@@ -48,21 +48,27 @@
 .event-row{
 	margin-bottom: 60px;
 		
+	@include large-mobile {
+		margin-bottom: 100px;
+	}
+		
 	@include tablet {
 		margin-bottom: 160px;
 	}
 
 	._title{
-		@include mobile {
-			margin-bottom: 12px;
-		}
-
+		margin-bottom: 12px;
 		@include flexIt;
 		@include flexAlign-center;
 		line-height: 1em;
 		padding-bottom: 10px;
 
+		@include large-mobile {
+			margin-bottom: 24px;
+		}
+
 		@include tablet {
+			margin-bottom: 0;
 			line-height: 1.2em;
 		}
 

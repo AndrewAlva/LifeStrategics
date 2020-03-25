@@ -42,6 +42,10 @@
 		display: block;
 		bottom: 20px;
 
+		@include large-mobile {
+			bottom: 60px;
+		}
+
 		@include tablet {
 			bottom: 100px;
 		}
@@ -51,7 +55,7 @@
 			width: 42.26%;
 			margin-bottom: 60px;
 
-			@include tablet {
+			@include large-mobile {
 				margin-bottom: 0;
 			}
 
@@ -86,7 +90,7 @@
 			position: relative;
 			margin-left: 4.1666665%;
 
-			@include tablet {
+			@include large-mobile {
 				position: absolute;
 				margin-left: 0;
 				bottom: 0;
