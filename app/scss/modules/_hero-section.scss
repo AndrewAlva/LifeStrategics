@@ -6,6 +6,10 @@
 	background-color: $bg-color;
 
 	@include tablet {
+		min-height: 700px;
+	}
+
+	@include laptop {
 		min-height: 850px;
 	}
 
@@ -15,6 +19,10 @@
 		margin-bottom: 60px;
 
 		@include tablet {
+			padding-top: 80px;
+		}
+
+		@include laptop {
 			padding-top: 100px;
 			margin-bottom: 0;
 		}
@@ -47,6 +55,10 @@
 		}
 
 		@include tablet {
+			bottom: 80px;
+		}
+
+		@include laptop {
 			bottom: 100px;
 		}
 

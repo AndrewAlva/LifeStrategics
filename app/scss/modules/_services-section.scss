@@ -5,12 +5,6 @@
 
 	.section-name{
 		color: $yellow;
-		
-		margin-bottom: 20px;
-		
-		@include tablet {
-			margin-bottom: 80px;
-		}
 	}
 
 	.title-wrap{
@@ -19,6 +13,10 @@
 		margin-bottom: 60px;
 		
 		@include tablet {
+			margin-bottom: 80px;
+		}
+		
+		@include laptop {
 			margin-bottom: 120px;
 		}
 
@@ -65,8 +63,10 @@
 			cursor: pointer;
 
 			.h2{
-				@include mobile {
-					padding-right: 50px;
+				padding-right: 50px;
+
+				@include tablet {
+					padding-right: 80px;
 				}
 			}
 
@@ -106,6 +106,10 @@
 			@include transitions-ease(1s);
 
 			@include tablet {
+				width: 80%;
+			}
+
+			@include laptop {
 				width: 70.37%;
 				min-width: 780px;
 				max-height: 300px;
@@ -149,9 +153,10 @@
 								height: 14px;
 								border-radius: 50%;
 								margin-right: 10px;
+								top: 3px;
 
-								@include mobile {
-									top: 3px;
+								@include tablet {
+									top: 1px;
 								}
 							}
 

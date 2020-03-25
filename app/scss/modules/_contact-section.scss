@@ -2,6 +2,10 @@
 	padding-bottom: 120px;
 
 	@include tablet {
+		padding-bottom: 180px;
+	}
+
+	@include laptop {
 		padding-bottom: 330px;
 	}
 
@@ -10,17 +14,16 @@
 
 	.section-name{
 		color: $red;
-		margin-bottom: 20px;
-		
-		@include tablet {
-			margin-bottom: 80px;
-		}
 	}
 
 	.title-wrap{
 		margin-bottom: 20px;
 
 		@include tablet {
+			margin-bottom: 100px;
+		}
+
+		@include laptop {
 			margin-bottom: 260px;
 		}
 
@@ -30,6 +33,10 @@
 	}
 
 	.cta-wrap{
+		@include mobile {
+			@include flexWrap;
+		}
+
 		@include flexIt;
 		@include flexJustify;
 
@@ -39,9 +46,13 @@
 			height: 100px;
 			
 			@include tablet {
-				width: 34.675%;
+				width: 23%;
 				height: 52px;
 				@include flexIt;
+			}
+
+			@include laptop {
+				width: 34.675%;
 			}
 
 
@@ -63,8 +74,14 @@
 					@include tablet {
 						top: 8px;
 						bottom: 0;
+						left: 0;
+						right: auto;
 						width: 99.2%;
 						height: 4px;
+					}
+
+					@include laptop {
+						width: 99.2%;
 					}
 				}
 			}

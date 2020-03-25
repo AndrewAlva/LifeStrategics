@@ -16,7 +16,7 @@
 	$mobile-large-min-width: 576px; // xs
 	$mobile-max-width: 767px;
 	$tablet-min-width: 768px;// sm
-	$small-laptop-min-width: 1024px;// md
+	$small-laptop-min-width: 1025px;// md
 	$laptop-min-width: 1200px;// lg
 	$small-desktop-min-width: 1441px;// xl
 	$desktop-min-width: 1650px;// xxl
@@ -182,8 +182,8 @@
   margin-left: - $ls-grid__gutterHalfWidth-mob;
 
   @include tablet {
-  	margin-right: $ls-grid__gutterHalfWidth;
-  	margin-left: $ls-grid__gutterHalfWidth;
+  	margin-right: - $ls-grid__gutterHalfWidth;
+  	margin-left: - $ls-grid__gutterHalfWidth;
   }
 }
 

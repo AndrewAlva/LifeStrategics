@@ -3,7 +3,7 @@
 	position: relative;
 	width: 100%;
 
-	@include tablet {
+	@include laptop {
 		height: 480px;
 	}
 }
@@ -17,9 +17,12 @@
 	background-color: #161618;
 
 	@include tablet {
+		padding: 85px 0 60px;
+	}
+
+	@include laptop {
 		position: fixed;
 		height: 480px;
-		padding: 85px 0 60px;
 	}
 
 	.info-col{
@@ -112,8 +115,10 @@
 		}
 
 		&.decide{
-			@include mobile {
-				margin-top: 60px;
+			margin-top: 60px;
+
+			@include laptop {
+				margin-top: 0;
 			}
 
 			li{
@@ -130,8 +135,10 @@
 		}
 
 		&.takeaction{
-			@include mobile {
-				margin-top: 60px;
+			margin-top: 60px;
+
+			@include laptop {
+				margin-top: 0;
 			}
 			
 			li{

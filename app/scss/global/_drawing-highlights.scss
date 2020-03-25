@@ -95,7 +95,7 @@
 				bottom: -28%;
 				@include translate(-53%, 0);
 
-				@include tablet {
+				@include laptop {
 					bottom: -42%;
 				}
 
@@ -121,6 +121,10 @@
 			width: 120%;
 
 			@include tablet {
+				bottom: -35%;
+			}
+
+			@include laptop {
 				bottom: -45%;
 			}
 
@@ -143,6 +147,10 @@
 				bottom: -20%;
 
 				@include tablet {
+					bottom: -25%;
+				}
+
+				@include laptop {
 					bottom: -32%;
 				}
 			}
@@ -157,7 +165,7 @@
 			@include translate(-50%, 0);
 			width: 108%;
 
-			@include tablet {
+			@include laptop {
 				bottom: -50%;
 			}
 
@@ -173,7 +181,7 @@
 			svg{
 				bottom: -16%;
 
-				@include tablet {
+				@include laptop {
 					bottom: -20%;
 				}
 			}

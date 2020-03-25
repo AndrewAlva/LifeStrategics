@@ -3,15 +3,14 @@
 	
 	.section-name{
 		color: $blue;
-		margin-bottom: 20px;
-
-		@include tablet {
-			margin-bottom: 110px;
-		}
 	}
 
 	.content{
 		@include tablet {
+			height: 360px;
+		}
+
+		@include laptop {
 			height: 467px;
 		}
 	}
@@ -30,8 +29,13 @@
 		.inner-container{
 			@include tablet {
 				position: absolute;
-				top: 44%;
+				top: 48%;
 				@include translate(0, -50%);
+			}
+
+			@include laptop {
+				position: absolute;
+				top: 44%;
 			}
 		}
 
@@ -99,6 +103,10 @@
 			height: 100%;
 
 			@include tablet {
+				width: 310px;
+			}
+
+			@include laptop {
 				width: 488px;
 				pointer-events: none;
 			}
@@ -124,6 +132,11 @@
 			@include transitions-ease(.4s);
 
 			@include tablet {
+				width: 180px;
+				height: 180px;
+			}
+
+			@include laptop {
 				width: 306px;
 				height: 306px;
 			}
@@ -132,6 +145,14 @@
 				margin: auto;
 				top: 0;
 				left: 0; right: 0;
+
+				@include tablet {
+					top: 34px;
+				}
+
+				@include laptop {
+					top: 0;
+				}
 				
 
 				.h3{
@@ -148,8 +169,13 @@
 			&.cps{
 				left: 0;
 				top: 68px;
+
 				@include tablet {
 					top: auto;
+					bottom: 34px;
+				}
+
+				@include laptop {
 					bottom: 0;
 				}
 
@@ -159,6 +185,11 @@
 					left: -16.66%;
 
 					@include tablet {
+						bottom: 32px;
+						left: -16.66%;
+					}
+
+					@include laptop {
 						bottom: 55px;
 						left: -43%;
 					}
@@ -168,8 +199,13 @@
 			&.sc{
 				right: 0;
 				top: 68px;
+
 				@include tablet {
 					top: auto;
+					bottom: 34px;
+				}
+
+				@include laptop {
 					bottom: 0;
 				}
 
@@ -178,9 +214,13 @@
 					left: -16.66%;
 
 					@include tablet {
-						bottom: 55px;
+						bottom: 32px;
+					}
+
+					@include laptop {
 						left: auto;
 						right: -50%;
+						bottom: 55px;
 					}
 				}
 			}
@@ -195,6 +235,10 @@
 				@include transitions-ease(.4s);
 
 				@include tablet {
+					border-width: 2px;
+				}
+
+				@include laptop {
 					border-width: 3px;
 					opacity: .35;
 				}
@@ -207,7 +251,7 @@
 				position: absolute;
 				@include transitions-ease(.4s);
 
-				@include tablet {
+				@include laptop {
 					opacity: 1;
 					pointer-events: auto;
 				}

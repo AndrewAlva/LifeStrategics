@@ -1,14 +1,14 @@
 mixin event-row(index, title, imgSrc, date, location, cta, href)
 	.ls-row.event-row
-		h2.h2._title.ls-col-20.offset-2.ls-col-xs-18.offset-xs-3.ls-col-xl-10.offset-xl-3
+		h2.h2._title.ls-col-20.offset-2.ls-col-xs-18.offset-xs-3.ls-col-sm-10.offset-sm-2.ls-col-xl-10.offset-xl-3
 			span._wrap
 				span.p2._index #{index}
 				| #{title}
 
-		._cover.ls-col-10.offset-2.ls-col-xs-6.offset-xs-3.ls-col-xl-3.offset-xl-1
+		._cover.ls-col-10.offset-2.ls-col-xs-6.offset-xs-3.ls-col-sm-4.offset-sm-1.ls-col-xl-3.offset-xl-1
 			img(src="#{imgSrc}", alt="#{title} cover photo")
 
-		._abstract.ls-col-10.offset-1.ls-col-xs-7.offset-xs-3.ls-col-xl-3.offset-xl-1
+		._abstract.ls-col-10.offset-1.ls-col-xs-7.offset-xs-3.ls-col-sm-5.offset-sm-1.ls-col-xl-3.offset-xl-1
 			._info
 				h4.h4._date #{date}
 				p.p2._location #{location}

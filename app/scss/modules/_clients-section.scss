@@ -5,12 +5,6 @@
 
 	.section-name{
 		color: $yellow;
-		
-		margin-bottom: 20px;
-		
-		@include tablet {
-			margin-bottom: 80px;
-		}
 	}
 
 	.title-indexed{
@@ -31,8 +25,12 @@
 				line-height: 1em;
 				text-transform: lowercase;
 				color: $yellow;
-				
+
 				@include tablet {
+					top: 2em;
+				}
+
+				@include laptop {
 					top: 2.38em;
 					left: -.8em;
 				}
@@ -56,6 +54,10 @@
 			margin-bottom: 40px;
 
 			@include tablet {
+				margin-bottom: 60px;
+			}
+
+			@include laptop {
 				margin-bottom: 100px;
 			}
 
@@ -68,7 +70,7 @@
 				max-width: 120px;
 				opacity: .65;
 
-				@include tablet {
+				@include laptop {
 					width: auto;
 					height: 60px;
 				}
