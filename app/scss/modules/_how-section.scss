@@ -15,6 +15,10 @@
 				margin-bottom: 100px;
 			}
 
+			@include small-laptop {
+				margin-bottom: 135px;
+			}
+
 			@include laptop {
 				margin-bottom: 170px;
 			}
@@ -55,9 +59,16 @@
 				width: 200px;
 			}
 
-			@include laptop {
+			@include small-laptop {
 				display: inline-block;
 				vertical-align: bottom;
+				width: 90px;
+				height: 80px;
+				margin-left: 35px;
+				margin-right: 50px;
+			}
+
+			@include laptop {
 				width: 150px;
 				height: 99px;
 				margin-left: 55px;
@@ -82,13 +93,17 @@
 		.bullets-wrap{
 			display: block;
 
-			@include laptop {
-				height: 99px;
+			@include small-laptop {
+				height: 80px;
 				display: inline-block;
 			}
 
+			@include laptop {
+				height: 99px;
+			}
+
 			.center-container{
-				@include laptop {
+				@include small-laptop {
 					position: absolute;
 					top: 50%;
 					@include translate(0, -50%);

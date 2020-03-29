@@ -3,6 +3,10 @@
 	position: relative;
 	width: 100%;
 
+	@include small-laptop {
+		height: 435px;
+	}
+
 	@include laptop {
 		height: 480px;
 	}
@@ -20,8 +24,12 @@
 		padding: 85px 0 60px;
 	}
 
-	@include laptop {
+	@include small-laptop {
 		position: fixed;
+		height: 435px;
+	}
+
+	@include laptop {
 		height: 480px;
 	}
 
@@ -117,7 +125,7 @@
 		&.decide{
 			margin-top: 60px;
 
-			@include laptop {
+			@include small-laptop {
 				margin-top: 0;
 			}
 
@@ -137,7 +145,7 @@
 		&.takeaction{
 			margin-top: 60px;
 
-			@include laptop {
+			@include small-laptop {
 				margin-top: 0;
 			}
 			

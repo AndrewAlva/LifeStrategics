@@ -109,6 +109,10 @@
 				width: 80%;
 			}
 
+			@include small-laptop {
+				width: 72%;
+			}
+
 			@include laptop {
 				width: 70.37%;
 				min-width: 780px;
