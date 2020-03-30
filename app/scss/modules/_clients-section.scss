@@ -78,6 +78,11 @@
 					width: auto;
 					height: 60px;
 				}
+
+				@include small-desktop {
+					max-width: 160px;
+					height: 80px;
+				}
 			}
 
 			&.tall{

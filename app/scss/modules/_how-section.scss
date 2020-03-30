@@ -77,10 +77,14 @@
 			}
 
 			@include small-desktop {
-				width: 150px;
+				width: 110px;
 				height: 99px;
 				margin-left: 55px;
 				margin-right: 90px;
+			}
+
+			@include desktop {
+				width: 150px;
 			}
 
 			&:after{

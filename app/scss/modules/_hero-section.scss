@@ -31,7 +31,8 @@
 			margin-bottom: 0;
 		}
 
-		@include small-desktop {
+
+		@include desktop {
 			padding-top: 100px;
 		}
 

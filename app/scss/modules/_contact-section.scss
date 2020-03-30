@@ -5,7 +5,7 @@
 		padding-bottom: 180px;
 	}
 
-	@include small-desktop {
+	@include desktop {
 		padding-bottom: 330px;
 	}
 
@@ -23,7 +23,7 @@
 			margin-bottom: 100px;
 		}
 
-		@include small-desktop {
+		@include desktop {
 			margin-bottom: 260px;
 		}
 

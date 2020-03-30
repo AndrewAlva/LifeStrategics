@@ -121,6 +121,9 @@
 			@include small-desktop {
 				width: 70.37%;
 				min-width: 780px;
+			}
+
+			@include desktop {
 				max-height: 300px;
 			}
 
