@@ -17,6 +17,10 @@
 		min-height: 850px;
 	}
 
+	@include desktop {
+		min-height: 900px;
+	}
+
 	.title-wrap{
 		position: relative;
 		padding-top: 40px;

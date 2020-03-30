@@ -95,10 +95,6 @@
 				bottom: -28%;
 				@include translate(-53%, 0);
 
-				@include desktop {
-					bottom: -42%;
-				}
-
 				path{
 					stroke-width: 2;
 				}
@@ -124,10 +120,6 @@
 				bottom: -35%;
 			}
 
-			@include desktop {
-				bottom: -45%;
-			}
-
 			path{
 				stroke-width: 3;
 				stroke-dashoffset: -435;
@@ -149,10 +141,6 @@
 				@include tablet {
 					bottom: -25%;
 				}
-
-				@include desktop {
-					bottom: -32%;
-				}
 			}
 		}
 	}
@@ -164,10 +152,6 @@
 			left: 50%;
 			@include translate(-50%, 0);
 			width: 108%;
-
-			@include desktop {
-				bottom: -50%;
-			}
 
 			path{
 				stroke-width: 3;
@@ -182,7 +166,7 @@
 				bottom: -16%;
 
 				@include desktop {
-					bottom: -20%;
+					bottom: -12%;
 				}
 			}
 		}

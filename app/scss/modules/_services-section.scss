@@ -34,7 +34,9 @@
 		width: 100%;
 
 		&:not(:last-child){
-			margin-bottom: 20px;
+			@include tablet {
+				margin-bottom: 20px;
+			}
 		}
 
 		&:after{
@@ -56,8 +58,12 @@
 		.toggle-wrap{
 			position: relative;
 			width: 100%;
-			padding: 32px 0;
+			padding: 20px 0;
 			cursor: pointer;
+
+			@include tablet {
+				padding: 32px 0;
+			}
 
 			.h2{
 				padding-right: 50px;
@@ -119,7 +125,7 @@
 			}
 
 			@include small-desktop {
-				width: 70.37%;
+				width: 71.15%;
 				min-width: 780px;
 			}
 
