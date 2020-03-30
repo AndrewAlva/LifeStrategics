@@ -95,7 +95,7 @@
 				bottom: -28%;
 				@include translate(-53%, 0);
 
-				@include laptop {
+				@include small-desktop {
 					bottom: -42%;
 				}
 
@@ -124,7 +124,7 @@
 				bottom: -35%;
 			}
 
-			@include laptop {
+			@include small-desktop {
 				bottom: -45%;
 			}
 
@@ -150,7 +150,7 @@
 					bottom: -25%;
 				}
 
-				@include laptop {
+				@include small-desktop {
 					bottom: -32%;
 				}
 			}
@@ -165,7 +165,7 @@
 			@include translate(-50%, 0);
 			width: 108%;
 
-			@include laptop {
+			@include small-desktop {
 				bottom: -50%;
 			}
 
@@ -181,7 +181,7 @@
 			svg{
 				bottom: -16%;
 
-				@include laptop {
+				@include small-desktop {
 					bottom: -20%;
 				}
 			}

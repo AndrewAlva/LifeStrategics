@@ -19,7 +19,7 @@
 				margin-bottom: 135px;
 			}
 
-			@include laptop {
+			@include small-desktop {
 				margin-bottom: 170px;
 			}
 		}
@@ -42,6 +42,10 @@
 				}
 
 				@include laptop {
+					top: 1.9em;
+				}
+
+				@include small-desktop {
 					top: 2.38em;
 					left: -.8em;
 				}
@@ -69,6 +73,10 @@
 			}
 
 			@include laptop {
+				height: 90px;
+			}
+
+			@include small-desktop {
 				width: 150px;
 				height: 99px;
 				margin-left: 55px;
@@ -99,6 +107,10 @@
 			}
 
 			@include laptop {
+				height: 90px;
+			}
+
+			@include small-desktop {
 				height: 99px;
 			}
 

@@ -10,6 +10,10 @@
 	}
 
 	@include laptop {
+		min-height: 620px;
+	}
+
+	@include small-desktop {
 		min-height: 850px;
 	}
 
@@ -23,8 +27,12 @@
 		}
 
 		@include laptop {
-			padding-top: 100px;
+			padding-top: 60px;
 			margin-bottom: 0;
+		}
+
+		@include small-desktop {
+			padding-top: 100px;
 		}
 
 		.h1{
@@ -59,6 +67,10 @@
 		}
 
 		@include laptop {
+			bottom: 60px;
+		}
+
+		@include small-desktop {
 			bottom: 100px;
 		}
 

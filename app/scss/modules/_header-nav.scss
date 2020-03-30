@@ -11,6 +11,11 @@
 	}
 
 	@include laptop {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	@include small-desktop {
 		height: $header-nav-height;
 		padding: 41px 35px 0;
 	}
@@ -35,7 +40,7 @@
 			height: 60px;
 		}
 
-		@include laptop {
+		@include small-desktop {
 			bottom: -80px;
 			height: 80px;
 		}

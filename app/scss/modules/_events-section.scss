@@ -16,7 +16,7 @@
 			margin-bottom: 110px;
 		}
 		
-		@include laptop {
+		@include small-desktop {
 			margin-bottom: 160px;
 		}
 
@@ -50,7 +50,7 @@
 		margin-bottom: 100px;
 	}
 		
-	@include laptop {
+	@include small-desktop {
 		margin-bottom: 160px;
 	}
 

@@ -37,6 +37,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 90px;
+	}
+
+	@include small-desktop {
 		font-size: 120px;
 	}
 }
@@ -54,6 +58,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 48px;
+	}
+
+	@include small-desktop {
 		font-size: 60px;
 	}
 }
@@ -71,6 +79,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 40px;
+	}
+
+	@include small-desktop {
 		font-size: 48px;
 	}
 }
@@ -86,6 +98,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 28px;
+	}
+
+	@include small-desktop {
 		font-size: 32px;
 	}
 }
@@ -101,6 +117,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 24px;
+	}
+
+	@include small-desktop {
 		font-size: 28px;
 	}
 }
@@ -117,6 +137,10 @@ $secondary-font: "FreightNeo B", sans-serif;
 	}
 
 	@include laptop {
+		font-size: 20px;
+	}
+
+	@include small-desktop {
 		font-size: 24px;
 	}
 }
@@ -131,7 +155,7 @@ $secondary-font: "FreightNeo B", sans-serif;
 		font-size: 16px;
 	}
 
-	@include laptop {
+	@include small-desktop {
 		font-size: 18px;
 	}
 }

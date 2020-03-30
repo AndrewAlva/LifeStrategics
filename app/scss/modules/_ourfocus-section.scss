@@ -11,6 +11,10 @@
 		}
 
 		@include laptop {
+			height: 420px;
+		}
+
+		@include small-desktop {
 			height: 467px;
 		}
 	}
@@ -33,8 +37,7 @@
 				@include translate(0, -50%);
 			}
 
-			@include laptop {
-				position: absolute;
+			@include small-desktop {
 				top: 44%;
 			}
 		}
@@ -107,8 +110,12 @@
 			}
 
 			@include laptop {
-				width: 488px;
+				width: 440px;
 				pointer-events: none;
+			}
+
+			@include small-desktop {
+				width: 488px;
 			}
 
 			&:hover{
@@ -137,6 +144,11 @@
 			}
 
 			@include laptop {
+				width: 260px;
+				height: 260px;
+			}
+
+			@include small-desktop {
 				width: 306px;
 				height: 306px;
 			}
@@ -191,6 +203,10 @@
 
 					@include laptop {
 						bottom: 55px;
+						left: -35%;
+					}
+
+					@include small-desktop {
 						left: -43%;
 					}
 				}
@@ -219,8 +235,12 @@
 
 					@include laptop {
 						left: auto;
-						right: -50%;
+						right: -35%;
 						bottom: 55px;
+					}
+
+					@include small-desktop {
+						right: -50%;
 					}
 				}
 			}

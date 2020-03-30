@@ -16,7 +16,7 @@
 			margin-bottom: 80px;
 		}
 		
-		@include laptop {
+		@include small-desktop {
 			margin-bottom: 120px;
 		}
 
@@ -27,9 +27,6 @@
 				}
 			}
 		}
-	}
-
-	.services-wrap{
 	}
 
 	.service-container{
@@ -68,6 +65,10 @@
 				@include tablet {
 					padding-right: 80px;
 				}
+
+				@include laptop {
+					padding-right: 16.667%;
+				}
 			}
 
 			.toggle-info-button{
@@ -77,6 +78,10 @@
 				bottom: 0;
 				right: 0;
 				@include transitions-ease(.4s);
+
+				@include laptop {
+					right: 5.55%;
+				}
 			}
 
 			&:hover{
@@ -113,14 +118,18 @@
 				width: 72%;
 			}
 
-			@include laptop {
+			@include small-desktop {
 				width: 70.37%;
 				min-width: 780px;
 				max-height: 300px;
 			}
 
 			._description{
-				margin-bottom: 56px;
+				margin-bottom: 30px;
+
+				@include tablet {
+					margin-bottom: 56px;
+				}
 			}
 
 			.profiles-container{

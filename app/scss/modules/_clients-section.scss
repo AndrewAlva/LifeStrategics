@@ -31,6 +31,10 @@
 				}
 
 				@include laptop {
+					top: 1.9em;
+				}
+
+				@include small-desktop {
 					top: 2.38em;
 					left: -.8em;
 				}
@@ -42,7 +46,7 @@
 		&:not(:last-child){
 			margin-bottom: 80px;
 
-			@include tablet {
+			@include small-desktop {
 				margin-bottom: 100px;
 			}
 		}
@@ -57,7 +61,7 @@
 				margin-bottom: 60px;
 			}
 
-			@include laptop {
+			@include small-desktop {
 				margin-bottom: 100px;
 			}
 
