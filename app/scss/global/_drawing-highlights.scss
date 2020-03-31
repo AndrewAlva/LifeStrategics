@@ -122,7 +122,7 @@
 
 			path{
 				stroke-width: 3;
-				stroke-dashoffset: -435;
+				stroke-dashoffset: 435;
 				stroke-dasharray: 435;
 				@include transitions-ease(.4s);
 			}
@@ -155,7 +155,7 @@
 
 			path{
 				stroke-width: 3;
-				stroke-dashoffset: -1000;
+				stroke-dashoffset: 1000;
 				stroke-dasharray: 1000;
 				@include transitions-ease(.4s);
 			}
