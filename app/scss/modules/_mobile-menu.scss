@@ -9,12 +9,24 @@
 	@include flexDirection-Vert;
 	overflow: hidden;
 
+	@include small-laptop {
+		display: none;
+	}
+
 	&.opened{
 		& ~ #header-nav{
 			background-color: $dark-bg-color;
 
+			@include small-laptop {
+				background-color: $bg-color;
+			}
+
 			&:after {
 				display: none;
+
+				@include small-laptop {
+					display: block;
+				}
 			}
 		}
 	}
@@ -99,6 +111,10 @@
 
 			ul{
 				padding-left: 20%;
+
+				@include large-mobile {
+					padding-left: 0;
+				}
 			}
 
 			li:not(:last-child){
@@ -109,6 +125,10 @@
 				display: block;
 				width: 100%;
 				text-align: left;
+
+				._label{
+					font-size: 18px;
+				}
 
 				._icon{
 					opacity: .2;
