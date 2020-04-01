@@ -126,7 +126,11 @@
 @mixin flexDirection-Vert{
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
 	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 @mixin flexJustify{
@@ -195,4 +199,21 @@
 	-ms-flex-negative: $proportion;
 	flex-shrink: $proportion;
 }
+
+@mixin flexGrow($proportion){
+	-webkit-box-flex: $proportion;
+	-webkit-flex-grow: $proportion;
+	-moz-box-flex: $proportion;
+	-ms-flex-positive: $proportion;
+	flex-grow: $proportion;
+}
+
+@mixin flexStretch{
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-moz-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
 

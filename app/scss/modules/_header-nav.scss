@@ -74,7 +74,7 @@
 	.slogan-wrap{
 		display: none;
 
-		@include laptop {
+		@include small-laptop {
 			position: absolute;
 			display: inline-block;
 			width: 340px;
@@ -96,7 +96,7 @@
 	.pages-wrap{
 		display: none;
 
-		@include laptop {
+		@include small-laptop {
 			position: relative;
 			display: inline-block;
 			float: right;
@@ -114,6 +114,37 @@
 				text-decoration: none;
 				padding-right: 41px;
 				// border: 1px solid $red;
+			}
+		}
+	}
+
+
+	.mobile-menu-trigger{
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		@include small-laptop {
+			display: none;
+		}
+
+		.burger-btn{
+			padding-top: 6px;
+
+			._line{
+				display: block;
+				width: 32px;
+				height: 2px;
+				background-color: $body-text-color;
+
+				&:first-child{
+					margin-bottom: 6px;
+				}
+
+				&:last-child {
+					@include transform-origin(center,right);
+					@include scale(0.6,1);
+				}
 			}
 		}
 	}
