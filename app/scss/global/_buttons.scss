@@ -50,6 +50,22 @@
 		height: 100%;
 		@include transitions-ease(.4s);
 
+		&.left {
+			top: 2px;
+			right: auto;
+			left: 0;
+			width: 21px;
+
+			@include tablet {
+				top: 4px;
+				width: 24px;
+			}
+
+			@include small-desktop {
+				width: 28px;
+			}
+		}
+
 		&.right{
 			width: 16px;
 			@include translate(-5px, 0);
@@ -106,14 +122,14 @@
 
 	&:hover{
 		._icon{
-			&.right{
+			&.right, &.up{
 				@include translate(0,0);
 			}
 			&.down{
 				@include translate(0,5px);
 			}
-			&.up{
-				@include translate(0, 0);
+			&.left{
+				@include translate(-5px, 0);
 			}
 		}
 	}

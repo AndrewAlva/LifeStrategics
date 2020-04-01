@@ -63,6 +63,10 @@
 			}
 		}
 
+		.arrow-button{
+			padding-left: 50px;
+		}
+
 		._underlined{
 			position: relative;
 			display: inline-block;
@@ -84,6 +88,13 @@
 			&._blue:before{background-color: $blue;}
 			&._yellow:before{background-color: $yellow;}
 		}
+	}
+
+	.focus-info-block{
+		@include transitions-ease(.7s);
+		&.invisible{opacity: 0;}
+
+		.hide{display: none;}
 	}
 
 	.graph-wrap{
@@ -118,11 +129,11 @@
 				width: 488px;
 			}
 
-			&:hover{
+			&:hover, &.active{
 				.graph-circle{
 					opacity: .2;
 
-					&:hover{
+					&:hover, &.active{
 						opacity: 1;
 					}
 				}
@@ -283,11 +294,9 @@
 
 
 			&:hover, &.active{
-				z-index: 1;
 
 				._outline{
 					opacity: 1;
-					border-color: $yellow;
 					@include drawShadow(2px, 2px, 5px, 2px, #202020)
 				}
 
@@ -297,6 +306,17 @@
 
 				._line{
 					text-shadow: 0px 0px 4px $bg-color;
+				}
+			}
+
+			&:hover{
+				z-index: 2;
+			}
+
+			&.active{
+				z-index: 1;
+				._outline{
+					border-color: $yellow;
 				}
 			}
 		}
