@@ -13,6 +13,10 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
+    // Circles in "Focus" section interaction
+    var Focus_Circles = new Circles();
+    Focus_Circles.init();
+
 
     // Services list interactions
     var Landing_Services = new Services_List();

@@ -95,6 +95,3 @@ var Circles = function() {
 	}
 }
 
-
-var Focus_Circles = new Circles();
-Focus_Circles.init();
