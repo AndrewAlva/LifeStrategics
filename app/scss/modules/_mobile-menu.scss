@@ -8,12 +8,17 @@
 	@include flexIt;
 	@include flexDirection-Vert;
 	overflow: hidden;
+	@include transitions-ease(.6s);
+	@include translate(0, -100%);
 
 	@include small-laptop {
 		display: none;
 	}
 
 	&.opened{
+		@include transitions-ease(.9s);
+		@include translate(0, 0);
+
 		& ~ #header-nav{
 			background-color: $dark-bg-color;
 
@@ -80,6 +85,24 @@
 		width: 100%;
 		height: 100%;
 		overflow: scroll;
+
+		&::-webkit-scrollbar {
+			width: 1px;
+			border-radius: 1px;
+		}
+
+		&::-webkit-scrollbar-track {
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $blue;
+			outline: 1px solid $blue;
+
+			@include laptop {
+				outline-width: 1px;
+			}
+		}
 
 		.shadow-wrap{
 			z-index: 1;

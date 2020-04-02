@@ -150,5 +150,13 @@
 				}
 			}
 		}
+
+		&.opened {
+			.burger-btn{
+				._line:first-child{
+					@include scale(0,1);
+				}
+			}
+		}
 	}
 }

@@ -13,12 +13,16 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
+    // Mobile menu interactions
+    var landingMobileMenu = new Mobile_Menu();
+    landingMobileMenu.init();
+
     // Circles in "Focus" section interaction
-    var Focus_Circles = new Circles();
-    Focus_Circles.init();
+    var focusCircles = new Circles();
+    focusCircles.init();
 
 
     // Services list interactions
-    var Landing_Services = new Services_List();
-    Landing_Services.init();
+    var landingServices = new Services_List();
+    landingServices.init();
 }
