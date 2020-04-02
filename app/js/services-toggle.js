@@ -20,7 +20,7 @@ var Services_List = function() {
 
 
 		for (var i = 0; i < _self.text_wraps.length; i++) {
-			// Save element height, and convert it to 0 to "close" service
+			// Save each element height, and convert it to 0 to "close" each service
 			var _height = _self.text_wraps[i].querySelector('.inner-container').getBoundingClientRect().height;
 			_self.text_wraps[i].style.height = 0;
 			
@@ -35,7 +35,7 @@ var Services_List = function() {
 		}
 
 		// Show first service
-		_self.text_wraps[0].el.style.height = _self.text_wraps[0].height;
+		_self.text_wraps[0].el.style.height = _self.text_wraps[0].height + "px";
 	}
 
 	this.addListeners = function() {
