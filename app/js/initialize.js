@@ -13,11 +13,8 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
-    var circles = document.getElementsByClassName('graph-circle');
 
-    for (var i = 0; i < circles.length; i++) {
-    	circles[i].addEventListener("click", function(){
-    	// 	alert("circle clicked")
-    	})
-    }
+    // Services list interactions
+    var Landing_Services = new Services_List();
+    Landing_Services.init();
 }

@@ -130,7 +130,7 @@
 			}
 
 			@include desktop {
-				max-height: 300px;
+				// max-height: 300px;
 			}
 
 			._description{
@@ -193,7 +193,7 @@
 
 		&[data-show=false]{
 			.text-wrap{
-				max-height: 0px;
+				// height: 0;
 			}
 		}
 
@@ -209,7 +209,7 @@
 					&:after{@include rotate(360deg);}
 				}
 
-				.circle-open{
+				.circle-open, .circle-open-round, .circle-open-long{
 					svg path{
 						stroke-dashoffset: 0;
 					}

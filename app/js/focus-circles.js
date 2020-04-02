@@ -1,5 +1,5 @@
 var Circles = function() {
-	_self = this;
+	var _self = this;
 
 	this.index = 0;
 	this.blocks = document.getElementsByClassName('focus-info-block');

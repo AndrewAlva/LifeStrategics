@@ -1,10 +1,8 @@
-mixin service-card(title, opened, description, projectsMethods, peopleMethods)
-	.service-container(data-show="#{opened}")
-		.toggle-wrap
-			h2.h2 !{title}
-			.toggle-info-button
 
-		.text-wrap
+
+mixin service-card-content(description, projectsMethods, peopleMethods)
+	.text-wrap
+		.inner-container
 			._description.p2 #{description}
 
 			.profiles-container
@@ -23,26 +21,6 @@ mixin service-card(title, opened, description, projectsMethods, peopleMethods)
 							li(class="p3 #{n.color}")= n.name
 
 
-mixin service-card-content(description, projectsMethods, peopleMethods)
-	.text-wrap
-		._description.p2 #{description}
-
-		.profiles-container
-			._note.p3 Service delivery according to your profile.
-
-			.profile-wrap
-				._name.p2 For new and existing projects.
-				ul._methods
-					for n, i in projectsMethods
-						li(class="p3 #{n.color}")= n.name
-
-			.profile-wrap
-				._name.p2 For teams and people.
-				ul._methods
-					for n, i in peopleMethods
-						li(class="p3 #{n.color}")= n.name
-
-
 
 section#services-section.page-section.inner-padded
 	.ls-container
@@ -58,8 +36,8 @@ section#services-section.page-section.inner-padded
 							+hl-underline("#f6eb30")
 
 			.services-wrap.ls-col-21.offset-2.offset-md-5.ls-col-md-17.ls-col-lg-18.ls-col-xxl-17.offset-xxl-6
-				.service-container(data-show="false")
-					.toggle-wrap
+				.service-container(data-show="true")
+					.toggle-wrap(data-index="0")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Business
@@ -93,8 +71,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="true")
-					.toggle-wrap
+				.service-container(data-show="false")
+					.toggle-wrap(data-index="1")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Strategic
@@ -129,7 +107,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="2")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-round.lighter
 								span._text Value
@@ -164,7 +142,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="3")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Customer
@@ -199,7 +177,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="4")
 						h2.h2
 							| Marketing 
 							span.servicehl-animation.dw-highlight.circle-open-round.lifted
@@ -235,7 +213,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="5")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Marketing
@@ -270,7 +248,7 @@ section#services-section.page-section.inner-padded
 
 				
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="6")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
 								span._text Training
@@ -305,7 +283,7 @@ section#services-section.page-section.inner-padded
 
 				
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="7")
 						h2.h2
 							| Training on Creative Thinking for 
 							span.servicehl-animation.dw-highlight.circle-open-long
@@ -340,7 +318,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="8")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger
 								span._text Team Building
@@ -375,7 +353,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="9")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
 								span._text Change
@@ -410,7 +388,7 @@ section#services-section.page-section.inner-padded
 
 				
 				.service-container(data-show="false")
-					.toggle-wrap
+					.toggle-wrap(data-index="10")
 						h2.h2
 							| Facilitation for Product or Service 
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger.bolder
