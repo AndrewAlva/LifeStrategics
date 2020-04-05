@@ -3,7 +3,7 @@ var Mobile_Menu = function() {
 
 	this.opened = false;
 	this.initScrollPosition = 0;
-	this.pageScroll = document.getElementById('main-wrapper');
+	this.pageScroll = document.body;
 	this.transitionDuration = 900; // in ms
 
 	this.trigger = document.getElementById('mobile-menu-trigger');
@@ -54,10 +54,12 @@ var Mobile_Menu = function() {
 
 	this.lockPageScroll = function() {
 		setTimeout(function(){
-			_self.pageScroll.style.position = "fixed";
+			_self.pageScroll.style.height = "100%";
+			_self.pageScroll.style.overflow = "hidden";
 		}, this.transitionDuration);
 	}
 	this.unlockPageScroll = function() {
-		this.pageScroll.style.position = "absolute";
+		this.pageScroll.style.height = "";
+		this.pageScroll.style.overflow = "";
 	}
 }

@@ -92,3 +92,32 @@ ul{
 	}
 }
 
+
+//Special styles for smooth scroll
+	.js-fake-scroll{
+		pointer-events: none;
+	}
+
+	.js-scroll{
+		z-index: 2;
+		pointer-events: none;
+
+		.page-section{
+			pointer-events: auto;
+		}
+	}
+
+	// User on footer
+	.only-mobile{
+		@include small-laptop {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.landing-footer{
+			@include small-laptop {
+				pointer-events: none;
+			}
+		}
+	}
+

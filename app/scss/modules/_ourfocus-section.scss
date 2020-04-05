@@ -108,7 +108,10 @@
 		}
 
 		@include transitions-ease(.7s);
-		&.invisible{opacity: 0;}
+		&.invisible{
+			opacity: 0;
+			pointer-events: none;
+		}
 
 		.hide{
 			@include tablet {

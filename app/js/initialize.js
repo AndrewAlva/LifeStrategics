@@ -1,3 +1,7 @@
+// Global vars
+var PageSmoothScroll;
+
+
 // Trigger functions when the initial HTML document
 // has been completely loaded and parsed,
 // without waiting for stylesheets, images, and
@@ -25,4 +29,12 @@ window.onload = function() {
     // Services list interactions
     var landingServices = new Services_List();
     landingServices.init();
+
+
+    // Animiation frame loop at 60fps to enable "toTop()" function
+    RAF.init();
+
+    // Smooth scrolling
+    PageSmoothScroll = new SmoothScroll();
+    RAF.add(PageSmoothScroll);
 }

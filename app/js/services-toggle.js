@@ -52,6 +52,9 @@ var Services_List = function() {
 					_self.showService(_index);
 					_self.updateIndex(_index);
 				}
+
+				// Smooth Scroll resize
+				setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
 			});
 		}
 
@@ -62,6 +65,9 @@ var Services_List = function() {
 	this.resize = function(){
 		_self.getInfoHeight();
 		_self.updateHeight();
+
+		// Smooth Scroll resize
+		setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
 	}
 
 	this.getInfoHeight = function() {
