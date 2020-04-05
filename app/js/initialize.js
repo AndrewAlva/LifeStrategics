@@ -8,6 +8,8 @@ var PageSmoothScroll;
 // subframes to finish loading
 document.addEventListener('DOMContentLoaded', function() {
     // Do something
+    var clickScroll = new Scroll_To();
+    clickScroll.init();
 });
 
 
