@@ -38,7 +38,6 @@ var Mobile_Menu = function() {
 		this.container.classList.add('opened');
 
 		this.initScrollPosition = window.pageYOffset;
-		this.lockPageScroll();
 
 		this.opened = true;
 	}
@@ -46,20 +45,7 @@ var Mobile_Menu = function() {
 		this.trigger.classList.remove('opened');
 		this.container.classList.remove('opened');
 
-		this.unlockPageScroll();
 
 		this.opened = false;
-	}
-
-
-	this.lockPageScroll = function() {
-		setTimeout(function(){
-			_self.pageScroll.style.height = "100%";
-			_self.pageScroll.style.overflow = "hidden";
-		}, this.transitionDuration);
-	}
-	this.unlockPageScroll = function() {
-		this.pageScroll.style.height = "";
-		this.pageScroll.style.overflow = "";
 	}
 }
