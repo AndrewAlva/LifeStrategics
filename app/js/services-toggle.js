@@ -2,6 +2,7 @@ var Services_List = function() {
 	var _self = this;
 
 	this.index = 0;
+	this.opened = true;
 
 	this.triggers = document.getElementsByClassName('toggle-wrap');
 	this.text_wraps = [];
@@ -64,7 +65,7 @@ var Services_List = function() {
 
 	this.resize = function(){
 		_self.getInfoHeight();
-		_self.updateHeight();
+		if (_self.opened) _self.updateHeight();
 
 		// Smooth Scroll resize
 		setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
@@ -97,10 +98,14 @@ var Services_List = function() {
 	this.showService = function(index) {
 		_self.triggers[index].parentNode.setAttribute('data-show', true);
 		_self.text_wraps[index].el.style.height = _self.text_wraps[index].height + "px";
+
+		_self.opened = true;
 	}
 	this.hideService = function(index) {
 		_self.triggers[index].parentNode.setAttribute('data-show', false);
 		_self.text_wraps[index].el.style.height = 0;
+
+		_self.opened = false;
 	}
 }
 
