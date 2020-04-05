@@ -152,12 +152,24 @@
 				width: 488px;
 			}
 
-			&:hover, &.active{
+			&.active{
 				.graph-circle{
 					opacity: .2;
 
-					&:hover, &.active{
+					&.active{
 						opacity: 1;
+					}
+				}
+			}
+
+			&:hover{
+				@include small-laptop {
+					.graph-circle{
+						opacity: .2;
+
+						&:hover, &.active{
+							opacity: 1;
+						}
 					}
 				}
 			}
@@ -316,8 +328,7 @@
 			}
 
 
-			&:hover, &.active{
-
+			&.active{
 				._outline{
 					opacity: 1;
 					@include drawShadow(2px, 2px, 5px, 2px, #202020)
@@ -333,7 +344,21 @@
 			}
 
 			&:hover{
-				z-index: 2;
+				@include small-laptop {
+					z-index: 2;
+					._outline{
+						opacity: 1;
+						@include drawShadow(2px, 2px, 5px, 2px, #202020)
+					}
+
+					.h3{
+						opacity: 1;
+					}
+
+					._line{
+						text-shadow: 0px 0px 4px $bg-color;
+					}
+				}
 			}
 
 			&.active{

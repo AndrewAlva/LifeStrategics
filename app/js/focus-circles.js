@@ -1,6 +1,8 @@
 var Circles = function() {
 	var _self = this;
 
+	this.canShift = true;
+
 
 	// Circles interaction
 	this.index = 0;
@@ -37,12 +39,14 @@ var Circles = function() {
 		// Shift info triggers
 		for (var i = 0; i < _self.triggers.length; i++) {
 			_self.triggers[i].addEventListener('click', function() {
-				if (this.classList.contains('seb') && _self.index != 1) {
-					_self.shiftCircles('seb');
-				} else if (this.classList.contains('cps') && _self.index != 2) {
-					_self.shiftCircles('cps');
-				} else if (this.classList.contains('sc') && _self.index != 3) {
-					_self.shiftCircles('sc');
+				if (_self.canShift) {
+					if (this.classList.contains('seb') && _self.index != 1) {
+						_self.shiftCircles('seb');
+					} else if (this.classList.contains('cps') && _self.index != 2) {
+						_self.shiftCircles('cps');
+					} else if (this.classList.contains('sc') && _self.index != 3) {
+						_self.shiftCircles('sc');
+					}
 				}
 			});
 		}
@@ -50,7 +54,9 @@ var Circles = function() {
 		// Default info trigger
 		for (var i = 0; i < _self.defaultTriggers.length; i++) {
 			_self.defaultTriggers[i].addEventListener('click', function() {
-				_self.shiftCircles();
+				if (_self.canShift) {
+					_self.shiftCircles();
+				}
 			});
 		}
 
@@ -94,6 +100,8 @@ var Circles = function() {
 	}
 
 	this.switchBlocks = function(index) {
+		_self.canShift = false;
+
 		for (var i = 0; i < _self.blocks.length; i++) {
 			_self.blocks[i].classList.add('invisible');
 		}
@@ -105,6 +113,8 @@ var Circles = function() {
 
 			_self.blocks[index].querySelector('.wrap').classList.remove('hide');
 			_self.blocks[index].classList.remove('invisible');
+
+			_self.canShift = true;
 
 		}, _self.transitionDelay)
 	}
