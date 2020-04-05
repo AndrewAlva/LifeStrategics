@@ -89,12 +89,32 @@
 			&._yellow:before{background-color: $yellow;}
 		}
 	}
+	#focus-block_text-container{
+		@include mobile {
+			position: relative;
+			@include transitions-ease(.7s);
+		}
+	}
+	#graph-circles-container{
+		@include mobile {
+			@include transitions-ease(.7s);
+		}
+	}
 
 	.focus-info-block{
+		@include mobile {
+			position: absolute;
+			top: 0;
+		}
+
 		@include transitions-ease(.7s);
 		&.invisible{opacity: 0;}
 
-		.hide{display: none;}
+		.hide{
+			@include tablet {
+				display: none;
+			}
+		}
 	}
 
 	.graph-wrap{
@@ -118,11 +138,11 @@
 
 			@include tablet {
 				width: 310px;
+				pointer-events: none;
 			}
 
 			@include laptop {
 				width: 440px;
-				pointer-events: none;
 			}
 
 			@include small-desktop {
