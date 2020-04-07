@@ -39,4 +39,26 @@ window.onload = function() {
     // Smooth scrolling
     PageSmoothScroll = new SmoothScroll();
     RAF.add(PageSmoothScroll);
+
+
+    // General inview animation, linked with "Cascading" system
+    var inviewObjects = document.getElementsByClassName('motion-cascade');
+    for (var i = 0; i < inviewObjects.length; i++) {
+        var inview = InView(inviewObjects[i], function(isInView, data) {
+            if ((this.el.getBoundingClientRect().top - window.innerHeight) < 0) {
+                this.el.classList.add('animate');
+            } else {
+                this.el.classList.remove('animate');
+            }
+        })
+    }
 }
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,10 @@
 	
 	.section-name{
 		color: $blue;
+
+		span {
+			display: inline-block;
+		}
 	}
 
 	.content{
