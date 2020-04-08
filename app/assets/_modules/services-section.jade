@@ -1,5 +1,3 @@
-
-
 mixin service-card-content(description, projectsMethods, peopleMethods)
 	.text-wrap
 		.inner-container
@@ -25,13 +23,18 @@ mixin service-card-content(description, projectsMethods, peopleMethods)
 section#services-section.page-section.inner-padded
 	.ls-container
 		.ls-row
-			h4.p2.section-name.ls-col-22.offset-1 iii. What you'll get
+			h4.p2.section-name.ls-col-22.offset-1
+				span.motion-cascade(data-cascade="rotate-up" data-cascade-delay="0") iii. What you'll get
 
 			.title-wrap.ls-col-20.offset-2
-				h1.h1
-					|Our 
-					span.dw-highlight.underline#services-animation.drawn.long
-						span._text Services
+				h1.h1.motion-cascade
+					span.cascade-mask.inline-block
+						span(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") Our
+
+					span#services-animation.dw-highlight.underline.long
+						span._text.cascade-mask.inline-block
+							span(data-cascade="mask-up" data-cascade-delay="2" data-cascade-delay-mobile="2") Services
+						
 						span._scaleDown
 							+hl-underline("#f6eb30")
 

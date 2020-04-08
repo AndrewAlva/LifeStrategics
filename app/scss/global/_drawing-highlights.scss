@@ -16,11 +16,6 @@
 
 		path, line{
 			stroke-width: 6;
-
-			&:first-child{@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 0);}
-			&:nth-child(2){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 1);}
-			&:nth-child(3){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 2);}
-			&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, $underline-draw-speed * 3);}
 		}
 
 		._p-top{
@@ -64,10 +59,35 @@
 		&.long{
 			path, line {
 				// stroke-width: 3;
-				&:first-child{@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 0);}
-				&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 1);}
-				&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 2);}
-				&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, $underline-long-draw-speed * 3);}
+				
+			}
+		}
+
+		&.drawn{
+			path, line {
+				&:first-child{@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 0);}
+				&:nth-child(2){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 1);}
+				&:nth-child(3){@include trans-ease-delay($underline-draw-speed, $underline-draw-speed * 2);}
+				&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, $underline-draw-speed * 3);}
+			}
+
+			&.long{
+				path, line {
+					&:first-child{@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 0);}
+					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 1);}
+					&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, $underline-long-draw-speed * 2);}
+					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, $underline-long-draw-speed * 3);}
+				}
+			}
+
+			&#services-animation{
+				$services-drawing-data-cascade-delay: 2;
+				path, line{
+					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 2) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, ( ($underline-long-draw-speed * 3) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+				}
 			}
 		}
 	}

@@ -43,12 +43,24 @@ window.onload = function() {
 
     // General inview animation, linked with "Cascading" system
     var inviewObjects = document.getElementsByClassName('motion-cascade');
+
+    // Cascade animation timing values
     for (var i = 0; i < inviewObjects.length; i++) {
         var inview = InView(inviewObjects[i], function(isInView, data) {
             if ((this.el.getBoundingClientRect().top - window.innerHeight) < 0) {
                 this.el.classList.add('animate');
+
+                if(this.el.querySelector('#services-animation')) {
+                    this.el.querySelector('#services-animation').classList.add('drawn');
+                }
+
             } else {
                 this.el.classList.remove('animate');
+
+                if(this.el.querySelector('#services-animation')) {
+                    this.el.querySelector('#services-animation').classList.remove('drawn');
+                }
+
             }
         })
     }
