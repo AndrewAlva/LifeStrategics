@@ -1,16 +1,18 @@
 mixin how-bullet(index, name, width, offset, ...bullets)
-	div(class="bullet-row #{width} #{offset}")
+	div(class="motion-cascade bullet-row #{width} #{offset}")
 		h2.h1.name-wrap
-			span._index.h4.motion-cascade(data-cascade="rotate-up" data-cascade-delay="0") #{index}
-			|#{name}
+			span._index.h4(data-cascade="rotate-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{index}
+			span.cascade-mask.inline-block
+				span._name(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") #{name}
 
-		.line-wrap
+		.line-wrap(data-cascade="scale-x-left" data-cascade-delay="6" data-cascade-delay-mobile="6")
 
 		.bullets-wrap
 			ul.center-container
 				each bullet, index in bullets
 					- var fixedIndex = (index + 1)
-					li.p2.motion-cascade(data-cascade="rotate-up" data-cascade-delay=index data-cascade-delay-mobile=index) #{fixedIndex}. #{bullet}
+					- var cascadeIndex = (index + 9)
+					li.p2(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex) #{fixedIndex}. #{bullet}
 
 section#how-section.page-section.inner-padded
 	.ls-container
