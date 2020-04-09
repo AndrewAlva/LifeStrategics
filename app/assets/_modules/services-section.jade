@@ -1,22 +1,32 @@
 mixin service-card-content(description, projectsMethods, peopleMethods)
 	.text-wrap
 		.inner-container
-			._description.p2 #{description}
+			._description.p2
+				span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{description}
 
 			.profiles-container
-				._note.p3 Service delivery according to your profile.
+				//- ._note.p3
+					span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") Service delivery according to your profile.
 
 				.profile-wrap
-					._name.p2 For new and existing projects.
+					._name.p2
+						span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") For new and existing projects.
 					ul._methods
 						for n, i in projectsMethods
-							li(class="p3 #{n.color}")= n.name
+							- var cascadeIndex = i + 2
+
+							li(class="p3 #{n.color}")
+								span(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
 
 				.profile-wrap
-					._name.p2 For teams and people.
+					._name.p2
+						span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") For teams and people.
 					ul._methods
 						for n, i in peopleMethods
-							li(class="p3 #{n.color}")= n.name
+							- var cascadeIndex = i + 2
+
+							li(class="p3 #{n.color}")
+								span(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
 
 
 
@@ -39,8 +49,8 @@ section#services-section.page-section.inner-padded
 							+hl-underline("#f6eb30")
 
 			.services-wrap.ls-col-21.offset-2.offset-md-5.ls-col-md-17.ls-col-lg-18.ls-col-xxl-17.offset-xxl-6
-				.service-container(data-show="true")
-					.toggle-wrap(data-index="0")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="0" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Business
@@ -74,8 +84,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="1")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="1" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Strategic
@@ -109,8 +119,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="2")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="2" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-round.lighter
 								span._text Value
@@ -144,8 +154,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="3")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="3" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Customer
@@ -179,8 +189,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="4")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="4" data-cascade="slide-up")
 						h2.h2
 							| Marketing 
 							span.servicehl-animation.dw-highlight.circle-open-round.lifted
@@ -215,8 +225,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="5")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="5" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Marketing
@@ -250,8 +260,8 @@ section#services-section.page-section.inner-padded
 					)
 
 				
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="6")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="6" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
 								span._text Training
@@ -285,8 +295,8 @@ section#services-section.page-section.inner-padded
 					)
 
 				
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="7")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="7" data-cascade="slide-up")
 						h2.h2
 							| Training on Creative Thinking for 
 							span.servicehl-animation.dw-highlight.circle-open-long
@@ -320,8 +330,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="8")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="8" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger
 								span._text Team Building
@@ -355,8 +365,8 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="9")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="9" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
 								span._text Change
@@ -390,8 +400,8 @@ section#services-section.page-section.inner-padded
 					)
 
 				
-				.service-container(data-show="false")
-					.toggle-wrap(data-index="10")
+				.service-container.motion-cascade(data-show="false")
+					.toggle-wrap(data-index="10" data-cascade="slide-up")
 						h2.h2
 							| Facilitation for Product or Service 
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger.bolder

@@ -2,7 +2,7 @@ var Services_List = function() {
 	var _self = this;
 
 	this.index = 0;
-	this.opened = true;
+	this.opened = false;
 
 	this.triggers = document.getElementsByClassName('toggle-wrap');
 	this.text_wraps = [];
@@ -36,7 +36,7 @@ var Services_List = function() {
 		}
 
 		// Show first service
-		_self.text_wraps[0].el.style.height = _self.text_wraps[0].height + "px";
+		// _self.text_wraps[0].el.style.height = _self.text_wraps[0].height + "px";
 	}
 
 	this.addListeners = function() {

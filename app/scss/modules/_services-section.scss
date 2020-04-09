@@ -137,6 +137,7 @@
 
 			._description{
 				margin-bottom: 30px;
+				@include trans-ease-delay(1s, 0s);
 
 				@include tablet {
 					margin-bottom: 56px;
@@ -160,6 +161,7 @@
 
 					._name{
 						margin-bottom: 25px;
+						@include trans-ease-delay(1s, 0s);
 					}
 
 					._methods{
@@ -168,8 +170,9 @@
 							display: inline-block;
 							width: 50%;
 							min-width: 148px;
+							@include trans-ease-delay(1s, 0s);
 
-							&:before{
+							span:before{
 								content: '';
 								position: relative;
 								display: inline-block;
@@ -184,9 +187,9 @@
 								}
 							}
 
-							&.blue:before{background-color: $blue;}
-							&.yellow:before{background-color: $yellow;}
-							&.red:before{background-color: $red;}
+							&.blue span:before{background-color: $blue;}
+							&.yellow span:before{background-color: $yellow;}
+							&.red span:before{background-color: $red;}
 						}
 					}
 				}
@@ -196,6 +199,23 @@
 		&[data-show=false]{
 			.text-wrap{
 				// height: 0;
+
+				._description {
+					opacity: 0;
+				}
+
+				.profile-wrap {
+					._name{
+						opacity: 0;
+					}
+
+					._methods li{
+						opacity: 0;
+						-webkit-transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
+						-moz-transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
+						transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
+					}
+				}
 			}
 		}
 
@@ -222,6 +242,34 @@
 						@include scale(0.7, 1);
 
 						&:before{@include rotate(0deg);}
+					}
+				}
+			}
+
+			.text-wrap{
+				._description {
+					@include trans-ease-delay(1s, $cascade-interval*2);
+					opacity: 1;
+				}
+
+				.profile-wrap {
+					._name{
+						@include trans-ease-delay(1s, $cascade-interval*3);
+						opacity: 1;
+					}
+
+					._methods li{
+						opacity: 1;
+						-webkit-transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
+						-moz-transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
+						transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
+
+						&:first-child{@include trans-ease-delay(1s, $cascade-interval*4);}
+						&:nth-child(2){@include trans-ease-delay(1s, $cascade-interval*5);}
+						&:nth-child(3){@include trans-ease-delay(1s, $cascade-interval*6);}
+						&:nth-child(4){@include trans-ease-delay(1s, $cascade-interval*7);}
+						&:nth-child(5){@include trans-ease-delay(1s, $cascade-interval*8);}
+						&:nth-child(6){@include trans-ease-delay(1s, $cascade-interval*9);}
 					}
 				}
 			}
