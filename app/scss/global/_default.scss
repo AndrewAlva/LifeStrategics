@@ -101,6 +101,7 @@ ul{
 	.js-scroll{
 		z-index: 2;
 		pointer-events: none;
+		position: relative;
 
 		.page-section{
 			pointer-events: auto;
@@ -112,6 +113,8 @@ ul{
 		@include small-laptop {
 			opacity: 0;
 			pointer-events: none;
+
+			&.not-scroll-js{height: 0;}
 		}
 
 		.landing-footer{

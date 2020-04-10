@@ -89,6 +89,16 @@
 					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, ( ($underline-long-draw-speed * 3) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
 				}
 			}
+
+			&#talks-animation{
+				$talks-drawing-data-cascade-delay: 4;
+				path, line{
+					&:first-child{@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 0) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(2){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 1) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(3){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 2) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, ( ($underline-draw-speed * 3) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+				}
+			}
 		}
 	}
 

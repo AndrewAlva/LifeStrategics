@@ -1,9 +1,14 @@
 .footer-fixed-holder{
-	z-index: 1;
-	position: relative;
-	width: 100%;
+	display: none;
+
+	@include tablet {
+	}
 
 	@include small-laptop {
+		display: block;
+		z-index: 1;
+		position: relative;
+		width: 100%;
 		height: 435px;
 	}
 

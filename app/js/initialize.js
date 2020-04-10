@@ -37,8 +37,10 @@ window.onload = function() {
     RAF.init();
 
     // Smooth scrolling
-    PageSmoothScroll = new SmoothScroll();
-    RAF.add(PageSmoothScroll);
+    if(window.innerWidth >= 1025) {
+        PageSmoothScroll = new SmoothScroll();
+        RAF.add(PageSmoothScroll);
+    }
 
 
     // General inview animation, linked with "Cascading" system
@@ -54,11 +56,19 @@ window.onload = function() {
                     this.el.querySelector('#services-animation').classList.add('drawn');
                 }
 
+                if(this.el.querySelector('#talks-animation')) {
+                    this.el.querySelector('#talks-animation').classList.add('drawn');
+                }
+
             } else {
                 this.el.classList.remove('animate');
 
                 if(this.el.querySelector('#services-animation')) {
                     this.el.querySelector('#services-animation').classList.remove('drawn');
+                }
+
+                if(this.el.querySelector('#talks-animation')) {
+                    this.el.querySelector('#talks-animation').classList.remove('drawn');
                 }
 
             }

@@ -23,6 +23,10 @@
 		._line{
 			display: block;
 		}
+
+		span[data-cascade]{
+			white-space: pre;
+		}
 	}
 }
 
@@ -79,7 +83,7 @@
 
 		._index{
 			position: absolute;
-			top: .85em;
+			top: .71em;
 			right: 101.3%;
 			line-height: 1em;
 			color: $blue;

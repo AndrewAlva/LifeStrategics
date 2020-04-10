@@ -25,9 +25,16 @@ var SmoothScroll = function(args){
 		this.bindAll();
 		this.setInitial();
 		this.addListeners();
+
 		setTimeout(function(){
 			_self.setFakeHeight();
-		},1000)
+		},1000);
+
+		// Remove special classes from not-scroll-js elements
+		var _notScrollElements = document.getElementsByClassName('not-scroll-js');
+		for (var i = 0; i < _notScrollElements.length; i++) {
+			_notScrollElements[i].classList.remove('not-scroll-js');
+		}
 	}
 
 	this.bindAll = function(){
