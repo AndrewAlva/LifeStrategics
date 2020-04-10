@@ -1,8 +1,8 @@
 /* mbrt. Cascade Styling */
 
 /////// Mixins para detectar mobile y desktop
-	$cascade-mobile-max-width: 1024px;
-	$cascade-desktop-min-width: 1025px;
+	$cascade-mobile-max-width: 575px;
+	$cascade-desktop-min-width: 576px;
 
 	@mixin cascade-mobile {
 		@media (max-width: #{$cascade-mobile-max-width}) {
