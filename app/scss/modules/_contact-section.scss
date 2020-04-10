@@ -27,9 +27,14 @@
 		._line{
 			display: block;
 		}
+
+		span[data-cascade]{
+			white-space: pre;
+		}
 	}
 
 	.cta-wrap{
+		opacity: 0;
 		@include mobile {
 			@include flexWrap;
 		}

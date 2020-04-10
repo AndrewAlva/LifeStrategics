@@ -60,6 +60,10 @@ window.onload = function() {
                     this.el.querySelector('#talks-animation').classList.add('drawn');
                 }
 
+                if(this.el.querySelector('#help-animation')) {
+                    this.el.querySelector('#help-animation').classList.add('drawn');
+                }
+
             } else {
                 this.el.classList.remove('animate');
 
@@ -69,6 +73,10 @@ window.onload = function() {
 
                 if(this.el.querySelector('#talks-animation')) {
                     this.el.querySelector('#talks-animation').classList.remove('drawn');
+                }
+
+                if(this.el.querySelector('#help-animation')) {
+                    this.el.querySelector('#help-animation').classList.remove('drawn');
                 }
 
             }
