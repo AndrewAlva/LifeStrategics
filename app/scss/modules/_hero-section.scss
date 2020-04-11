@@ -1,9 +1,13 @@
 #hero-section{
 	height: 100vh;
-	min-height: 520px;
+	min-height: 580px;
 	border-bottom: 1px solid $blue;
 
 	background-color: $bg-color;
+
+	@media (min-width: 350px) {
+		min-height: 520px;
+	}
 
 	@include tablet {
 		min-height: 700px;
@@ -82,7 +86,7 @@
 		.intro-wrap{
 			position: relative;
 			width: 42.26%;
-			margin-bottom: 60px;
+			margin-bottom: 40px;
 
 			@include large-mobile {
 				margin-bottom: 0;

@@ -1,11 +1,11 @@
 section#contact-section.page-section.inner-padded
-	.ls-container
+	.ls-container.motion-cascade
 		.ls-row
 			h4.p2.section-name.ls-col-22.offset-1
-				span.motion-cascade(data-cascade="rotate-up") vi. Reach us
+				span(data-cascade="rotate-up") vi. Reach us
 
 			.title-wrap.ls-col-22.offset-1.ls-col-xs-18.offset-xs-2.ls-col-xxl-17.offset-lg-2
-				h1.h1.motion-cascade
+				h1.h1
 					span.cascade-mask.inline-block 
 							span(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") Need 
 
@@ -55,15 +55,27 @@ section#contact-section.page-section.inner-padded
 		.ls-row
 			.cta-wrap.ls-col-22.offset-1.ls-col-xs-20.offset-xs-2.ls-col-lg-20.offset-lg-2
 				figure._arrow
-					i._body
-					i._chevron
+					i._body(data-cascade="contact-arrow-body" data-cascade-delay-mobile="18" data-cascade-delay="18")
+					i._chevron(data-cascade="contact-arrow-chevron" data-cascade-delay-mobile="18" data-cascade-delay="18")
 						+chevron-down("#f7f7f7")
 						+chevron-right("#f7f7f7")
 
 
 				a(href="mailto:hello@lifestrategics.com" target="_blank" rel="nofollow noopener noreferrer")._mail-btn.h2
 					span#hello-animation.dw-highlight.circle-open
-						span._text hello
+						span._text.cascade-mask.inline-block
+							span(data-cascade="mask-up" data-cascade-delay="23" data-cascade-delay-mobile="23") hello
+
 						+hl-circle-open("#e93f3b")
-					| @lifestrategics.com
+
+
+					span.cascade-mask.inline-block
+						span(data-cascade="mask-up" data-cascade-delay="24" data-cascade-delay-mobile="24") @lifestrategics.com
+
+
+
+
+
+
+
 

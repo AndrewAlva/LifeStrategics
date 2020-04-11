@@ -118,6 +118,71 @@
 		}
 	}
 
+	@keyframes contact-arrow-body-mobile {
+		0%   {
+			@include scale(1, 0);
+		}
+
+		1%   {
+			@include scale(1, 0);
+		}
+
+		3%   {
+			opacity: 1;
+			@include scale(1, 0);
+		}
+
+		100% {
+			@include scale(1, 1);
+		}
+	}
+	@keyframes contact-arrow-body {
+		0%   {
+			@include scale(0.36, 1);
+		}
+
+		1%   {
+			@include scale(0.36, 1);
+		}
+
+		3%   {
+			@include scale(0.36, 1);
+		}
+
+		100% {
+			opacity: 1;
+			@include scale(1, 1);
+		}
+	}
+
+
+	@keyframes contact-arrow-chevron-mobile {
+		0%   {
+			@include translate3d(0, -270%, 0);
+		}
+
+		1%   {
+			@include translate3d(0, -270%, 0);
+		}
+
+		100% {
+			@include translate3d(0, 0, 0);
+		}
+	}
+	@keyframes contact-arrow-chevron {
+		0%   {
+			@include translate3d(-320%, 0, 0);
+		}
+
+		1%   {
+			@include translate3d(-320%, 0, 0);
+		}
+
+		100% {
+			@include translate3d(0, 0, 0);
+		}
+	}
+
 
 /////// Estilos
 
@@ -186,6 +251,29 @@
 	@include ani-name(scale-x);
 }
 
+
+[data-cascade="contact-arrow-body"]{opacity: 0;}
+[data-cascade="contact-arrow-body"].animate, .animate [data-cascade="contact-arrow-body"]{
+	@include transform-origin(top, center);
+	opacity: 1;
+	@include ani-name(contact-arrow-body-mobile);
+	
+	@include tablet {
+		@include transform-origin(left, center);
+		@include ani-name(contact-arrow-body);
+	}
+}
+
+[data-cascade="contact-arrow-chevron"]{opacity: 0;}
+[data-cascade="contact-arrow-chevron"].animate, .animate [data-cascade="contact-arrow-chevron"]{
+	opacity: 1;
+	@include ani-name(contact-arrow-chevron-mobile);
+	
+	@include tablet {
+		@include ani-name(contact-arrow-chevron);
+	}
+}
+
 [data-cascade="aladdin"]{
 	animation-duration: 600ms;
 	opacity: 0;
@@ -222,6 +310,11 @@
 	[data-cascade-delay-mobile="21"]{animation-delay: $cascade_interval * 21;}
 	[data-cascade-delay-mobile="22"]{animation-delay: $cascade_interval * 22;}
 	[data-cascade-delay-mobile="23"]{animation-delay: $cascade_interval * 23;}
+	[data-cascade-delay-mobile="24"]{animation-delay: $cascade_interval * 24;}
+	[data-cascade-delay-mobile="25"]{animation-delay: $cascade_interval * 25;}
+	[data-cascade-delay-mobile="26"]{animation-delay: $cascade_interval * 26;}
+	[data-cascade-delay-mobile="27"]{animation-delay: $cascade_interval * 27;}
+	[data-cascade-delay-mobile="28"]{animation-delay: $cascade_interval * 28;}
 	
 	[data-cascade-delay-mobile="0"]{
 		&.firstload-mobile, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
@@ -321,6 +414,11 @@
 	[data-aladdin-delay-mobile="21"]{animation-delay: $aladdin_interval * 21;}
 	[data-aladdin-delay-mobile="22"]{animation-delay: $aladdin_interval * 22;}
 	[data-aladdin-delay-mobile="23"]{animation-delay: $aladdin_interval * 23;}
+	[data-aladdin-delay-mobile="24"]{animation-delay: $aladdin_interval * 24;}
+	[data-aladdin-delay-mobile="25"]{animation-delay: $aladdin_interval * 25;}
+	[data-aladdin-delay-mobile="26"]{animation-delay: $aladdin_interval * 26;}
+	[data-aladdin-delay-mobile="27"]{animation-delay: $aladdin_interval * 27;}
+	[data-aladdin-delay-mobile="28"]{animation-delay: $aladdin_interval * 28;}
 	
 	[data-aladdin-delay-mobile="0"]{
 		&.firstload-mobile, &.firstload{animation-delay: $cascade_firstload_mobile + ($aladdin_interval * 0);}
@@ -443,6 +541,11 @@
 	[data-cascade-delay="21"]{animation-delay: $cascade_interval * 21;}
 	[data-cascade-delay="22"]{animation-delay: $cascade_interval * 22;}
 	[data-cascade-delay="23"]{animation-delay: $cascade_interval * 23;}
+	[data-cascade-delay="24"]{animation-delay: $cascade_interval * 24;}
+	[data-cascade-delay="25"]{animation-delay: $cascade_interval * 25;}
+	[data-cascade-delay="26"]{animation-delay: $cascade_interval * 26;}
+	[data-cascade-delay="27"]{animation-delay: $cascade_interval * 27;}
+	[data-cascade-delay="28"]{animation-delay: $cascade_interval * 28;}
 	
 	[data-cascade-delay="0"]{
 		&.firstload-desk, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
@@ -542,6 +645,11 @@
 	[data-aladdin-delay="21"]{animation-delay: $aladdin_interval * 21;}
 	[data-aladdin-delay="22"]{animation-delay: $aladdin_interval * 22;}
 	[data-aladdin-delay="23"]{animation-delay: $aladdin_interval * 23;}
+	[data-aladdin-delay="24"]{animation-delay: $aladdin_interval * 24;}
+	[data-aladdin-delay="25"]{animation-delay: $aladdin_interval * 25;}
+	[data-aladdin-delay="26"]{animation-delay: $aladdin_interval * 26;}
+	[data-aladdin-delay="27"]{animation-delay: $aladdin_interval * 27;}
+	[data-aladdin-delay="28"]{animation-delay: $aladdin_interval * 28;}
 	
 	[data-aladdin-delay="0"]{
 		&.firstload-desk, &.firstload{animation-delay: $cascade_firstload_desktop + ($aladdin_interval * 0);}
