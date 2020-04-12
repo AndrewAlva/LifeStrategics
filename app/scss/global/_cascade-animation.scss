@@ -120,65 +120,94 @@
 
 	@keyframes contact-arrow-body-mobile {
 		0%   {
-			@include scale(1, 0);
+			@include scale(1, 0.3);
 		}
 
 		1%   {
-			@include scale(1, 0);
+			@include scale(1, 0.3);
 		}
 
 		3%   {
 			opacity: 1;
-			@include scale(1, 0);
+			@include scale(1, 0.3);
 		}
 
 		100% {
+			// @include scale(1, 0.3);
 			@include scale(1, 1);
+		}
+	}
+	@keyframes contact-arrow-body-tablet {
+		0%   {
+			@include translate3d(-13vw, 0,0);
+		}
+
+		1%   {
+			@include translate3d(-13vw, 0,0);
+		}
+
+		100% {
+			opacity: 1;
+			// @include translate3d(-13vw, 0,0);
+			@include translate3d(0, 0,0);
 		}
 	}
 	@keyframes contact-arrow-body {
 		0%   {
-			@include scale(0.36, 1);
+			@include translate3d(-25vw, 0,0);
 		}
 
 		1%   {
-			@include scale(0.36, 1);
-		}
-
-		3%   {
-			@include scale(0.36, 1);
+			@include translate3d(-25vw, 0,0);
 		}
 
 		100% {
 			opacity: 1;
-			@include scale(1, 1);
+			// @include translate3d(-25vw, 0,0);
+			@include translate3d(0, 0,0);
 		}
 	}
 
 
 	@keyframes contact-arrow-chevron-mobile {
 		0%   {
-			@include translate3d(0, -270%, 0);
+			@include translate3d(0, -185%, 0);
 		}
 
 		1%   {
-			@include translate3d(0, -270%, 0);
+			@include translate3d(0, -185%, 0);
 		}
 
 		100% {
+			// @include translate3d(0, -185%, 0);
+			@include translate3d(0, 0, 0);
+		}
+	}
+	@keyframes contact-arrow-chevron-tablet {
+		0%   {
+			@include translate3d(-13vw, 0, 0);
+		}
+
+		1%   {
+			@include translate3d(-13vw, 0, 0);
+		}
+
+		100% {
+			// @include translate3d(-13vw, 0, 0);
 			@include translate3d(0, 0, 0);
 		}
 	}
 	@keyframes contact-arrow-chevron {
 		0%   {
-			@include translate3d(-320%, 0, 0);
+			@include translate3d(-25vw, 0, 0);
 		}
 
 		1%   {
-			@include translate3d(-320%, 0, 0);
+			@include translate3d(-25vw, 0, 0);
 		}
 
 		100% {
+			// @include translate3d(-25vw, 0, 0);
 			@include translate3d(0, 0, 0);
 		}
 	}
@@ -260,6 +289,10 @@
 	
 	@include tablet {
 		@include transform-origin(left, center);
+		@include ani-name(contact-arrow-body-tablet);
+	}
+
+	@include laptop {
 		@include ani-name(contact-arrow-body);
 	}
 }
@@ -270,6 +303,10 @@
 	@include ani-name(contact-arrow-chevron-mobile);
 	
 	@include tablet {
+		@include ani-name(contact-arrow-chevron-tablet);
+	}
+
+	@include laptop {
 		@include ani-name(contact-arrow-chevron);
 	}
 }
