@@ -352,6 +352,14 @@
 	[data-cascade-delay-mobile="26"]{animation-delay: $cascade_interval * 26;}
 	[data-cascade-delay-mobile="27"]{animation-delay: $cascade_interval * 27;}
 	[data-cascade-delay-mobile="28"]{animation-delay: $cascade_interval * 28;}
+	[data-cascade-delay-mobile="29"]{animation-delay: $cascade_interval * 29;}
+	[data-cascade-delay-mobile="30"]{animation-delay: $cascade_interval * 30;}
+	[data-cascade-delay-mobile="31"]{animation-delay: $cascade_interval * 31;}
+	[data-cascade-delay-mobile="32"]{animation-delay: $cascade_interval * 32;}
+	[data-cascade-delay-mobile="33"]{animation-delay: $cascade_interval * 33;}
+	[data-cascade-delay-mobile="34"]{animation-delay: $cascade_interval * 34;}
+	[data-cascade-delay-mobile="35"]{animation-delay: $cascade_interval * 35;}
+	[data-cascade-delay-mobile="36"]{animation-delay: $cascade_interval * 36;}
 	
 	[data-cascade-delay-mobile="0"]{
 		&.firstload-mobile, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
@@ -583,6 +591,14 @@
 	[data-cascade-delay="26"]{animation-delay: $cascade_interval * 26;}
 	[data-cascade-delay="27"]{animation-delay: $cascade_interval * 27;}
 	[data-cascade-delay="28"]{animation-delay: $cascade_interval * 28;}
+	[data-cascade-delay="29"]{animation-delay: $cascade_interval * 29;}
+	[data-cascade-delay="30"]{animation-delay: $cascade_interval * 30;}
+	[data-cascade-delay="31"]{animation-delay: $cascade_interval * 31;}
+	[data-cascade-delay="32"]{animation-delay: $cascade_interval * 32;}
+	[data-cascade-delay="33"]{animation-delay: $cascade_interval * 33;}
+	[data-cascade-delay="34"]{animation-delay: $cascade_interval * 34;}
+	[data-cascade-delay="35"]{animation-delay: $cascade_interval * 35;}
+	[data-cascade-delay="36"]{animation-delay: $cascade_interval * 36;}
 	
 	[data-cascade-delay="0"]{
 		&.firstload-desk, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
