@@ -85,6 +85,8 @@
 			left: 0; right: 0;
 			text-align: center;
 
+			._blue, ._yellow, ._red{@include transitions-ease(.4s);}
+
 			._blue{color: $blue;}
 			._yellow{color: $yellow;}
 			._red{color: $red;}
@@ -92,6 +94,16 @@
 			._dot{
 				display: inline-block;
 				margin: 0 8px;
+			}
+		}
+
+		&.on{
+			._blue, ._yellow, ._red{
+				opacity: .4;
+
+				&.on{
+					opacity: 1;
+				}
 			}
 		}
 	}

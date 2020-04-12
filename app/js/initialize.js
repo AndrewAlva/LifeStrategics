@@ -82,6 +82,11 @@ window.onload = function() {
             }
         })
     }
+
+
+    // Slogan highlighting interaction
+    var LandingSlogan = new Slogan();
+    LandingSlogan.init();
 }
 
 
