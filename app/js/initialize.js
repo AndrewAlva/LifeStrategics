@@ -7,9 +7,17 @@ var PageSmoothScroll;
 // without waiting for stylesheets, images, and
 // subframes to finish loading
 document.addEventListener('DOMContentLoaded', function() {
-    // Do something
+    // Mobile menu interactions
+    var landingMobileMenu = new Mobile_Menu();
+    landingMobileMenu.init();
+
+    
     var clickScroll = new Scroll_To();
     clickScroll.init();
+
+    // Slogan highlighting interaction
+    var LandingSlogan = new Slogan();
+    LandingSlogan.init();
 });
 
 
@@ -19,9 +27,8 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
-    // Mobile menu interactions
-    var landingMobileMenu = new Mobile_Menu();
-    landingMobileMenu.init();
+    document.getElementById('hero-section').classList.add('animate');
+    document.getElementById('lead-animation').classList.add('drawn');
 
     // Circles in "Focus" section interaction
     var focusCircles = new Circles();
@@ -83,10 +90,6 @@ window.onload = function() {
         })
     }
 
-
-    // Slogan highlighting interaction
-    var LandingSlogan = new Slogan();
-    LandingSlogan.init();
 }
 
 

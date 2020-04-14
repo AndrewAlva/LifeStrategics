@@ -55,7 +55,9 @@ var Services_List = function() {
 				}
 
 				// Smooth Scroll resize
-				setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
+				if (PageSmoothScroll != undefined) {
+					setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
+				}
 			});
 		}
 
@@ -68,7 +70,9 @@ var Services_List = function() {
 		if (_self.opened) _self.updateHeight();
 
 		// Smooth Scroll resize
-		setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
+		if (PageSmoothScroll != undefined) {
+			setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
+		}
 	}
 
 	this.getInfoHeight = function() {
