@@ -27,8 +27,7 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
-    document.getElementById('hero-section').classList.add('animate');
-    document.getElementById('lead-animation').classList.add('drawn');
+    Preloader.init();
 
     // Circles in "Focus" section interaction
     var focusCircles = new Circles();

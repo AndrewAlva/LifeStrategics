@@ -22,7 +22,7 @@
 	}
 
 	@include desktop {
-		min-height: 900px;
+		// min-height: 900px;
 	}
 
 	.title-wrap{
@@ -41,7 +41,7 @@
 
 
 		@include desktop {
-			padding-top: 100px;
+			// padding-top: 100px;
 		}
 
 		.h1{
@@ -85,7 +85,7 @@
 		}
 
 		@include small-desktop {
-			bottom: 100px;
+			// bottom: 100px;
 		}
 
 		.intro-wrap{

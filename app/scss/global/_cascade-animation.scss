@@ -76,6 +76,17 @@
 			opacity: 1;
 		}
 	}
+	@keyframes slide-down {
+		0%		{
+			@include translate3d(0, -40px, 0);
+			opacity: 0;
+		}
+		
+		100%	{
+			@include translate3d(0,0,0);
+			opacity: 1;
+		}
+	}
 	@keyframes stretch-up {
 		0%   {
 			-webkit-transform: scaleY(1.2) translate3d(0, 40px, 0);
@@ -260,6 +271,11 @@
 	opacity: 1;
 	@include ani-name(slide-up-long);
 }
+[data-cascade="slide-down"]{opacity: 0;}
+[data-cascade="slide-down"].animate, .animate [data-cascade="slide-down"]{
+	opacity: 1;
+	@include ani-name(slide-down);
+}
 [data-cascade="stretch-up"]{opacity: 0;}
 [data-cascade="stretch-up"].animate, .animate [data-cascade="stretch-up"]{
 	@include transform-origin(top, left);
@@ -360,6 +376,10 @@
 	[data-cascade-delay-mobile="34"]{animation-delay: $cascade_interval * 34;}
 	[data-cascade-delay-mobile="35"]{animation-delay: $cascade_interval * 35;}
 	[data-cascade-delay-mobile="36"]{animation-delay: $cascade_interval * 36;}
+	[data-cascade-delay-mobile="37"]{animation-delay: $cascade_interval * 37;}
+	[data-cascade-delay-mobile="38"]{animation-delay: $cascade_interval * 38;}
+	[data-cascade-delay-mobile="39"]{animation-delay: $cascade_interval * 39;}
+	[data-cascade-delay-mobile="40"]{animation-delay: $cascade_interval * 40;}
 	
 	[data-cascade-delay-mobile="0"]{
 		&.firstload-mobile, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
@@ -599,6 +619,10 @@
 	[data-cascade-delay="34"]{animation-delay: $cascade_interval * 34;}
 	[data-cascade-delay="35"]{animation-delay: $cascade_interval * 35;}
 	[data-cascade-delay="36"]{animation-delay: $cascade_interval * 36;}
+	[data-cascade-delay="37"]{animation-delay: $cascade_interval * 37;}
+	[data-cascade-delay="38"]{animation-delay: $cascade_interval * 38;}
+	[data-cascade-delay="39"]{animation-delay: $cascade_interval * 39;}
+	[data-cascade-delay="40"]{animation-delay: $cascade_interval * 40;}
 	
 	[data-cascade-delay="0"]{
 		&.firstload-desk, &.firstload{animation-delay: $preloader_trans_duration + ($cascade_interval * 0);}
