@@ -1,7 +1,7 @@
 var Scroll_To = function() {
 	var _self = this;
 
-	this.cof = 0.1;
+	this.cof = 0.05;
 
 	this.currentPosition = 0;
 	this.displacement = 0;
@@ -73,7 +73,7 @@ var Scroll_To = function() {
 
 		_self.interpolatedScrollPosition = _self.currentPosition;
 		_self.scrollSpeed = (_self.newPosition - _self.currentPosition ) * _self.cof;
-		if ( Math.abs(_self.scrollSpeed) < 1 ) _self.scrollSpeed = _self.scrollSpeed / Math.abs(_self.scrollSpeed);
+		// if ( Math.abs(_self.scrollSpeed) < 1 ) _self.scrollSpeed = _self.scrollSpeed / Math.abs(_self.scrollSpeed);
 
 		if (_self.displacement < 1 && _self.displacement > -1) {
 			_self.stopInterval();

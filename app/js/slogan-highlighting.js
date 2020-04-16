@@ -20,19 +20,35 @@ var Slogan = function() {
 	this.setTriggers = function(){
 		// Default triggers
 		_self.defaultTriggers[0] = document.getElementById('hero-section');
+		var footers = document.getElementsByClassName('landing-footer');
+		for (var i = 0; i < footers.length; i++) {
+			_self.defaultTriggers.push(footers[i]);
+		}
 
 		// Blue triggers
 		_self.blueTriggers[0] = document.getElementById('ourfocus-section');
 		_self.blueTriggers[1] = document.getElementById('how-section');
 		_self.blueTriggers[2] = document.getElementById('events-section');
+		var blue_links = document.getElementsByClassName('slogan-highlight-blue');
+		for (var i = 0; i < blue_links.length; i++) {
+			_self.blueTriggers.push(blue_links[i]);
+		}
 
 
 		// Yellow triggers
 		_self.yellowTriggers[0] = document.getElementById('services-section');
 		_self.yellowTriggers[1] = document.getElementById('clients-section');
+		var yellow_links = document.getElementsByClassName('slogan-highlight-yellow');
+		for (var i = 0; i < yellow_links.length; i++) {
+			_self.yellowTriggers.push(yellow_links[i]);
+		}
 
 		// Red triggers
 		_self.redTriggers[0] = document.getElementById('contact-section');
+		var red_links = document.getElementsByClassName('slogan-highlight-red');
+		for (var i = 0; i < red_links.length; i++) {
+			_self.redTriggers.push(red_links[i]);
+		}
 	}
 
 	this.addListeners = function(){
@@ -45,24 +61,36 @@ var Slogan = function() {
 
 		// Blue triggers
 		for (var i = 0; i < _self.blueTriggers.length; i++) {
-		_self.blueTriggers[i].addEventListener('mouseenter', function(){
-			_self.shiftTo('blue');
-		});
-	}
+			_self.blueTriggers[i].addEventListener('mouseenter', function(){
+				_self.shiftTo('blue');
+			});
+
+			_self.blueTriggers[i].addEventListener('mouseleave', function(){
+				_self.shiftTo('default');
+			});
+		}
 
 		// Yellow triggers
 		for (var i = 0; i < _self.yellowTriggers.length; i++) {
-		_self.yellowTriggers[i].addEventListener('mouseenter', function(){
-			_self.shiftTo('yellow');
-		});
-	}
+			_self.yellowTriggers[i].addEventListener('mouseenter', function(){
+				_self.shiftTo('yellow');
+			});
+
+			_self.yellowTriggers[i].addEventListener('mouseleave', function(){
+				_self.shiftTo('default');
+			});
+		}
 
 		// Red triggers
 		for (var i = 0; i < _self.redTriggers.length; i++) {
-		_self.redTriggers[i].addEventListener('mouseenter', function(){
-			_self.shiftTo('red');
-		});
-	}
+			_self.redTriggers[i].addEventListener('mouseenter', function(){
+				_self.shiftTo('red');
+			});
+
+			_self.redTriggers[i].addEventListener('mouseleave', function(){
+				_self.shiftTo('default');
+			});
+		}
 
 	}
 
@@ -102,6 +130,7 @@ var Slogan = function() {
 	}
 
 	this.highlightRed = function(){
+		// console.log('red triggered!');
 		_self.red.classList.add('on');
 		_self.container.classList.add('on');
 
@@ -111,6 +140,7 @@ var Slogan = function() {
 
 
 	this.returnToDefault = function(){
+		// console.log('returnToDefault');
 		_self.container.classList.remove('on');
 		_self.blue.classList.remove('on');
 		_self.yellow.classList.remove('on');
