@@ -34,7 +34,7 @@
 		background: -webkit-linear-gradient(bottom, rgba(38,38,39,0) 10%, rgba(38,38,39,1) 100%);
 		background: -moz-linear-gradient(bottom, rgba(38,38,39,0) 10%, rgba(38,38,39,1) 100%);
 		background: -o-linear-gradient(bottom, rgba(38,38,39,0) 10%, rgba(38,38,39,1) 100%);
-		background: linear-gradient(0deg, rgba(38,38,39,0) 0%, rgba(38,38,39,1) 95%);
+		background: linear-gradient(0deg, rgba(255,38,39,0) 0%, rgba(255,38,39,1) 95%);
 		@include transitions-ease(.4s);
 
 		@include tablet {
