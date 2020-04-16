@@ -12,7 +12,8 @@ var SmoothScroll = function(args){
 		scroll: {
 			target: 0,
 			current: 0,
-			ease: 0.095
+			ease: 0.095,
+			displacement: 0 // Extra property to trigger inview animations
 		},
 		bounds: {
 			scrollHeight: 0
@@ -46,11 +47,22 @@ var SmoothScroll = function(args){
 	this.render = function(){
 		var scroll = this.state.scroll;
 
+		this.state.displacement = (scroll.target - scroll.current) * scroll.ease;
+		scroll.current += this.state.displacement;
 
-		scroll.current += (scroll.target - scroll.current) * scroll.ease;
-		if (scroll.current < .1) scroll.current = 0;
+		if (scroll.current < .1) {
+			scroll.current = 0;
+		}
 
 		this.translateContainer();
+
+		// After smooth scroll has been completed,
+		// scroll a tiny bit to trigger inview animations 
+		if (inviewTriggerInSmoothScroll == true && this.state.displacement < 1 && this.state.displacement > -1) {
+			window.scroll(0, window.scrollY + 1);
+			inviewTriggerInSmoothScroll = false;
+			// console.log('window scrolled a little bit more')
+		}
 	}
 
 	this.translateContainer = function() {

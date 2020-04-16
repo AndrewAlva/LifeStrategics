@@ -1,5 +1,7 @@
 // Global vars
 var PageSmoothScroll;
+var smoothScrollWindowMinWidth = 1025;
+var inviewTriggerInSmoothScroll = false;
 
 
 // Trigger functions when the initial HTML document
@@ -43,7 +45,7 @@ window.onload = function() {
     RAF.init();
 
     // Smooth scrolling
-    if(window.innerWidth >= 1025) {
+    if(window.innerWidth >= smoothScrollWindowMinWidth) {
         PageSmoothScroll = new SmoothScroll();
         RAF.add(PageSmoothScroll);
     }
