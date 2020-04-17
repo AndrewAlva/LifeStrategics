@@ -173,16 +173,16 @@
 
 
 	// for test only
-	&:after{
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: 2px;
-		width: 100%;
-		height: 1px;
-		background-color: $red;
-	}
+	// &:after{
+	// 	content: '';
+	// 	display: block;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	bottom: 2px;
+	// 	width: 100%;
+	// 	height: 1px;
+	// 	background-color: $red;
+	// }
 }
 
 

@@ -1,5 +1,5 @@
 #services-section{
-	border: 1px solid $yellow;
+	// border: 1px solid $yellow;
 	
 	background-color: $bg-color;
 
@@ -38,8 +38,14 @@
 		width: 100%;
 
 		&:not(:last-child){
-			@include tablet {
-				margin-bottom: 20px;
+			margin-bottom: 24px;
+
+			@include laptop {
+				margin-bottom: 40px;
+			}
+
+			@include desktop {
+				margin-bottom: 80px;
 			}
 		}
 

@@ -1,9 +1,13 @@
 #contact-section{
-	border-bottom: 1px solid $red;
+	// border-bottom: 1px solid $red;
 	padding-bottom: 120px;
 
 	@include tablet {
 		padding-bottom: 180px;
+	}
+
+	@include small-laptop {
+		@include drawShadow(0, 0, 10px, 0, rgba(0,0,0, 0.5));
 	}
 
 	/* Possible fixed footer */

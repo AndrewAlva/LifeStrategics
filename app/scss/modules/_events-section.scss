@@ -1,8 +1,9 @@
 #events-section{
-	border-bottom: 1px solid $blue;
+	// border-bottom: 1px solid $blue;
 	padding-bottom: 10px;
 
 	background-color: $bg-color;
+	z-index: 1;
 
 	.section-name{
 		color: $blue;

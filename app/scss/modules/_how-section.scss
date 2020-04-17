@@ -1,5 +1,5 @@
 #how-section{
-	border: 1px solid $blue;
+	// border: 1px solid $blue;
 
 	background-color: $bg-color;
 
@@ -9,11 +9,11 @@
 
 	.bullet-row{
 		&:not(:last-child){
-			margin-bottom: 60px;
+			margin-bottom: 100px;
 
-			@include tablet {
-				margin-bottom: 100px;
-			}
+			// @include tablet {
+			// 	margin-bottom: 100px;
+			// }
 
 			@include small-laptop {
 				margin-bottom: 135px;
@@ -21,6 +21,10 @@
 
 			@include small-desktop {
 				margin-bottom: 170px;
+			}
+
+			@include desktop {
+				margin-bottom: 320px;
 			}
 		}
 
