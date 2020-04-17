@@ -135,6 +135,7 @@
 			text-decoration: none;
 			color: inherit;
 			line-height: 1.25em;
+			svg{opacity: 0;}
 
 			@include tablet {
 				text-align: right;
@@ -145,6 +146,17 @@
 					path{
 						stroke-dashoffset: 0;
 					}
+				}
+			}
+		}
+	}
+
+	.motion-cascade{
+		&.animate{
+			._mail-btn{
+				svg{
+					@include trans-ease-delay(0.6s, 4s);
+					opacity: 1;
 				}
 			}
 		}
