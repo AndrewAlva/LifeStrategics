@@ -8,7 +8,7 @@ var Mobile_Menu = function() {
 
 	this.trigger = document.getElementById('mobile-menu-trigger');
 	this.container = document.getElementById('mobile-menu');
-	this.pageNavs = this.container.getElementsByClassName('mob-menu-page-scroll');
+	this.pageNavs = document.getElementsByClassName('mob-menu-page-scroll');
 
 
 	this.init = function() {
