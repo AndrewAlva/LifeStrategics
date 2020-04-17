@@ -1,6 +1,5 @@
 #events-section{
 	// border-bottom: 1px solid $blue;
-	padding-bottom: 10px;
 
 	background-color: $bg-color;
 	z-index: 1;
@@ -49,14 +48,16 @@
 }
 
 .event-row{
-	margin-bottom: 60px;
-		
-	@include large-mobile {
-		margin-bottom: 100px;
-	}
-		
-	@include small-desktop {
-		margin-bottom: 160px;
+	&:not(:last-child){
+		margin-bottom: 60px;
+			
+		@include large-mobile {
+			margin-bottom: 100px;
+		}
+			
+		@include small-desktop {
+			margin-bottom: 160px;
+		}
 	}
 
 	._title{
