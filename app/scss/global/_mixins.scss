@@ -60,6 +60,15 @@
 	transform: translate($Xmove, $Ymove) rotate($degs);
 }
 
+@mixin scale-rotate($Xscale, $Yscale, $degs){
+	-webkit-transform: -webkit-scale($Xscale, $Yscale) -webkit-rotate($degs);
+	-webkit-transform: scale($Xscale, $Yscale) rotate($degs);
+	-moz-transform: scale($Xscale, $Yscale) rotate($degs);
+	-ms-transform: scale($Xscale, $Yscale) rotate($degs);
+	-o-transform: scale($Xscale, $Yscale) rotate($degs);
+	transform: scale($Xscale, $Yscale) rotate($degs);
+}
+
 @mixin scale($X, $Y){
 	-webkit-transform: scale($X, $Y);
 	-moz-transform: scale($X, $Y);

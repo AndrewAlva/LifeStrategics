@@ -208,7 +208,11 @@
 		}
 	}
 
+	&:before{
+		@include transitions-ease(.6s);
+	}
 	&:after{
+		@include transitions-ease(.6s);
 		@include rotate(90deg);
 	}
 }

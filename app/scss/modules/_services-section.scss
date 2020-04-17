@@ -97,12 +97,10 @@
 			&:hover{
 				.toggle-info-button{
 					&:before{
-						@include transitions-ease(.4s);
-						@include rotate(90deg);
+						// @include scale(0.85, 1);
 					}
 					&:after{
-						@include transitions-ease(.6s);
-						@include rotate(180deg);
+						// @include scale-rotate(1, 0.85, 90deg);
 					}
 				}
 
@@ -229,8 +227,7 @@
 
 			.toggle-wrap{
 				.toggle-info-button{
-					// &:before{@include transitions-ease(.4s);}
-					&:after{@include rotate(360deg);}
+					&:after{@include scale-rotate(1, 0.01, 90deg);}
 				}
 
 				.circle-open, .circle-open-round, .circle-open-long{
@@ -240,10 +237,8 @@
 				}
 
 				&:hover{
-					.toggle-info-button{
+					.toggle-info-button:before{
 						@include scale(0.7, 1);
-
-						&:before{@include rotate(0deg);}
 					}
 				}
 			}
