@@ -36,7 +36,7 @@ var Scroll_To = function() {
 		}
 
 		// Regain control if user scrolls after click
-		window.addEventListener('wheel', debounce(_self.stopInterval, 20));
+		window.addEventListener('wheel', throttle(_self.stopInterval, 20));
 		window.addEventListener('touchstart', _self.stopInterval, false);
 	}
 
@@ -92,6 +92,7 @@ var Scroll_To = function() {
 	this.initInterval = function(target) {
 		// console.log('init interval');
 		_self.scrollTarget = target;
+		_self.stopInterval();
 		_self.scrollInterval = setInterval(_self.getTo, _self.intervalSpeed);
 	}
 
