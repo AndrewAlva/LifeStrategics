@@ -44,6 +44,15 @@
 				@include translate-scale(-50%, 0, 1, 0.52);
 			}
 		}
+		._scaleDownDouble{
+			svg{
+				@include translate-scale(-50%, 0, 0.95, 0.4);
+
+				@include large-mobile {
+					@include translate-scale(-52%, 0, 0.95, 0.4);
+				}
+			}
+		}
 
 		._rotate{
 			svg{
