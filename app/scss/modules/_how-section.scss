@@ -129,6 +129,10 @@
 					@include translate(0, -50%);
 				}
 			}
+
+			._subindex{
+				color: $blue;
+			}
 		}
 	}
 }

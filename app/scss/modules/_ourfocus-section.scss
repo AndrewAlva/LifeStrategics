@@ -112,6 +112,8 @@
 		}
 
 		@include transitions-ease(.7s);
+
+
 		&.invisible{
 			opacity: 0;
 			pointer-events: none;
@@ -122,6 +124,8 @@
 				display: none;
 			}
 		}
+
+		._title{text-transform: uppercase;}
 	}
 
 	.graph-wrap{
@@ -226,6 +230,8 @@
 				.h3{
 					left: -16.66%;
 					top: 20px;
+					// text-transform: uppercase;
+					white-space: nowrap;
 
 					@include tablet {
 						top: -30px;

@@ -20,6 +20,12 @@
 			margin-bottom: 120px;
 		}
 
+		@include desktop {
+			max-width: 970px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.dw-highlight{
 			&.underline{
 				svg{
