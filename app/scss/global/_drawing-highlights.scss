@@ -166,6 +166,16 @@
 				stroke-width: 3;
 			}
 		}
+
+		&.lifted{
+			svg{
+				bottom: -16%;
+
+				@include desktop {
+					bottom: -12%;
+				}
+			}
+		}
 	}
 
 	&.circle-open-round{

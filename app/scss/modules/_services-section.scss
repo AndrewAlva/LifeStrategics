@@ -76,6 +76,7 @@
 			width: 100%;
 			padding: 20px 0;
 			cursor: pointer;
+			// text-transform: uppercase;
 
 			@include tablet {
 				padding: 32px 0;
@@ -131,11 +132,12 @@
 			@include transitions-ease(1s);
 
 			@include tablet {
-				width: 80%;
+				// width: 80%;
+				width: 90%;
 			}
 
 			@include small-laptop {
-				width: 72%;
+				// width: 72%;
 			}
 
 			@include small-desktop {
@@ -153,6 +155,11 @@
 
 				@include tablet {
 					margin-bottom: 56px;
+					width: 85%;
+				}
+
+				@include small-desktop {
+					width: 100%;
 				}
 			}
 
@@ -168,8 +175,8 @@
 					position: relative;
 					display: inline-block;
 					vertical-align: top;
-					width: 50%;
-					padding-right: 8.3334%;
+					width: 100%;
+					// padding-right: 8.3334%;
 
 					._name{
 						margin-bottom: 25px;
@@ -180,9 +187,15 @@
 						li{
 							position: relative;
 							display: inline-block;
-							width: 50%;
+							width: 100%;
 							min-width: 148px;
+							padding-right: 14px;
+							vertical-align: top;
 							@include trans-ease-delay(1s, 0s);
+
+							@include tablet {
+								width: 50%;
+							}
 
 							span:before{
 								content: '';
@@ -279,6 +292,10 @@
 						&:nth-child(4){@include trans-ease-delay(1s, $cascade-interval*7);}
 						&:nth-child(5){@include trans-ease-delay(1s, $cascade-interval*8);}
 						&:nth-child(6){@include trans-ease-delay(1s, $cascade-interval*9);}
+						&:nth-child(7){@include trans-ease-delay(1s, $cascade-interval*10);}
+						&:nth-child(8){@include trans-ease-delay(1s, $cascade-interval*11);}
+						&:nth-child(9){@include trans-ease-delay(1s, $cascade-interval*12);}
+						&:nth-child(10){@include trans-ease-delay(1s, $cascade-interval*13);}
 					}
 				}
 			}

@@ -1,26 +1,29 @@
-mixin service-card-content(description, projectsMethods, peopleMethods)
+mixin service-card-content(description, intro, servicePractices)
 	.text-wrap
 		.inner-container
 			._description.p2
 				span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{description}
 
 			.profiles-container
-				//- ._note.p3
-					span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") Service delivery according to your profile.
+				._note.p3
+					span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{intro}
 
 				.profile-wrap
-					._name.p2
+					//- ._name.p2
 						span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") For new and existing projects.
+					
 					ul._methods
-						for n, i in projectsMethods
+						for n, i in servicePractices
 							- var cascadeIndex = i + 2
 
-							li(class="p3 #{n.color}")
+							//- li(class="p3 #{n.color}")
+							li.p3.blue
 								span(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
 
-				.profile-wrap
+				//- .profile-wrap
 					._name.p2
 						span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") For teams and people.
+					
 					ul._methods
 						for n, i in peopleMethods
 							- var cascadeIndex = i + 2
@@ -63,68 +66,86 @@ section#services-section.page-section.inner-padded
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="0" data-cascade="slide-up")
 						h2.h2
-							span.servicehl-animation.dw-highlight.circle-open.long
-								span._text Business
-								+hl-circle-open("#f6eb30")
-							|  Plan Creation
+							| Creación de 
+							span.servicehl-animation.dw-highlight.circle-open-long
+								span._text Plan de Negocios
+								+hl-circle-open-long("#f6eb30")
 
 						.toggle-info-button
 
 					+service-card-content(
-						"Brief description of how this service works, what would users should expect and why it’s something they should request, what would be the ultimate benefits.",
+						"En conjunto contigo desarrollamos toda la información para crear tu plan de negocios como una herramienta de clarificación, planeación estratégica y planeación operativa.",
+						
+						"Nuestros servicios para Creación de Plan de Negocios:",
+
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Definición de la solución / proyecto"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Definición de productos y/o servicios"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Investigación y validación de mercado"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Creación de modelo financiero"
+							},
+							{
+								"color": "red",
+								"name": "Definición y desarrollo de cultura organizacional"
+							},
+							{
+								"color": "red",
+								"name": "Planeación de marketing y comunicación"
 							}
 						]
 					)
 
 
+				
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="1" data-cascade="slide-up")
 						h2.h2
-							span.servicehl-animation.dw-highlight.circle-open.long
-								span._text Strategic
-								+hl-circle-open("#f6eb30")
-							|  & Implementation Planning
+							| Diseño de 
+							span.servicehl-animation.dw-highlight.circle-open-long
+								span._text Propuesta de Valor
+								+hl-circle-open-long("#f6eb30")
 
 						.toggle-info-button
 
 					+service-card-content(
-						"Brief description of how this service works, what would users should expect and why it’s something they should request, what would be the ultimate benefits.",
+						"Buscamos el punto óptimo para hacer tu oferta más relevante para tu público meta. Con ello tu proyecto tiene mejores oportunidades de diferenciarse y ofrecer valor a corto, mediano y largo plazo.",
+
+						"Nuestros servicios para Diseño de Propuesta de Valor:",
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Valoración de Propuesta de Valor existente"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Valoración de elementos de cadena de valor e identificación de oportunidades"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Co-diseño para la actualización de elementos de cadena de valor"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Facilitación para re-diseño de elementos de cadena de valor"
+							},
+							{
+								"color": "red",
+								"name": "Facilitación de proceso para identificación de fortalezas y creación de propuesta de valor"
+							},
+							{
+								"color": "red",
+								"name": "Facilitación de proceso para Desarrollo de Creative Personal Branding (personas)"
 							}
 						]
 					)
@@ -133,33 +154,42 @@ section#services-section.page-section.inner-padded
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="2" data-cascade="slide-up")
 						h2.h2
-							span.servicehl-animation.dw-highlight.circle-open-round.lighter
-								span._text Value
-								+hl-circle-open-round("#f6eb30")
-							|  Proposition Design
+							| Planeación e Implementación 
+
+							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger.bolder
+								span._text Estratégica
+								+hl-circle-open-long("#f6eb30")
 
 						.toggle-info-button
 
 					+service-card-content(
-						"Brief description of how this service works.",
+						"Al construir tu planeación estratégica y su plan de implementación contigo generamos en conjunto una ruta de acción para aprovechar lo mejor de tu proyecto respondiendo a las necesidades del mercado.",
+
+						"Nuestros servicios para Planeación e Implementación Estratégica:",
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Valoración de la Planeación Estratégica existente"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Identificación de Oportunidades Estratégicas"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Identificación y Priorización de Pilares Estratégicos"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Definición de la Estrategia (única o por áreas)"
+							},
+							{
+								"color": "red",
+								"name": "Análisis de aceptaciones y tomadores de decisiones"
+							},
+							{
+								"color": "red",
+								"name": "Planeación para la Implementación"
 							}
 						]
 					)
@@ -168,33 +198,50 @@ section#services-section.page-section.inner-padded
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="3" data-cascade="slide-up")
 						h2.h2
-							span.servicehl-animation.dw-highlight.circle-open.long
-								span._text Customer
+							| Creación de Plan de Comunicación y Mercadotecnia 
+
+							span.servicehl-animation.dw-highlight.circle-open.long.bolder.lifted
+								span._text Digital
 								+hl-circle-open("#f6eb30")
-							|  Journey & Experience Design
 
 						.toggle-info-button
 
 					+service-card-content(
-						"Brief description of how this service works.",
+						"Poder comunicarte de manera eficaz y eficiente con tus públicos meta es parte de conseguir los objetivos estratégicos de tu negocio o proyecto. Nuestra especialidad es hacerlo en canales digitales y podemos ayudarte a integrar tus canales análogos.",
+						
+						"Nuestros servicios para Creación de Plan de Comunicación y Mercadotecnia Digital",
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Facilitación de Introspección Corporativa"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Creación de Base de Marca"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Creación de Plan de Comunicación Digital"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Creación de Plan de Mercadotecnia Digital"
+							},
+							{
+								"color": "red",
+								"name": "Diseño de Estrategia Digital"
+							},
+							{
+								"color": "red",
+								"name": "Planeación para Operación Digital"
+							},
+							{
+								"color": "red",
+								"name": "Estrategia de Pago por Clic"
+							},
+							{
+								"color": "red",
+								"name": "Implementación de Campañas Pago por Clic (Facebook, Instagram, Google y LinkedIn)"
 							}
 						]
 					)
@@ -203,34 +250,38 @@ section#services-section.page-section.inner-padded
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="4" data-cascade="slide-up")
 						h2.h2
-							| Marketing 
-							span.servicehl-animation.dw-highlight.circle-open-round.lifted
-								span._text Plan
-								+hl-circle-open-round("#f6eb30")
-							|  Online & Offline
+							span.servicehl-animation.dw-highlight.circle-open.long
+								span._text Procesos
+								+hl-circle-open("#f6eb30")
+
+							|  Comerciales en Medios Digitales
 
 						.toggle-info-button
 
 					+service-card-content(
-						"Brief description of how this service works.",
+						"Ya sea para habilitar nuevos canales de distribución o reforzar los existentes las plataformas digitales requieren su propia infraestructura así como diseño estratégico y operativo.",
+
+						"Nuestros servicios para Procesos Comerciales en Medios Digitales:",
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Adaptación de Canales de Distribución e integración a medios digitales"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Digitalización de procesos comerciales existentes"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Creación de canales de distribución digitales"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Diseño de promociones digitales con integración análoga (offline)"
+							},
+							{
+								"color": "red",
+								"name": "Integración de marca para efectos promocionales (medios y alianzas)"
 							}
 						]
 					)
@@ -239,39 +290,40 @@ section#services-section.page-section.inner-padded
 				.service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="5" data-cascade="slide-up")
 						h2.h2
-							span.servicehl-animation.dw-highlight.circle-open.long
-								span._text Marketing
-								+hl-circle-open("#f6eb30")
-							|  Strategy & Commercial Processes
+							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger
+								span._text TeamBuilding
+								+hl-circle-open-long("#f6eb30")
+
+							|  y Comunicación Organizacional
 
 						.toggle-info-button
 
 					+service-card-content(
 						"Brief description of how this service works.",
+						
+						"Nuestros servicios para TeamBuilding y Comunicación Organizacional:",
 						[
 							{
 								"color": "blue",
-								"name": "Facilitation"
-							}
-						],
-						[
+								"name": "Facilitación para co-creación de marca corporativa y esencia organizacional"
+							},
 							{
 								"color": "yellow",
-								"name": "Implementation"
+								"name": "Facilitación de procesos de alineación de equipos"
 							},
 							{
 								"color": "red",
-								"name": "Back office"
+								"name": "Valoración de modos de resolución de conflictos"
 							},
 							{
 								"color": "red",
-								"name": "Co-design"
+								"name": "Valoración de perfiles de preferencias creativas"
 							}
 						]
 					)
 
 				
-				.service-container.motion-cascade(data-show="false")
+				//- .service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="6" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
@@ -306,7 +358,7 @@ section#services-section.page-section.inner-padded
 					)
 
 				
-				.service-container.motion-cascade(data-show="false")
+				//- .service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="7" data-cascade="slide-up")
 						h2.h2
 							| Training on Creative Thinking for 
@@ -341,7 +393,7 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container.motion-cascade(data-show="false")
+				//- .service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="8" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger
@@ -376,7 +428,7 @@ section#services-section.page-section.inner-padded
 					)
 
 
-				.service-container.motion-cascade(data-show="false")
+				//- .service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="9" data-cascade="slide-up")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long.bolder
@@ -411,7 +463,7 @@ section#services-section.page-section.inner-padded
 					)
 
 				
-				.service-container.motion-cascade(data-show="false")
+				//- .service-container.motion-cascade(data-show="false")
 					.toggle-wrap(data-index="10" data-cascade="slide-up")
 						h2.h2
 							| Facilitation for Product or Service 
@@ -445,9 +497,6 @@ section#services-section.page-section.inner-padded
 							}
 						]
 					)
-
-				
-
 
 
 
