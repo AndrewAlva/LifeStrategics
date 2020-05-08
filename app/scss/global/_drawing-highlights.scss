@@ -111,17 +111,17 @@
 			}
 
 			&#talks-animation{
-				$talks-drawing-data-cascade-delay: 4;
+				$talks-drawing-data-cascade-delay: 2;
 				path, line{
-					&:first-child{@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 0) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(2){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 1) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(3){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 2) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, ( ($underline-draw-speed * 3) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 2) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, ( ($underline-long-draw-speed * 3) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
 				}
 			}
 
 			&#help-animation{
-				$services-drawing-data-cascade-delay: 10;
+				$services-drawing-data-cascade-delay: 6;
 				path, line{
 					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
 					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $services-drawing-data-cascade-delay) + $cascade_trans_duration) );}
@@ -210,6 +210,16 @@
 
 				@include tablet {
 					bottom: -25%;
+				}
+			}
+		}
+
+		&.lifted-short{
+			svg {
+				bottom: -10%;
+
+				@include tablet {
+					// bottom: -15%;
 				}
 			}
 		}

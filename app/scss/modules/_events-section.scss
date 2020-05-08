@@ -27,25 +27,33 @@
 		span[data-cascade]{
 			white-space: pre;
 		}
-	}
-}
 
-.events-list-container{
-	@include laptop {
-		pointer-events: none;
-		&:hover{
-			.event-row{
-				opacity: .35;
+		.dw-highlight{
+			&.underline{
+				svg{
+					bottom: -39%;
+				}
 			}
 		}
-
-		.event-row{
-			pointer-events: auto;
-			@include transitions-ease(.4s);
-			&:hover{opacity: 1;}
-		}
 	}
 }
+
+// .events-list-container{
+// 	@include laptop {
+// 		pointer-events: none;
+// 		&:hover{
+// 			.event-row{
+// 				opacity: .35;
+// 			}
+// 		}
+
+// 		.event-row{
+// 			pointer-events: auto;
+// 			@include transitions-ease(.4s);
+// 			&:hover{opacity: 1;}
+// 		}
+// 	}
+// }
 
 .event-row{
 	&:not(:last-child){
@@ -119,7 +127,7 @@
 
 		._date{
 			line-height: .9em;
-			white-space: nowrap;
+			// white-space: nowrap;
 			margin-bottom: 7px;
 		}
 
