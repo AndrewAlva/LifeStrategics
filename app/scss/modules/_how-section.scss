@@ -132,7 +132,7 @@
 			@include laptop {
 				// height: 80px;
 				display: inline-block;
-				padding-top: .75em;
+				padding-top: .8em;
 			}
 
 			@include laptop {
@@ -141,6 +141,7 @@
 
 			@include small-desktop {
 				// height: 99px;
+				padding-top: 1.2em;
 			}
 
 			.center-container{

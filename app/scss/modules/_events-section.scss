@@ -31,7 +31,7 @@
 		.dw-highlight{
 			&.underline{
 				svg{
-					// bottom: -39%;
+					bottom: -15%;
 				}
 			}
 		}
@@ -61,6 +61,10 @@
 			
 		@include large-mobile {
 			margin-bottom: 100px;
+		}
+
+		@include laptop {
+			margin-bottom: 120px;
 		}
 			
 		@include small-desktop {
@@ -148,7 +152,7 @@
 			@include flexSelf-bottom;
 
 			@include tablet {
-				bottom: -8px;
+				// bottom: -8px;
 			}
 
 			._label, ._icon{

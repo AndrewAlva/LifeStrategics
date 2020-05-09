@@ -101,7 +101,7 @@
 
 			@include tablet {
 				width: 18px;
-				@include translate(0, 5px);
+				@include translate(0, 7px);
 			}
 
 			@include small-desktop {
@@ -126,8 +126,11 @@
 
 	&:hover{
 		._icon{
-			&.right, &.up{
+			&.right{
 				@include translate(0,0);
+			}
+			&.up{
+				@include translate(0, 2px);
 			}
 			&.down{
 				@include translate(0,5px);

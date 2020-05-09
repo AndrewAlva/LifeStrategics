@@ -9,22 +9,22 @@
 		z-index: 1;
 		position: relative;
 		width: 100%;
-		height: 435px;
+		// height: 435px;
 	}
 
 	@include laptop {
-		height: 480px;
+		// height: 480px;
 	}
 
 	.landing-footer{
 		@include small-laptop {
 			position: fixed;
 			bottom: 0;
-			height: 435px;
+			// height: 435px;
 		}
 
 		@include laptop {
-			height: 480px;
+			// height: 480px;
 		}
 	}
 }
