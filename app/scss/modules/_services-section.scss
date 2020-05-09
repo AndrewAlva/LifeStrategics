@@ -94,6 +94,8 @@
 				}
 			}
 
+			.dw-highlight{white-space: nowrap;}
+
 			.toggle-info-button{
 				position: absolute;
 				margin: auto;
@@ -132,12 +134,13 @@
 			@include transitions-ease(1s);
 
 			@include tablet {
-				// width: 80%;
-				width: 90%;
+				width: 80%;
+				// width: 100%;
 			}
 
 			@include small-laptop {
-				// width: 72%;
+				width: 72%;
+				// width: 90%;
 			}
 
 			@include small-desktop {
@@ -196,7 +199,7 @@
 							@include trans-ease-delay(1s, 0s);
 
 							@include tablet {
-								width: 50%;
+								// width: 50%;
 							}
 
 							span:before{
