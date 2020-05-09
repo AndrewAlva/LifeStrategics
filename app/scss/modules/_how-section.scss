@@ -129,6 +129,14 @@
 					top: 50%;
 					@include translate(0, -50%);
 				}
+
+				li:not(:last-child){
+					margin-bottom: 8px;
+
+					@include tablet {
+						margin-bottom: 16px;
+					}
+				}
 			}
 
 			._subindex{
