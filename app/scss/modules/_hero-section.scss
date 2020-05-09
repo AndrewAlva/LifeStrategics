@@ -1,12 +1,12 @@
 #hero-section{
-	height: 100vh;
-	min-height: 580px;
+	min-height: 670px;
 	// border-bottom: 1px solid $blue;
 
 	background-color: $bg-color;
 
 	@media (min-width: 350px) {
-		min-height: 520px;
+		height: 100vh;
+		min-height: 550px;
 	}
 
 	@include tablet {
