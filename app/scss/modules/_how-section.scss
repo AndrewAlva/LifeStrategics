@@ -9,6 +9,11 @@
 	}
 
 	.bullet-row{
+		@include laptop {
+			// height: 400px;
+			@include flexIt;
+		}
+
 		&:not(:last-child){
 			margin-bottom: 100px;
 
@@ -20,8 +25,12 @@
 				margin-bottom: 135px;
 			}
 
+			@include laptop {
+				margin-bottom: 200px;
+			}
+
 			@include small-desktop {
-				margin-bottom: 170px;
+				// margin-bottom: 170px;
 			}
 
 			@include desktop {
@@ -32,6 +41,10 @@
 		.name-wrap{
 			position: relative;
 			display: inline-block;
+
+			@include laptop {
+				@include flexBasis(0);
+			}
 
 			._index{
 				position: absolute;
@@ -55,6 +68,10 @@
 					left: -.8em;
 				}
 			}
+
+			span[data-cascade]{
+				white-space: pre;
+			}
 		}
 
 		.line-wrap{
@@ -68,13 +85,14 @@
 				width: 200px;
 			}
 
-			@include small-laptop {
+			@include laptop {
 				display: inline-block;
 				vertical-align: bottom;
 				width: 90px;
-				height: 80px;
+				// height: 80px;
 				margin-left: 35px;
 				margin-right: 50px;
+				@include flexShrink(0);
 			}
 
 			@include laptop {
@@ -85,11 +103,12 @@
 				width: 110px;
 				height: 99px;
 				margin-left: 55px;
-				margin-right: 90px;
+				margin-right: 55px;
 			}
 
 			@include desktop {
 				width: 150px;
+				margin-right: 90px;
 			}
 
 			&:after{
@@ -110,31 +129,32 @@
 		.bullets-wrap{
 			display: block;
 
-			@include small-laptop {
-				height: 80px;
+			@include laptop {
+				// height: 80px;
 				display: inline-block;
+				padding-top: .75em;
 			}
 
 			@include laptop {
-				height: 90px;
+				// height: 90px;
 			}
 
 			@include small-desktop {
-				height: 99px;
+				// height: 99px;
 			}
 
 			.center-container{
-				@include small-laptop {
-					position: absolute;
-					top: 50%;
-					@include translate(0, -50%);
+				@include laptop {
+					// position: absolute;
+					// top: 50%;
+					// @include translate(0, -50%);
 				}
 
 				li:not(:last-child){
-					margin-bottom: 8px;
+					margin-bottom: 12px;
 
 					@include tablet {
-						margin-bottom: 16px;
+						margin-bottom: 20px;
 					}
 				}
 			}
