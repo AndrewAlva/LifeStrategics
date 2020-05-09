@@ -98,10 +98,10 @@
 
 		&.up{
 			width: 16px;
-			@include translate(0, 5px);
 
 			@include tablet {
 				width: 18px;
+				@include translate(0, 5px);
 			}
 
 			@include small-desktop {

@@ -104,12 +104,12 @@
 				position: relative;
 				display: block;
 				width: 100%;
-				padding: 10px 0;
+				padding: 10px 24px 10px 0;
 				text-align: left;
 				@include transitions-ease(.4s);
 
 				@include tablet {
-					padding: 5px 0;
+					padding: 5px 24px 5px 0;
 				}
 
 				path{@include transitions-ease(.4s);}
