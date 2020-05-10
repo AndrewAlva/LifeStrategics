@@ -160,7 +160,13 @@ var Circles = function() {
 	}
 
 	this.getMaxHeight = function() {
-		this.maxHeight = Math.max(...this.heights);
+		var _max = 0;
+		for (var i = 0; i < this.heights.length; i++) {
+			if(this.heights[i] > _max) _max = this.heights[i];
+		}
+		
+		this.maxHeight = _max;
+		// this.maxHeight = Math.max(...this.heights);
 	}
 
 	this.getDisplacement = function() {

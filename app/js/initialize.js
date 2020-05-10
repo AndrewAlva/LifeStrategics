@@ -46,8 +46,8 @@ window.onload = function() {
 
     // Smooth scrolling
     if(window.innerWidth >= smoothScrollWindowMinWidth) {
-        // PageSmoothScroll = new SmoothScroll();
-        // RAF.add(PageSmoothScroll);
+        PageSmoothScroll = new SmoothScroll();
+        RAF.add(PageSmoothScroll);
     }
 
 
