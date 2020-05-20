@@ -28,7 +28,7 @@ var Slogan = function() {
 		// Blue triggers
 		_self.blueTriggers[0] = document.getElementById('ourfocus-section');
 		_self.blueTriggers[1] = document.getElementById('how-section');
-		_self.blueTriggers[2] = document.getElementById('events-section');
+		_self.blueTriggers[2] = document.getElementById('blog-section');
 		var blue_links = document.getElementsByClassName('slogan-highlight-blue');
 		for (var i = 0; i < blue_links.length; i++) {
 			_self.blueTriggers.push(blue_links[i]);
@@ -38,6 +38,7 @@ var Slogan = function() {
 		// Yellow triggers
 		_self.yellowTriggers[0] = document.getElementById('services-section');
 		_self.yellowTriggers[1] = document.getElementById('clients-section');
+		_self.yellowTriggers[2] = document.getElementById('events-section');
 		var yellow_links = document.getElementsByClassName('slogan-highlight-yellow');
 		for (var i = 0; i < yellow_links.length; i++) {
 			_self.yellowTriggers.push(yellow_links[i]);

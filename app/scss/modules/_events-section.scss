@@ -5,7 +5,7 @@
 	z-index: 1;
 
 	.section-name{
-		color: $blue;
+		color: $yellow;
 	}
 
 	.title-wrap{
@@ -31,7 +31,11 @@
 		.dw-highlight{
 			&.underline{
 				svg{
-					bottom: -15%;
+					bottom: -22%;
+
+					@include small-desktop {
+						bottom: -25%;
+					}
 				}
 			}
 		}
@@ -100,7 +104,7 @@
 			top: .71em;
 			right: 101.3%;
 			line-height: 1em;
-			color: $blue;
+			color: $yellow;
 			text-align: right;
 
 			@include tablet {

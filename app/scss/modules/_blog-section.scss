@@ -1,0 +1,39 @@
+#blog-section{
+	// border-bottom: 1px solid $blue;
+
+	background-color: $bg-color;
+	z-index: 1;
+
+	.section-name{
+		color: $blue;
+	}
+
+	.title-wrap{
+		text-align: center;
+		margin-bottom: 60px;
+		
+		@include tablet {
+			margin-bottom: 110px;
+		}
+		
+		@include small-desktop {
+			margin-bottom: 160px;
+		}
+
+		._line{
+			display: block;
+		}
+
+		span[data-cascade]{
+			white-space: pre;
+		}
+
+		.dw-highlight{
+			&.underline{
+				svg{
+					bottom: -32%;
+				}
+			}
+		}
+	}
+}

@@ -39,6 +39,11 @@
 			stroke-dasharray: 302;
 		}
 
+		._scaleDownHalf{
+			svg{
+				@include translate-scale(-50%, 0, 1, 0.65);
+			}
+		}
 		._scaleDown{
 			svg{
 				@include translate-scale(-50%, 0, 1, 0.52);
@@ -46,10 +51,10 @@
 		}
 		._scaleDownDouble{
 			svg{
-				@include translate-scale(-50%, 0, 0.95, 0.4);
+				@include translate-scale(-50%, 0, 0.95, 0.5);
 
 				@include large-mobile {
-					@include translate-scale(-52%, 0, 0.95, 0.4);
+					@include translate-scale(-52%, 0, 0.95, 0.45);
 				}
 			}
 		}
@@ -110,13 +115,23 @@
 				}
 			}
 
-			&#talks-animation{
-				$talks-drawing-data-cascade-delay: 2;
+			&#blog-animation{
+				$blog-drawing-data-cascade-delay: 2;
 				path, line{
-					&:first-child{@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 0) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(2){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 1) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(3){@include trans-ease-delay($underline-draw-speed, 	( ($underline-draw-speed * 2) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
-					&:nth-child(4){@include trans-ease-delay($underline-draw-speed * 2, ( ($underline-draw-speed * 3) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $blog-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $blog-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 2) + ($cascade_interval * $blog-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, ( ($underline-long-draw-speed * 3) + ($cascade_interval * $blog-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+				}
+			}
+
+			&#talks-animation{
+				$talks-drawing-data-cascade-delay: 5;
+				path, line{
+					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(3){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 2) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
+					&:nth-child(4){@include trans-ease-delay($underline-long-draw-speed * 2, ( ($underline-long-draw-speed * 3) + ($cascade_interval * $talks-drawing-data-cascade-delay) + $cascade_trans_duration) );}
 				}
 			}
 
@@ -144,7 +159,7 @@
 				stroke-width: 4;
 				stroke-dashoffset: 642;
 				stroke-dasharray: 642;
-				@include transitions-ease(.4s);
+				@include transitions-ease(.5s);
 			}
 		}
 
@@ -194,7 +209,7 @@
 				stroke-width: 3;
 				stroke-dashoffset: 435;
 				stroke-dasharray: 435;
-				@include transitions-ease(.4s);
+				@include transitions-ease(.5s);
 			}
 		}
 
@@ -237,7 +252,7 @@
 				stroke-width: 3;
 				stroke-dashoffset: 1000;
 				stroke-dasharray: 1000;
-				@include transitions-ease(.4s);
+				@include transitions-ease(.5s);
 			}
 		}
 

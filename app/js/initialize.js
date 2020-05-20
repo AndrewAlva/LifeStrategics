@@ -45,10 +45,10 @@ window.onload = function() {
     RAF.init();
 
     // Smooth scrolling
-    if(window.innerWidth >= smoothScrollWindowMinWidth) {
-        PageSmoothScroll = new SmoothScroll();
-        RAF.add(PageSmoothScroll);
-    }
+    // if(window.innerWidth >= smoothScrollWindowMinWidth) {
+    //     PageSmoothScroll = new SmoothScroll();
+    //     RAF.add(PageSmoothScroll);
+    // }
 
 
     // General inview animation, linked with "Cascading" system
@@ -64,6 +64,10 @@ window.onload = function() {
                     this.el.querySelector('#services-animation').classList.add('drawn');
                 }
 
+                if(this.el.querySelector('#blog-animation')) {
+                    this.el.querySelector('#blog-animation').classList.add('drawn');
+                }
+
                 if(this.el.querySelector('#talks-animation')) {
                     this.el.querySelector('#talks-animation').classList.add('drawn');
                 }
@@ -77,6 +81,10 @@ window.onload = function() {
 
                 if(this.el.querySelector('#services-animation')) {
                     this.el.querySelector('#services-animation').classList.remove('drawn');
+                }
+
+                if(this.el.querySelector('#blog-animation')) {
+                    this.el.querySelector('#blog-animation').classList.remove('drawn');
                 }
 
                 if(this.el.querySelector('#talks-animation')) {
