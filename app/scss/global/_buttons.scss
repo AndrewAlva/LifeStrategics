@@ -72,7 +72,7 @@
 
 		&.right{
 			width: 16px;
-			@include translate(-5px, 0);
+			// @include translate(-5px, 0);
 
 			@include tablet {
 				width: 18px;
@@ -127,7 +127,7 @@
 	&:hover{
 		._icon{
 			&.right{
-				@include translate(0,0);
+				@include translate(5px, 0);
 			}
 			&.up{
 				@include translate(0, 2px);

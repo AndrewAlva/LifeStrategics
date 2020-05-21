@@ -1,3 +1,24 @@
+mixin blogpost-row(imgURL, index, title, tags, link, cta)
+	.ls-row.blogpost-row
+		.cover-container.offset-2.ls-col-20.offset-xs-4.ls-col-xs-16.offset-sm-1.ls-col-sm-6.offset-lg-3.offset-xl-4.ls-col-xl-4.motion-cascade
+			img(src="#{imgURL}" alt="#{title}" data-cascade="slide-up" data-cascade-delay="0" data-cascade-delay-mobile="0")
+
+		.info-container.offset-2.ls-col-20.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-13.ls-col-lg-10.ls-col-xl-10
+			h2.h2._title.motion-cascade
+				span.p2._index(data-cascade="rotate-up" data-cascade-delay="2" data-cascade-delay-mobile="2") #{index}
+				span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") #{title}
+
+			.bottom-wrap.motion-cascade
+				p.p3._tags(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3") #{tags}
+
+				a.arrow-button._cta(href="#{link}" target="_blank" rel="nofollow noopener noreferrer" data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4")
+					span._label #{cta}
+					span._icon.right
+						+arrow-right("#55c4f0")
+
+
+
+
 section#blog-section.page-section.inner-padded
 	.ls-container
 		.ls-row
@@ -44,3 +65,39 @@ section#blog-section.page-section.inner-padded
 
 
 		.blog-list-container
+			+blogpost-row(
+				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/como-ayudamos-a-la-preservacion.jpg",
+				"01.",
+				"¿Cómo ayudamos a la preservación de condiciones de seguridad y bienestar para las generaciones humanas y no-humanas futuras?",
+				"Crisis · Futuro · Medio Ambiente · Sostenibilidad · Sustentabilidad",
+				"https://lifestrategics.com/blog/2020/04/24/como-ayudamos-a-la-preservacion-de-condiciones-de-seguridad-y-bienestar-para-las-generaciones-humanas-y-no-humanas-futuras/",
+				"Leer"
+			)
+
+			+blogpost-row(
+				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg",
+				"02.",
+				"Pensamientos de evolución personal, Pt. 1",
+				"Autoconocimiento · Coaching · Evolución · Mindfulness",
+				"https://lifestrategics.com/blog/2020/04/24/pensamientos-de-evolucion-personal-pt-1/",
+				"Leer"
+			)
+
+			+blogpost-row(
+				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-arte-de-aprender-a-aprender.jpg",
+				"03.",
+				"El Arte de Aprender a Aprender",
+				"Aprendizaje · Autoconocimiento · Coaching · Habilidades · Liderazgo",
+				"https://lifestrategics.com/blog/2020/04/24/el-arte-de-aprender-a-aprender/",
+				"Leer"
+			)
+
+
+
+
+
+
+
+
+
+

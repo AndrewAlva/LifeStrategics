@@ -33,9 +33,9 @@
 				svg{
 					bottom: -22%;
 
-					@include small-desktop {
-						bottom: -25%;
-					}
+					// @include small-desktop {
+					// 	bottom: -25%;
+					// }
 				}
 			}
 		}
@@ -61,7 +61,7 @@
 
 .event-row{
 	&:not(:last-child){
-		margin-bottom: 60px;
+		margin-bottom: 80px;
 			
 		@include large-mobile {
 			margin-bottom: 100px;
