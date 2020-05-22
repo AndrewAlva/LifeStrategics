@@ -18,6 +18,14 @@
 	transition: all $timing cubic-bezier(.3,0,.2,1);
 }
 
+@mixin ease($timing){
+	-webkit-transition: all $timing cubic-bezier(.25,0,.4,1);
+	-moz-transition: all $timing cubic-bezier(.25,0,.4,1);
+	-ms-transition: all $timing cubic-bezier(.25,0,.4,1);
+	-o-transition: all $timing cubic-bezier(.25,0,.4,1);
+	transition: all $timing cubic-bezier(.25,0,.4,1);
+}
+
 @mixin trans-ease-delay($timing, $delay){
 	-webkit-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
 	-moz-transition: all $timing cubic-bezier(.3,0,.2,1) $delay;
