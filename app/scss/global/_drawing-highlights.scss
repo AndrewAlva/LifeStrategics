@@ -279,9 +279,15 @@
 			}
 		}
 
+		&.bolder5{
+			svg path{
+				stroke-width: 5;
+			}
+		}
+
 		&.offset{
 			svg{
-				left: 55%;
+				left: 53%;
 			}
 		}
 	}
