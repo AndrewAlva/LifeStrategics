@@ -20,6 +20,36 @@ mixin blogpost-row(link, imgURL, index, title, tags, cta)
 								+arrow-right("#55c4f0")
 
 
+mixin blogpost-row--no-img(link, index, title, tags, cta)
+	.ls-row.blogpost-row.no-img
+		a(href="#{link}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-2.ls-col-20.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.offset-lg-3.ls-col-lg-18.offset-xxl-4.ls-col-xxl-16.motion-cascade
+			.ls-row
+				.index-container.h1.ls-col-20.ls-col-xs-16.ls-col-sm-4
+					span._text.cascade-mask.inline-block 
+						span(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") #{index}
+
+				.info-container.ls-col-20.ls-col-xs-16.offset-sm-1.ls-col-sm-15.ls-col-lg-13.ls-col-xxl-11
+					//- h2.h2._title
+						span(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") #{title}
+					.ls-row
+						h2.h2._title.ls-col-19.ls-col-xs-14.ls-col-sm-13.ls-col-lg-11.ls-col-xxl-9(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") #{title}
+						//- | ¿Cómo ayudamos a la 
+						//- span.dw-highlight.circle-open-long.lifted
+						//- 	span._text preservación
+						//- 	+hl-circle-open-long("#55c4f0")
+
+						//- |  de condiciones de seguridad y bienestar para las generaciones humanas y no-humanas futuras?
+
+					.bottom-wrap.ls-row
+						p.p3._tags.ls-col-13.push-1.ls-col-xs-11.ls-col-sm-10.ls-col-md-10.ls-col-lg-9.ls-col-xxl-7(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") #{tags}
+
+						.ls-col-6.ls-col-xs-4.ls-col-lg-3.cta-wrap
+							.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+								span._label #{cta}
+								span._icon.right
+									+arrow-right("#55c4f0")
+
+
 
 
 section#blog-section.page-section.inner-padded
@@ -68,27 +98,24 @@ section#blog-section.page-section.inner-padded
 
 
 		.blog-list-container
-			+blogpost-row(
+			+blogpost-row--no-img(
 				"https://lifestrategics.com/blog/2020/04/24/como-ayudamos-a-la-preservacion-de-condiciones-de-seguridad-y-bienestar-para-las-generaciones-humanas-y-no-humanas-futuras/",
-				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/como-ayudamos-a-la-preservacion.jpg",
 				"01.",
 				"¿Cómo ayudamos a la preservación de condiciones de seguridad y bienestar para las generaciones humanas y no-humanas futuras?",
 				"Crisis · Futuro · Medio Ambiente · Sostenibilidad · Sustentabilidad",
 				"Leer"
 			)
 
-			+blogpost-row(
+			+blogpost-row--no-img(
 				"https://lifestrategics.com/blog/2020/04/24/pensamientos-de-evolucion-personal-pt-1/",
-				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg",
 				"02.",
 				"Pensamientos de evolución personal, Pt. 1",
 				"Autoconocimiento · Coaching · Evolución · Mindfulness",
 				"Leer"
 			)
 
-			+blogpost-row(
+			+blogpost-row--no-img(
 				"https://lifestrategics.com/blog/2020/04/24/el-arte-de-aprender-a-aprender/",
-				"https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-arte-de-aprender-a-aprender.jpg",
 				"03.",
 				"El Arte de Aprender a Aprender",
 				"Aprendizaje · Autoconocimiento · Coaching · Habilidades · Liderazgo",

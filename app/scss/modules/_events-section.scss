@@ -84,7 +84,7 @@
 			._cover{
 				img{
 					@include ease(1s);
-					@include scale(1, 1);
+					@include scale(1.15, 1.15);
 				}
 			}
 
@@ -160,7 +160,7 @@
 			position: relative;
 			width: 100%;
 			@include ease(.6s);
-			@include scale(1.15, 1.15);
+			// @include scale(1.15, 1.15);
 		}
 	}
 
@@ -174,7 +174,7 @@
 			margin-bottom: 8px;
 
 			@include tablet {
-				margin-bottom: 16px;
+				margin-bottom: 10px;
 			}
 		}
 

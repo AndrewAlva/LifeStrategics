@@ -278,6 +278,12 @@
 				stroke-width: 4;
 			}
 		}
+
+		&.offset{
+			svg{
+				left: 55%;
+			}
+		}
 	}
 
 	&.circle-close{}

@@ -44,6 +44,7 @@
 	}
 
 	.blogpost-row{
+		// border-top: 1px solid red;
 		&:not(:last-child){
 			margin-bottom: 80px;
 			
@@ -69,7 +70,7 @@
 				.cover-container{
 					img{
 						@include ease(1s);
-						@include scale(1, 1);
+						@include scale(1.15, 1.15);
 					}
 				}
 
@@ -78,6 +79,12 @@
 						&.right{
 							@include translate(5px, 0);
 						}
+					}
+				}
+
+				.circle-open, .circle-open-round, .circle-open-long{
+					path{
+						stroke-dashoffset: 0;
 					}
 				}
 			}
@@ -100,15 +107,20 @@
 				vertical-align: top;
 				width: 100%;
 				@include ease(.6s);
-				@include scale(1.15, 1.15);
+				// @include scale(1.15, 1.15);
+			}
+		}
+
+		.index-container{
+			color: $blue;
+			line-height: 1.3em;
+
+			@include tablet {
+				margin-top: -0.55em;
 			}
 		}
 
 		.info-container{
-			@include flexIt;
-			@include flexDirection-Vert;
-			@include flexJustify;
-
 			._title{
 				position: relative;
 				width: 100%;
@@ -149,21 +161,12 @@
 			}
 
 			.bottom-wrap{
-				width: 100%;
 				margin-bottom: -0.3em;
-				@include flexIt;
-				@include flexJustify;
 			}
 
 			._tags{
 				position: relative;
-				margin-bottom: -0.05em;
-				padding-right: 40px;
 				@include flexSelf-bottom;
-
-				@include tablet {
-					padding-right: 80px;
-				}
 			}
 
 			._cta{
@@ -177,6 +180,54 @@
 
 				._label{
 					vertical-align: middle;
+				}
+			}
+		}
+
+		&:not(.no-img){
+			.info-container{
+				@include flexIt;
+				@include flexDirection-Vert;
+				@include flexJustify;
+
+				.bottom-wrap{
+					width: 100%;
+					@include flexIt;
+					@include flexJustify;
+				}
+
+				._tags{
+					padding-right: 40px;
+					margin-bottom: -0.05em;
+
+					@include tablet {
+						padding-right: 80px;
+					}
+				}
+			}
+		}
+
+
+		&.no-img{
+			.info-container{
+				// border-bottom: 1px solid red;
+
+				.bottom-wrap{
+					@include flexNoWrap;
+				}
+
+				// ._tags{
+				// 	border-top: 1px solid red;
+				// }
+
+				.cta-wrap{
+					@include flexIt;
+				}
+
+				._cta{
+					width: 100%;
+					text-align: right;
+					// margin-bottom: -0.05em;
 				}
 			}
 		}
