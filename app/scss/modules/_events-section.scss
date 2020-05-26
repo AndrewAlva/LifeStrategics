@@ -81,10 +81,16 @@
 		text-decoration: none;
 
 		&:hover{
+			.circle-open, .circle-open-round, .circle-open-long{
+				path{
+					stroke-dashoffset: 0;
+				}
+			}
+
 			._cover{
 				img{
 					@include ease(1s);
-					@include scale(1.15, 1.15);
+					@include scale(1.1, 1.1);
 				}
 			}
 

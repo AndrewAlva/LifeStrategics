@@ -191,6 +191,26 @@
 				}
 			}
 		}
+
+		&.lifted-ascendents{
+			svg{
+				bottom: -12%;
+
+				@include laptop {
+					bottom: -2%;
+				}
+
+				@include desktop {
+					bottom: -8%;
+				}
+			}
+		}
+
+		&.offset{
+			svg {
+				@include translate(-50%, 0);
+			}
+		}
 	}
 
 	&.circle-open-round{
@@ -266,6 +286,16 @@
 			}
 		}
 
+		&.sublifted{
+			svg{
+				bottom: -29%;
+
+				@include laptop {
+					bottom: -20%;
+				}
+			}
+		}
+
 		&.larger{
 			svg{
 				width: 120%;
@@ -282,6 +312,12 @@
 		&.bolder5{
 			svg path{
 				stroke-width: 5;
+			}
+		}
+
+		&.lighter{
+			svg path{
+				stroke-width: 2;
 			}
 		}
 
