@@ -50,13 +50,18 @@
 				position: absolute;
 				// bottom: 5px;
 				top: 1.06em;
-				left: -1em;
+				right: -webkit-calc(100% + #{$ls-grid__gutterWidth-mob});
+				right: -moz-calc(100% + #{$ls-grid__gutterWidth-mob});
+				right: calc(100% + #{$ls-grid__gutterWidth-mob});
 				line-height: 1em;
 				text-transform: lowercase;
 				color: $blue;
 
 				@include tablet {
 					top: 2em;
+					right: -webkit-calc(100% + #{$ls-grid__gutterWidth});
+					right: -moz-calc(100% + #{$ls-grid__gutterWidth});
+					right: calc(100% + #{$ls-grid__gutterWidth});
 				}
 
 				@include laptop {
@@ -65,7 +70,7 @@
 
 				@include small-desktop {
 					top: 2.38em;
-					left: -.8em;
+					// left: -.8em;
 				}
 			}
 
@@ -90,18 +95,15 @@
 				vertical-align: bottom;
 				width: 90px;
 				// height: 80px;
+				height: 100px;
 				margin-left: 35px;
 				margin-right: 50px;
 				@include flexShrink(0);
 			}
 
-			@include laptop {
-				height: 90px;
-			}
-
 			@include small-desktop {
 				width: 110px;
-				height: 99px;
+				height: 138px;
 				margin-left: 55px;
 				margin-right: 55px;
 			}
@@ -161,6 +163,9 @@
 			}
 
 			._subindex{
+				position: relative;
+				width: 1.5em;
+				display: inline-block;
 				color: $blue;
 			}
 		}
