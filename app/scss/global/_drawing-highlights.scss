@@ -159,7 +159,11 @@
 				stroke-width: 4;
 				stroke-dashoffset: 642;
 				stroke-dasharray: 642;
-				@include transitions-ease(.5s);
+
+				@include ani-duration(500ms);
+				@include ani-ease($soft-in-out);
+				@include ani-fillmode(both);
+				@include ani-name("circle-open--out");
 			}
 		}
 
@@ -229,7 +233,11 @@
 				stroke-width: 3;
 				stroke-dashoffset: 435;
 				stroke-dasharray: 435;
-				@include transitions-ease(.5s);
+				
+				@include ani-duration(500ms);
+				@include ani-ease($soft-in-out);
+				@include ani-fillmode(both);
+				@include ani-name("circle-round--out");
 			}
 		}
 
@@ -272,7 +280,11 @@
 				stroke-width: 3;
 				stroke-dashoffset: 1000;
 				stroke-dasharray: 1000;
-				@include transitions-ease(.5s);
+				
+				@include ani-duration(500ms);
+				@include ani-ease($soft-in-out);
+				@include ani-fillmode(both);
+				@include ani-name("circle-long--out");
 			}
 		}
 
@@ -328,8 +340,6 @@
 		}
 	}
 
-	&.circle-close{}
-
 
 	&.drawn{
 		&.underline, &.circle-open, &.circle-open-round, &.circle-open-long{
@@ -344,3 +354,125 @@
 		// opacity: 0;
 	}
 }
+
+
+///// @Keyframes //////
+
+// Circle open keyframe animation
+	// Outro
+	@-webkit-keyframes circle-open--out {
+		0% {stroke-dashoffset: 1284;}
+		100% {stroke-dashoffset: 642; }
+	}
+	@-moz-keyframes circle-open--out {
+		0% {stroke-dashoffset: 1284;}
+		100% {stroke-dashoffset: 642; }
+	}
+	@-o-keyframes circle-open--out {
+		0% {stroke-dashoffset: 1284;}
+		100% {stroke-dashoffset: 642; }
+	}
+	@keyframes circle-open--out {
+		0% {stroke-dashoffset: 1284;}
+		100% {stroke-dashoffset: 642; }
+	}
+
+	// Intro
+	@-webkit-keyframes circle-open--in {
+		0% {stroke-dashoffset: 642;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-moz-keyframes circle-open--in {
+		0% {stroke-dashoffset: 642;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-o-keyframes circle-open--in {
+		0% {stroke-dashoffset: 642;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@keyframes circle-open--in {
+		0% {stroke-dashoffset: 642;}
+		100% {stroke-dashoffset: 0;}
+	}
+
+
+
+// Circle round keyframe animation
+	// Outro
+	@-webkit-keyframes circle-round--out {
+		0% {stroke-dashoffset: 870;}
+		100% {stroke-dashoffset: 435; }
+	}
+	@-moz-keyframes circle-round--out {
+		0% {stroke-dashoffset: 870;}
+		100% {stroke-dashoffset: 435; }
+	}
+	@-o-keyframes circle-round--out {
+		0% {stroke-dashoffset: 870;}
+		100% {stroke-dashoffset: 435; }
+	}
+	@keyframes circle-round--out {
+		0% {stroke-dashoffset: 870;}
+		100% {stroke-dashoffset: 435; }
+	}
+
+	// Intro
+	@-webkit-keyframes circle-round--in {
+		0% {stroke-dashoffset: 435;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-moz-keyframes circle-round--in {
+		0% {stroke-dashoffset: 435;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-o-keyframes circle-round--in {
+		0% {stroke-dashoffset: 435;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@keyframes circle-round--in {
+		0% {stroke-dashoffset: 435;}
+		100% {stroke-dashoffset: 0;}
+	}
+
+
+
+// Circle long keyframe animation
+	// Outro
+	@-webkit-keyframes circle-long--out {
+		0% {stroke-dashoffset: 2000;}
+		100% {stroke-dashoffset: 1000; }
+	}
+	@-moz-keyframes circle-long--out {
+		0% {stroke-dashoffset: 2000;}
+		100% {stroke-dashoffset: 1000; }
+	}
+	@-o-keyframes circle-long--out {
+		0% {stroke-dashoffset: 2000;}
+		100% {stroke-dashoffset: 1000; }
+	}
+	@keyframes circle-long--out {
+		0% {stroke-dashoffset: 2000;}
+		100% {stroke-dashoffset: 1000; }
+	}
+
+	// Intro
+	@-webkit-keyframes circle-long--in {
+		0% {stroke-dashoffset: 1000;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-moz-keyframes circle-long--in {
+		0% {stroke-dashoffset: 1000;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@-o-keyframes circle-long--in {
+		0% {stroke-dashoffset: 1000;}
+		100% {stroke-dashoffset: 0;}
+	}
+	@keyframes circle-long--in {
+		0% {stroke-dashoffset: 1000;}
+		100% {stroke-dashoffset: 0;}
+	}
+
+
+
+
