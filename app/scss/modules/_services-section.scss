@@ -244,22 +244,23 @@
 
 				._description {
 					opacity: 0;
+					@include translate3d(0, 40px, 0);
 				}
 
 				._note{
 					opacity: 0;
+					@include translate3d(0, 40px, 0);
 				}
 
 				.profile-wrap {
 					._name{
 						opacity: 0;
+						@include translate3d(0, 40px, 0);
 					}
 
 					._methods li{
 						opacity: 0;
-						-webkit-transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
-						-moz-transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
-						transform: rotate3d(1,0,0, 90deg) translate3d(0, 40px, 0);
+						@include translate3d(0, 40px, 0);
 					}
 				}
 			}
@@ -276,9 +277,19 @@
 					&:after{@include scale-rotate(1, 0.01, 90deg);}
 				}
 
-				.circle-open, .circle-open-round, .circle-open-long{
-					svg path{
-						stroke-dashoffset: 0;
+				.circle-open{
+					path{
+						@include ani-name("circle-open--in");
+					}
+				}
+				.circle-open-round{
+					path{
+						@include ani-name("circle-round--in");
+					}
+				}
+				.circle-open-long{
+					path{
+						@include ani-name("circle-long--in");
 					}
 				}
 
@@ -293,35 +304,36 @@
 				._description {
 					@include trans-ease-delay(1s, $cascade-interval*2);
 					opacity: 1;
+					@include translate3d(0,0,0);
 				}
 
 				._note {
 					@include trans-ease-delay(1s, $cascade-interval*3);
 					opacity: 0.5;
+					@include translate3d(0,0,0);
 				}
 
 				.profile-wrap {
 					._name{
-						@include trans-ease-delay(1s, $cascade-interval*3);
+						@include trans-ease-delay(1s, $cascade-interval*4);
 						opacity: 1;
+						@include translate3d(0,0,0);
 					}
 
 					._methods li{
 						opacity: 1;
-						-webkit-transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
-						-moz-transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
-						transform: rotate3d(1,0,0, 0deg) translate3d(0,0,0);
+						@include translate3d(0,0,0);
 
-						&:first-child{@include trans-ease-delay(1s, $cascade-interval*4);}
-						&:nth-child(2){@include trans-ease-delay(1s, $cascade-interval*5);}
-						&:nth-child(3){@include trans-ease-delay(1s, $cascade-interval*6);}
-						&:nth-child(4){@include trans-ease-delay(1s, $cascade-interval*7);}
-						&:nth-child(5){@include trans-ease-delay(1s, $cascade-interval*8);}
-						&:nth-child(6){@include trans-ease-delay(1s, $cascade-interval*9);}
-						&:nth-child(7){@include trans-ease-delay(1s, $cascade-interval*10);}
-						&:nth-child(8){@include trans-ease-delay(1s, $cascade-interval*11);}
-						&:nth-child(9){@include trans-ease-delay(1s, $cascade-interval*12);}
-						&:nth-child(10){@include trans-ease-delay(1s, $cascade-interval*13);}
+						&:first-child{@include trans-ease-delay(1s, $cascade-interval*5);}
+						&:nth-child(2){@include trans-ease-delay(1s, $cascade-interval*6);}
+						&:nth-child(3){@include trans-ease-delay(1s, $cascade-interval*7);}
+						&:nth-child(4){@include trans-ease-delay(1s, $cascade-interval*8);}
+						&:nth-child(5){@include trans-ease-delay(1s, $cascade-interval*9);}
+						&:nth-child(6){@include trans-ease-delay(1s, $cascade-interval*10);}
+						&:nth-child(7){@include trans-ease-delay(1s, $cascade-interval*11);}
+						&:nth-child(8){@include trans-ease-delay(1s, $cascade-interval*12);}
+						&:nth-child(9){@include trans-ease-delay(1s, $cascade-interval*13);}
+						&:nth-child(10){@include trans-ease-delay(1s, $cascade-interval*14);}
 					}
 				}
 			}

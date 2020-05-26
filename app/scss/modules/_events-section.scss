@@ -156,6 +156,10 @@
 			}
 
 			@include laptop {
+				top: 1.36em;
+			}
+
+			@include small-desktop {
 				top: 1.56em;
 			}
 		}

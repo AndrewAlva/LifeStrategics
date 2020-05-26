@@ -4,7 +4,7 @@ mixin event-row(index, title, imgSrc, date, location, cta, href)
 			.ls-row
 				h2.h2._title.ls-col-20.ls-col-xs-18.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
 					span._wrap
-						span.p2._index(data-cascade="rotate-up") #{index}
+						span.p2._index(data-cascade="slide-up") #{index}
 						span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{title}
 
 				._cover.ls-col-10.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
@@ -26,29 +26,30 @@ mixin event-row(index, title, imgSrc, date, location, cta, href)
 section#events-section.page-section.inner-padded
 	.ls-container
 		.ls-row
-			h4.p2.section-name.ls-col-22.offset-1 
-				span.motion-cascade(data-cascade="rotate-up") vi. Próximos Eventos
+			h4.p2.section-name.ls-col-22.offset-1.motion-cascade
+				span.cascade-mask.inline-block
+					span(data-cascade="mask-up") vi. Próximos Eventos
 
 			.title-wrap.ls-col-22.offset-1
 				h1.h1.motion-cascade
 					span._line 
 						span.cascade-mask.inline-block 
-							span(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") Pláticas,
+							span(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") Pláticas,
 
 
 					span._line 
 						span.cascade-mask.inline-block 
-							span(data-cascade="mask-up" data-cascade-delay="1" data-cascade-delay-mobile="1")  talleres 
+							span(data-cascade="mask-up" data-cascade-delay="4" data-cascade-delay-mobile="4")  talleres 
 
 						span.cascade-mask.inline-block 
-							span(data-cascade="mask-up" data-cascade-delay="2" data-cascade-delay-mobile="2") y 
+							span(data-cascade="mask-up" data-cascade-delay="5" data-cascade-delay-mobile="5") y 
 
 						//- span.cascade-mask.inline-block 
 							span(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") upcoming 
 
 						span#talks-animation.dw-highlight.underline.long
 							span._text.cascade-mask.inline-block 
-								span(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") cursos
+								span(data-cascade="mask-up" data-cascade-delay="6" data-cascade-delay-mobile="6") cursos
 
 							span._scaleDownHalf
 								+hl-underline("#f6eb30")
@@ -61,7 +62,7 @@ section#events-section.page-section.inner-padded
 					.ls-row
 						h2.h2._title.ls-col-20.ls-col-xs-18.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
 							span._wrap
-								span.p2._index(data-cascade="rotate-up") 01.
+								span.p2._index(data-cascade="slide-up") 01.
 								span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
 									| Bootcamp Online de Construcción de 
 									span.dw-highlight.circle-open.long.bolder.lifted-ascendents.offset
@@ -93,7 +94,7 @@ section#events-section.page-section.inner-padded
 					.ls-row
 						h2.h2._title.ls-col-20.ls-col-xs-18.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
 							span._wrap
-								span.p2._index(data-cascade="rotate-up") 02.
+								span.p2._index(data-cascade="slide-up") 02.
 								span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
 									| El poder de la  
 									span.dw-highlight.circle-open-long.sublifted
@@ -125,7 +126,7 @@ section#events-section.page-section.inner-padded
 					.ls-row
 						h2.h2._title.ls-col-20.ls-col-xs-18.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
 							span._wrap
-								span.p2._index(data-cascade="rotate-up") 03.
+								span.p2._index(data-cascade="slide-up") 03.
 								span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
 									span.dw-highlight.circle-open-long.sublifted
 										span._text Emprendimiento 
@@ -156,7 +157,7 @@ section#events-section.page-section.inner-padded
 					.ls-row
 						h2.h2._title.ls-col-20.ls-col-xs-18.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
 							span._wrap
-								span.p2._index(data-cascade="rotate-up") 04.
+								span.p2._index(data-cascade="slide-up") 04.
 								span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
 									| Bases para Diseño de 
 									span.dw-highlight.circle-open-long.lifted

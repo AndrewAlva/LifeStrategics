@@ -2,11 +2,11 @@ mixin service-card-content(description, intro, servicePractices)
 	.text-wrap
 		.inner-container
 			._description.p2
-				span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{description}
+				span(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") #{description}
 
 			.profiles-container
 				._note.p3
-					span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{intro}
+					span(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6") #{intro}
 
 				.profile-wrap
 					//- ._name.p2
@@ -14,57 +14,58 @@ mixin service-card-content(description, intro, servicePractices)
 					
 					ul._methods
 						for n, i in servicePractices
-							- var cascadeIndex = i + 2
+							- var cascadeIndex = i + 7
 
 							//- li(class="p3 #{n.color}")
 							li.p3.blue
-								span(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
+								span(data-cascade="slide-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
 
 				//- .profile-wrap
 					._name.p2
-						span(data-cascade="slide-up" data-cascade-delay="2" data-cascade-delay-mobile="2") For teams and people.
+						span(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6") For teams and people.
 					
 					ul._methods
 						for n, i in peopleMethods
-							- var cascadeIndex = i + 2
+							- var cascadeIndex = i + 7
 
 							li(class="p3 #{n.color}")
-								span(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
+								span(data-cascade="slide-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex)= n.name
 
 
 
 section#services-section.page-section.inner-padded
 	.ls-container
 		.ls-row
-			h4.p2.section-name.ls-col-22.offset-1
-				span.motion-cascade(data-cascade="rotate-up") ii. Lo que te ofrecemos
+			h4.p2.section-name.ls-col-22.offset-1.motion-cascade
+				span.cascade-mask.inline-block 
+					span(data-cascade="mask-up") ii. Lo que te ofrecemos
 
 			.title-wrap.ls-col-20.offset-2.offset-xs-6.ls-col-xs-12.offset-sm-3.ls-col-sm-18.offset-md-5.ls-col-md-14.offset-xl-4.ls-col-xl-16.offset-xxl-5.ls-col-xxl-14
 				h1.h1.motion-cascade
 					span#services-animation.dw-highlight.underline.long
 						span._text.cascade-mask.inline-block
-							span(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") Servicios 
+							span(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") Servicios 
 						
 						span._scaleDownDouble
 							+hl-underline("#f6eb30")
 
 					span.cascade-mask.inline-block
-						span(data-cascade="mask-up" data-cascade-delay="2" data-cascade-delay-mobile="2") por 
+						span(data-cascade="mask-up" data-cascade-delay="5" data-cascade-delay-mobile="5") por 
 
 					span.cascade-mask.inline-block
-						span(data-cascade="mask-up" data-cascade-delay="4" data-cascade-delay-mobile="4") área 
+						span(data-cascade="mask-up" data-cascade-delay="7" data-cascade-delay-mobile="7") área 
 
 					span.cascade-mask.inline-block
-						span(data-cascade="mask-up" data-cascade-delay="6" data-cascade-delay-mobile="6") de 
+						span(data-cascade="mask-up" data-cascade-delay="9" data-cascade-delay-mobile="9") de 
 
 					span.cascade-mask.inline-block
-						span(data-cascade="mask-up" data-cascade-delay="8" data-cascade-delay-mobile="8") acción
+						span(data-cascade="mask-up" data-cascade-delay="11" data-cascade-delay-mobile="11") acción
 
 					
 
 			.services-wrap.ls-col-21.offset-2.offset-md-5.ls-col-md-17.ls-col-lg-18.ls-col-xxl-17.offset-xxl-6
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="0" data-cascade="slide-up")
+					.toggle-wrap(data-index="0" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							| Creación de 
 							span.servicehl-animation.dw-highlight.circle-open-long
@@ -109,7 +110,7 @@ section#services-section.page-section.inner-padded
 
 				
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="1" data-cascade="slide-up")
+					.toggle-wrap(data-index="1" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							| Diseño de 
 							span.servicehl-animation.dw-highlight.circle-open-long
@@ -152,7 +153,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="2" data-cascade="slide-up")
+					.toggle-wrap(data-index="2" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							| Planeación e Implementación 
 
@@ -196,7 +197,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="3" data-cascade="slide-up")
+					.toggle-wrap(data-index="3" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							| Creación de Plan de Comunicación y Mercadotecnia 
 
@@ -248,7 +249,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="4" data-cascade="slide-up")
+					.toggle-wrap(data-index="4" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open.long
 								span._text Procesos
@@ -288,7 +289,7 @@ section#services-section.page-section.inner-padded
 
 
 				.service-container.motion-cascade(data-show="false")
-					.toggle-wrap(data-index="5" data-cascade="slide-up")
+					.toggle-wrap(data-index="5" data-cascade="slide-up" data-cascade-delay-mobile="4" data-cascade-delay="4")
 						h2.h2
 							span.servicehl-animation.dw-highlight.circle-open-long.lifted.larger
 								span._text TeamBuilding

@@ -1,26 +1,29 @@
 mixin how-bullet(index, name, width, offset, ...bullets)
 	div(class="motion-cascade bullet-row #{width} #{offset}")
 		h2.h1.name-wrap
-			span._index.h4(data-cascade="rotate-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{index}
-			span.cascade-mask.inline-block
-				span._name(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") #{name}
+			span._index.h4.cascade-mask.inline-block
+				span(data-cascade="mask-up" data-cascade-delay="4" data-cascade-delay-mobile="4") #{index}
 
-		.line-wrap(data-cascade="scale-x-left" data-cascade-delay="6" data-cascade-delay-mobile="6")
+			span.cascade-mask.inline-block
+				span._name(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") #{name}
+
+		.line-wrap(data-cascade="scale-x-left" data-cascade-delay="9" data-cascade-delay-mobile="9")
 
 		.bullets-wrap
 			ul.center-container
 				each bullet, index in bullets
 					- var fixedIndex = (index + 1)
-					- var cascadeIndex = (index + 9)
-					li.p2(data-cascade="rotate-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex) 
+					- var cascadeIndex = (index + 12)
+					li.p2(data-cascade="slide-up" data-cascade-delay=cascadeIndex data-cascade-delay-mobile=cascadeIndex) 
 						span._subindex 0#{fixedIndex}. 
 						| #{bullet}
 
 section#how-section.page-section.inner-padded
 	.ls-container
 		.ls-row
-			h4.p2.section-name.ls-col-22.offset-1 
-				span.motion-cascade(data-cascade="rotate-up") iii. Cómo lo hacemos
+			h4.p2.section-name.ls-col-22.offset-1.motion-cascade
+				span.cascade-mask.inline-block 
+					span(data-cascade="mask-up") iii. Cómo lo hacemos
 
 			+how-bullet(
 				"a.",
@@ -75,25 +78,26 @@ section#how-section.page-section.inner-padded
 
 			.motion-cascade.bullet-row.ls-col-18.ls-col-lg-22.ls-col-xl-20.ls-col-xxl-22.offset-3.offset-sm-1.offset-xl-2.offset-xxl-1
 				h2.h1.name-wrap
-					span._index.h4(data-cascade="rotate-up" data-cascade-delay="1" data-cascade-delay-mobile="1") d.
+					span._index.h4.cascade-mask.inline-block
+						span(data-cascade="mask-up" data-cascade-delay="4" data-cascade-delay-mobile="4") d.
 					
 					span.cascade-mask.inline-block
-						span._name(data-cascade="mask-up" data-cascade-delay="0" data-cascade-delay-mobile="0") Sobre 
+						span._name(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") Sobre 
 					
 					span.cascade-mask.inline-block
-						span._name(data-cascade="mask-up" data-cascade-delay="1" data-cascade-delay-mobile="1") solicitud
+						span._name(data-cascade="mask-up" data-cascade-delay="4" data-cascade-delay-mobile="4") solicitud
 
-				.line-wrap(data-cascade="scale-x-left" data-cascade-delay="6" data-cascade-delay-mobile="6")
+				.line-wrap(data-cascade="scale-x-left" data-cascade-delay="10" data-cascade-delay-mobile="10")
 
 				.bullets-wrap
 					ul.center-container
-						li.p2(data-cascade="rotate-up" data-cascade-delay="9" data-cascade-delay-mobile="9") 
+						li.p2(data-cascade="slide-up" data-cascade-delay="13" data-cascade-delay-mobile="13") 
 							span._subindex 01. 
 							| Social Listening (entregables y construcción de equipos operativos)
-						li.p2(data-cascade="rotate-up" data-cascade-delay="10" data-cascade-delay-mobile="10") 
+						li.p2(data-cascade="slide-up" data-cascade-delay="14" data-cascade-delay-mobile="14") 
 							span._subindex 02. 
 							| Facilitación para la Innovación en productos/servicios y procesos
-						li.p2(data-cascade="rotate-up" data-cascade-delay="11" data-cascade-delay-mobile="11") 
+						li.p2(data-cascade="slide-up" data-cascade-delay="15" data-cascade-delay-mobile="15") 
 							span._subindex 03. 
 							| Reportes de Tendencias
 
