@@ -20,7 +20,7 @@
 /////// Variables
 	$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 	$soft-in-out: cubic-bezier(.3,0,.2,1);
-	$cascade_trans_duration: 1000ms;
+	$cascade_trans_duration: 1200ms;
 	$cascade_trans_duration-short: 700ms;
 	$cascade_interval: 100ms;
 	$aladdin_interval: 20ms;
@@ -246,7 +246,8 @@
 [data-cascade]{
 	display: block;
 	animation-duration: $cascade_trans_duration;
-	animation-timing-function: $soft-in-out;
+	// animation-timing-function: $soft-in-out;
+	animation-timing-function: $easeOutQuint;
 	animation-fill-mode: both;
 }
 
