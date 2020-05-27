@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     clickScroll.init();
 
     // Slogan highlighting interaction
-    var LandingSlogan = new Slogan();
-    LandingSlogan.init();
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
+        var LandingSlogan = new Slogan();
+        LandingSlogan.init();
+    }
 });
 
 
@@ -31,16 +33,6 @@ window.onload = function() {
 
     Preloader.init();
 
-    // Circles in "Focus" section interaction
-    var focusCircles = new Circles();
-    focusCircles.init();
-
-
-    // Services list interactions
-    var landingServices = new Services_List();
-    landingServices.init();
-
-
     // Animiation frame loop at 60fps to enable "toTop()" function
     RAF.init();
 
@@ -50,8 +42,7 @@ window.onload = function() {
     //     RAF.add(PageSmoothScroll);
     // }
 
-
-    // General inview animation, linked with "Cascading" system
+    // Landing inview animation, linked with "Cascading" system
     var inviewObjects = document.getElementsByClassName('motion-cascade');
 
     // Cascade animation timing values
@@ -97,6 +88,18 @@ window.onload = function() {
 
             }
         })
+    }
+
+
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
+        // Circles in "Focus" section interaction
+        var focusCircles = new Circles();
+        focusCircles.init();
+
+
+        // Services list interactions
+        var landingServices = new Services_List();
+        landingServices.init();
     }
 
 }

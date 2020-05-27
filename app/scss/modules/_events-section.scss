@@ -40,6 +40,26 @@
 			}
 		}
 	}
+
+	&.events-page{
+		padding-bottom: 100px;
+
+		@include tablet {
+			padding-bottom: 140px;
+		}
+
+		@include laptop {
+			padding-bottom: 120px;
+		}
+
+		@include small-desktop {
+			padding-bottom: 180px;
+		}
+
+		@include desktop {
+			padding-bottom: 200px;
+		}
+	}
 }
 
 .events-list-container{
@@ -223,5 +243,11 @@
 			}
 		}
 	}
-	
 }
+
+
+
+
+
+
+

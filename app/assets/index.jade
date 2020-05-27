@@ -1,5 +1,11 @@
 extends _templates/layout.jade
 
+block mobile-menu
+	include _modules/mobile-menu-landing.jade
+
+block header-nav
+	+header-nav('home')
+
 
 block content
 	include _modules/hero-section.jade
@@ -13,4 +19,8 @@ block content
 	include _modules/contact-section.jade
 	
 	.only-mobile.not-scroll-js
-		include _modules/footer.jade
+		include _modules/footer-landing.jade
+
+
+block footer
+	include _modules/footer-landing.jade

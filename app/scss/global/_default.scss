@@ -1,4 +1,13 @@
 // Default style
+::-moz-selection { 
+	background: #000;
+	// color: $blue;
+}
+::selection { 
+	background: #000;
+	// color: $blue;
+}
+
 *{
 	@include border-box;
 }

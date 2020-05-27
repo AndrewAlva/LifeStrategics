@@ -42,6 +42,20 @@
 	}
 
 	.info-col{
+		min-height: 280px;
+
+		@include large-mobile {
+			min-height: 180px;
+		}
+
+		@include small-laptop {
+			min-height: 230px;
+		}
+
+		@include small-desktop {
+			min-height: 300px;
+		}
+
 		.p2{
 			@include tablet {
 				line-height: 1.5em;

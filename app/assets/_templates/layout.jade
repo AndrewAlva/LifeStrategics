@@ -11,7 +11,6 @@ html(class='no-js' lang="es-MX")
 		//- metatags
 		block google_metatags
 			meta(name='description', content='Page_description')
-			meta(name='subject', content='Page_subject')
 
 		//- Share graphs for social media
 		block og_metatags
@@ -87,6 +86,7 @@ html(class='no-js' lang="es-MX")
 
 		//- Mixins
 		include ../_modules/svg-mixins.jade
+		include ../_modules/header-nav.jade
 
 		
 		//- Preloader screen
@@ -94,10 +94,12 @@ html(class='no-js' lang="es-MX")
 
 
 		//- mobile menu window
-		include ../_modules/mobile-menu.jade
+		block mobile-menu
+			include ../_modules/mobile-menu.jade
 
 		//- header
-		include ../_modules/header-nav.jade
+		block header-nav
+			+header-nav('home')
 
 		//- content
 		#main-wrapper
@@ -105,7 +107,8 @@ html(class='no-js' lang="es-MX")
 				block content
 
 			.footer-fixed-holder
-				include ../_modules/footer.jade
+				block footer
+					include ../_modules/footer.jade
 
 		//- scripts
 		script(src='js/app.js')
