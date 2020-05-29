@@ -296,6 +296,12 @@
 	opacity: 1;
 	@include ani-name(scale-x);
 }
+[data-cascade="scale-x-left-normal"]{opacity: 0;}
+[data-cascade="scale-x-left-normal"].animate, .animate [data-cascade="scale-x-left-normal"]{
+	@include transform-origin(center, left);
+	opacity: 1;
+	@include ani-name(scale-x);
+}
 
 
 [data-cascade="contact-arrow-body"]{opacity: 0;}

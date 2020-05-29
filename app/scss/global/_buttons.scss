@@ -122,6 +122,22 @@
 				width: 16px;
 			}
 		}
+
+		&.xl{
+			&.up, &.right{
+				width: 28px;
+
+				@include tablet {
+					width: 38px;
+				}
+				@include laptop {
+					width: 44px;
+				}
+				@include small-desktop {
+					width: 55px;
+				}
+			}
+		}
 	}
 
 	&:hover{
