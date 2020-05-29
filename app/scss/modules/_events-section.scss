@@ -60,6 +60,55 @@
 			padding-bottom: 200px;
 		}
 	}
+
+	.view-all-row{
+		.link-container{
+			&:hover{
+				._icon{
+					&.right{
+						@include translate(10px, 0);
+					}
+				}
+			}
+		}
+
+		.view-all-wrap{
+			position: relative;
+			width: 100%;
+
+			.top-line{
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 1px;
+				margin-bottom: 24px;
+				background-color: #fff;
+
+				@include tablet {
+					height: 3px;
+				}
+
+				@include laptop {
+					margin-bottom: 34px;
+				}
+			}
+
+			.arrow-button{
+				display: inline-block;
+				padding-right: 56px;
+
+				@include tablet {
+					padding-right: 76px;
+				}
+				@include laptop {
+					padding-right: 88px;
+				}
+				@include small-desktop {
+					padding-right: 110px;
+				}
+			}
+		}
+	}
 }
 
 .events-list-container{
