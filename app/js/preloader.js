@@ -1,7 +1,7 @@
 var Preloader = {
 	init: function() {
-		setTimeout(this.start, 500); // for testing locally
-		// this.start();
+		// setTimeout(this.start, 1000); // for testing locally
+		this.start();
 	},
 
 	start: function() {

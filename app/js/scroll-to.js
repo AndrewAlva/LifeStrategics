@@ -42,14 +42,17 @@ var Scroll_To = function() {
 
 	this.getCurrentPosition = function() {
 		_self.currentPosition = window.pageYOffset;
+		// console.log("_self.currentPosition: " + _self.currentPosition);
 	}
 
 	this.getDisplacement = function(target) {
 		_self.displacement = target.getBoundingClientRect().y;
+		// console.log("_self.displacement: " + _self.displacement);
 	}
 
 	this.getNewPosition = function() {
 		_self.newPosition = _self.currentPosition + _self.displacement;
+		// console.log("_self.newPosition: " + _self.newPosition);
 	}
 
 	this.goTo = function(target) {

@@ -15,10 +15,13 @@ var SmoothScroll = function(args){
 			ease: 0.095,
 			displacement: 0 // Extra property to trigger inview animations
 		},
+
 		bounds: {
 			scrollHeight: 0
 		},
-		isResizing: false
+		
+		isResizing: false,
+		initDelay: 1000
 	}
    
 
@@ -29,7 +32,7 @@ var SmoothScroll = function(args){
 
 		setTimeout(function(){
 			_self.setFakeHeight();
-		},1000);
+		}, _self.state.initDelay);
 
 		// Remove special classes from not-scroll-js elements
 		var _notScrollElements = document.getElementsByClassName('not-scroll-js');

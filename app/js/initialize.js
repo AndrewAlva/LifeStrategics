@@ -1,7 +1,10 @@
 // Global vars
 var PageSmoothScroll;
+var clickScroll;
 var smoothScrollWindowMinWidth = 1025;
 var inviewTriggerInSmoothScroll = false;
+var pageInitDelay;
+
 
 
 // Trigger functions when the initial HTML document
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     landingMobileMenu.init();
 
     
-    var clickScroll = new Scroll_To();
+    clickScroll = new Scroll_To();
     clickScroll.init();
 
     // Slogan highlighting interaction
@@ -31,16 +34,18 @@ window.onload = function() {
     console.log("Page fully loaded.");
     console.log("Initialize.js");
 
-    Preloader.init();
+    // Preloader.init();
 
     // Animiation frame loop at 60fps to enable "toTop()" function
     RAF.init();
 
     // Smooth scrolling
-    // if(window.innerWidth >= smoothScrollWindowMinWidth) {
-    //     PageSmoothScroll = new SmoothScroll();
-    //     RAF.add(PageSmoothScroll);
-    // }
+    if(window.innerWidth >= smoothScrollWindowMinWidth) {
+        PageSmoothScroll = new SmoothScroll();
+        RAF.add(PageSmoothScroll);
+
+        pageInitDelay = PageSmoothScroll.state.initDelay;
+    }
 
     // Landing inview animation, linked with "Cascading" system
     var inviewObjects = document.getElementsByClassName('motion-cascade');
@@ -100,7 +105,37 @@ window.onload = function() {
         // Services list interactions
         var landingServices = new Services_List();
         landingServices.init();
+
+
+        // Scroll to specific section through URL
+        if (window.innerWidth >= smoothScrollWindowMinWidth && window.location.hash) {
+            var _targetId = window.location.hash;
+            _targetId = _targetId.substr(1);
+
+            var _scrollTarget = document.getElementById(_targetId);
+
+
+            setTimeout(function(){
+                // clickScroll.goTo(_scrollTarget);
+
+                clickScroll.getCurrentPosition();
+                clickScroll.getDisplacement(_scrollTarget);
+                clickScroll.getNewPosition();
+                // console.log(clickScroll.newPosition);
+                
+                PageSmoothScroll.state.scroll.target = clickScroll.newPosition;
+                PageSmoothScroll.state.scroll.current = clickScroll.newPosition;
+                PageSmoothScroll.state.scroll.displacement = clickScroll.newPosition;
+                
+                clickScroll.goTo(_scrollTarget);
+
+            }, pageInitDelay);
+        }
     }
+
+    setTimeout(function(){
+        Preloader.init();
+    }, pageInitDelay);
 
 }
 
