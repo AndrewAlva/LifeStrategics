@@ -107,30 +107,30 @@ window.onload = function() {
         landingServices.init();
 
 
-        // Scroll to specific section through URL
-        if (window.innerWidth >= smoothScrollWindowMinWidth && window.location.hash) {
-            var _targetId = window.location.hash;
-            _targetId = _targetId.substr(1);
-
-            var _scrollTarget = document.getElementById(_targetId);
-
-
+        if (window.location.hash) {
             setTimeout(function(){
-                // clickScroll.goTo(_scrollTarget);
+                // Scroll to specific section through URL
+                var _targetId = window.location.hash;
+                _targetId = _targetId.substr(1);
 
+                var _scrollTarget = document.getElementById(_targetId);
+                
                 clickScroll.getCurrentPosition();
                 clickScroll.getDisplacement(_scrollTarget);
                 clickScroll.getNewPosition();
                 // console.log(clickScroll.newPosition);
-                
-                PageSmoothScroll.state.scroll.target = clickScroll.newPosition;
-                PageSmoothScroll.state.scroll.current = clickScroll.newPosition;
-                PageSmoothScroll.state.scroll.displacement = clickScroll.newPosition;
-                
-                clickScroll.goTo(_scrollTarget);
 
+                if (window.innerWidth >= smoothScrollWindowMinWidth) {
+                    PageSmoothScroll.state.scroll.target = clickScroll.newPosition;
+                    PageSmoothScroll.state.scroll.current = clickScroll.newPosition;
+                    PageSmoothScroll.state.scroll.displacement = clickScroll.newPosition;
+                }
+
+                clickScroll.goTo(_scrollTarget);
+        
             }, pageInitDelay);
         }
+
     }
 
     setTimeout(function(){
