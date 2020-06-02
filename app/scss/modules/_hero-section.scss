@@ -18,7 +18,7 @@
 	}
 
 	@include small-desktop {
-		min-height: 850px;
+		min-height: 750px;
 	}
 
 	@include desktop {
@@ -45,8 +45,14 @@
 		}
 
 		.h1{
+			max-width: 380px;
+			margin: 0 auto;
 			text-align: center;
 			// line-height: 1em;
+
+			@include tablet {max-width: 750px;}
+			@include laptop {max-width: 850px;}
+			@include small-desktop {max-width: 1100px;}
 
 			._line{
 				display: block;

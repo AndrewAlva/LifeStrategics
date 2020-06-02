@@ -10,7 +10,7 @@ var Preloader = {
 
 		if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
 			document.getElementById('hero-section').classList.add('animate');
-			document.getElementById('lead-animation').classList.add('drawn');
+			document.getElementById('hero-animation').classList.add('drawn');
 		}
 	}
 }
