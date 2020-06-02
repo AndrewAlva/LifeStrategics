@@ -138,10 +138,10 @@
 			li{
 				button, a{
 					&:hover{
-						// color: $yellow;
+						// color: $blue;
 
 						path {
-							fill: $yellow;
+							fill: $blue;
 						}
 					}
 				}
@@ -158,10 +158,10 @@
 			li{
 				button, a{
 					&:hover{
-						// color: $blue;
+						// color: $yellow;
 
 						svg, path {
-							fill: $blue;
+							fill: $yellow;
 						}
 					}
 				}
