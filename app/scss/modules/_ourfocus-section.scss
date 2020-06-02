@@ -315,30 +315,36 @@
 
 				._outline{
 					@include laptop {
-						@include scale-rotate(1, -1, -25deg)
+						@include scale-rotate(1, -1, 0deg)
 					}
 
 					@include small-desktop {
-						@include scale-rotate(1, -1, -12deg)
+						@include scale-rotate(1, -1, -8deg)
 					}
 				}
 
 				.h3{
-					bottom: 20px;
-					left: -16.66%;
+					bottom: -8px;
+					left: -12.66%;
 
-					@include tablet {
+					@include small-laptop {
 						bottom: 32px;
+						left: auto;
+						right: -39%;
+						white-space: nowrap;
 					}
 
 					@include laptop {
-						left: auto;
 						right: -35%;
 						bottom: 55px;
 					}
 
 					@include small-desktop {
 						right: -50%;
+					}
+
+					@include desktop {
+						right: -67%;
 					}
 				}
 			}
