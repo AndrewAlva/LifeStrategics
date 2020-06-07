@@ -246,6 +246,11 @@
 				stroke-width: 2;
 			}
 		}
+		&.bolder{
+			svg path{
+				stroke-width: 6;
+			}
+		}
 
 		&.lifted{
 			svg {
@@ -305,6 +310,12 @@
 				@include laptop {
 					bottom: -20%;
 				}
+			}
+		}
+
+		&.lower{
+			svg{
+				bottom: -40%;
 			}
 		}
 

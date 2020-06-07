@@ -8,25 +8,25 @@ function deserializeBlog() {
 	var defaultContent = document.getElementById('default-blog-list');
 
 	var requestURL = "http://192.168.15.5:3000/cms/blog-data.json";
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    
-    request.responseType = 'json';
-    request.send();
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
 
-    request.onload = function() {
-  //   	if (defaultContent.parentNode) {
+	request.responseType = 'json';
+	request.send();
+
+	request.onload = function() {
+		// if (defaultContent.parentNode) {
 		// 	defaultContent.parentNode.removeChild(defaultContent);
 		// }
 		
 
-        var blogArticles = request.response;
-        for (var i = 0; i < blogArticles.length; i++) {
-            // console.log(blogArticles[i]);
+		var blogArticles = request.response;
+		for (var i = 0; i < blogArticles.length; i++) {
+			// console.log(blogArticles[i]);
 
-            formatBlogEntry(blogArticles[i], container);
-        }
-    }
+			formatBlogEntry(blogArticles[i], container);
+		}
+	}
 }
 
 function formatBlogEntry(entry, container) {
@@ -37,11 +37,46 @@ function formatBlogEntry(entry, container) {
 	var _high = entry.resaltar;
 
 	// measure word to highlight
-	// var _highSize = _high.length;
+	var _highSize = _high.length;
 
 	// clone highlight svg according to size needed
-	var _circleHighlight = hl_circle_open_long.cloneNode(true);
+	var _circleHighlight, _circleHighlightClasses;
+	if (_highSize <= 4) {
+		_circleHighlight = hl_circle_open_round.cloneNode(true);
+
+		if (_highSize <= 2) {
+			_circleHighlightClasses = 'dw-highlight circle-open-round bolder lifted-short';
+		} else {
+			_circleHighlightClasses = 'dw-highlight circle-open-round';
+		}
+	
+	} else if (_highSize <= 7) {
+		_circleHighlight = hl_circle_open.cloneNode(true);
+
+		if (_highSize <= 5) {
+			_circleHighlightClasses = 'dw-highlight circle-open offset';
+		} else {
+			_circleHighlightClasses = 'dw-highlight circle-open offset long bolder';
+		}
+	
+	} else if (_highSize <= 11) {
+		_circleHighlight = hl_circle_open_long.cloneNode(true);
+		_circleHighlightClasses = 'dw-highlight circle-open-long lifted bolder larger offset';
+	
+	} else {
+		_circleHighlight = hl_circle_open_long.cloneNode(true);
+		
+		if (_highSize <= 13) {
+			_circleHighlightClasses = 'dw-highlight circle-open-long sublifted';
+		} else if (_highSize <= 17) {
+			_circleHighlightClasses = 'dw-highlight circle-open-long lower';
+		} else {
+			_circleHighlightClasses = 'dw-highlight circle-open-long lower lighter';
+		}
+	}
+
 	_circleHighlight.classList.add('blue');
+
 
 	// Clone arrow svg
 	var _blogpost_arrow_svg = link_arrow_right.cloneNode(true);
@@ -69,18 +104,19 @@ function formatBlogEntry(entry, container) {
 		_titleEnd += _titleArray[i];
 	}
 
-	console.log(_title);
-	console.log(_titleArray);
-	console.log(_highStart);
-	console.log(_titleStart + ".");
+	// console.log(_title);
+	// console.log(_titleArray);
+	// console.log(_highStart);
+	// console.log(_titleStart + ".");
 	console.log(_high);
-	console.log(_titleEnd + ".");
+	// console.log(_titleEnd + ".");
+	console.log(_highSize);
 	console.log("");
-	console.log("");
+	// console.log("");
 
 	// create DOM elements in order
 		var _blogpost = document.createElement('article');
-		_blogpost.className = 'ls-row blogpost-row no-img';
+		_blogpost.className = 'ls-row blogpost-row no-img post-margin';
 
 			var _bpLink = document.createElement('a');
 			_bpLink.setAttribute('href', entry.url);
@@ -127,7 +163,7 @@ function formatBlogEntry(entry, container) {
 
 								// create highlight wrap
 								var _bpInfo_title_highlight = document.createElement('span');
-								_bpInfo_title_highlight.className = 'dw-highlight circle-open-long lifted bolder larger offset';
+								_bpInfo_title_highlight.className = _circleHighlightClasses;
 								
 									// insert highlighted word
 									var _bpInfo_title_highlight_text = document.createElement('span');
@@ -201,9 +237,8 @@ function formatBlogEntry(entry, container) {
 			_blogpost.appendChild(_bpLink);
 
 
-		
 
 
-	// insert into container
+	// insert Blog Post into container
 	container.appendChild(_blogpost);
 }

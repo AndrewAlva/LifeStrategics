@@ -1,15 +1,42 @@
-{
-	"indice": "01.",
-	"titulo": "¿Cómo ayudamos a la preservación de condiciones de seguridad y bienestar para las generaciones humanas y no-humanas futuras?",
-	"temas": [
-		"Crisis",
-		"Futuro",
-		"Medio Ambiente",
-		"Sostenibilidad",
-		"Sustentabilidad"
-	],
-	"url": "https://lifestrategics.com/blog/2020/04/24/como-ayudamos-a-la-preservacion-de-condiciones-de-seguridad-y-bienestar-para-las-generaciones-humanas-y-no-humanas-futuras/"
-}
+[
+	{
+		"indice": "01.",
+		"titulo": "¿Cómo ayudamos a la preservación de condiciones de seguridad y bienestar para las generaciones humanas y no-humanas futuras?",
+		"resaltar" : "preservación",
+		"temas": [
+			"Crisis",
+			"Futuro",
+			"Medio Ambiente",
+			"Sostenibilidad",
+			"Sustentabilidad"
+		],
+		"url": "https://lifestrategics.com/blog/2020/04/24/como-ayudamos-a-la-preservacion-de-condiciones-de-seguridad-y-bienestar-para-las-generaciones-humanas-y-no-humanas-futuras/"
+	},
 
+	{
+		"indice": "02.",
+		"titulo": "Pensamientos de evolución personal, Pt.1",
+		"resaltar" : "personal,",
+		"temas": [
+			"Autoconocimiento",
+			"Coaching",
+			"Evolución",
+			"Mindfulness"
+		],
+		"url": "https://lifestrategics.com/blog/2020/04/24/pensamientos-de-evolucion-personal-pt-1/"
+	},
 
-
+	{
+		"indice": "03.",
+		"titulo": "El Arte de Aprender a Aprender",
+		"resaltar" : "Arte",
+		"temas": [
+			"Aprendizaje",
+			"Autoconocimiento",
+			"Coaching",
+			"Habilidades",
+			"Liderazgo"
+		],
+		"url": "https://lifestrategics.com/blog/2020/04/24/pensamientos-de-evolucion-personal-pt-1/"
+	}
+]

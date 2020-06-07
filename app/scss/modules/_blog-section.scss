@@ -50,7 +50,7 @@
 
 	.blogpost-row{
 		// border-top: 1px solid red;
-		&:not(:last-child){
+		&.post-margin{
 			margin-bottom: 80px;
 			
 			@include large-mobile {

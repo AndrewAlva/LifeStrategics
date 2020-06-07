@@ -68,6 +68,9 @@ ul{
 			padding-bottom: 70px;
 		}
 
+		// Special style for bug revealing footer on space between sections
+		@include small-laptop {margin-top: -1px;}
+
 		@include laptop {
 			padding-top: 120px;
 			padding-bottom: 60px;
