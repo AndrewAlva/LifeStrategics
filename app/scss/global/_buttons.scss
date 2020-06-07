@@ -115,6 +115,10 @@
 			top: 0; bottom: 0;
 			left: 0;
 			width: 100%;
+
+			&.blue path{fill: $blue;}
+			&.yellow path{fill: $yellow;}
+			&.red path{fill: $red;}
 		}
 
 		&.sm{

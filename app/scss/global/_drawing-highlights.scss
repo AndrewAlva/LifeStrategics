@@ -355,6 +355,18 @@
 	}
 }
 
+.cms-circle-open, .cms-circle-open-round, .cms-circle-open-long{
+	&.blue path{
+		stroke: $blue;
+	}
+	&.yellow path{
+		stroke: $yellow;
+	}
+	&.red path{
+		stroke: $red;
+	}
+}
+
 
 ///// @Keyframes //////
 

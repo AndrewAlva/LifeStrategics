@@ -21,6 +21,12 @@ block content
 	.only-mobile.not-scroll-js
 		include _modules/footer-landing.jade
 
+	.cms-svgs(style="display: none;")
+		+hl-circle-open("", "cms-circle-open")
+		+hl-circle-open-round("", "cms-circle-open-round")
+		+hl-circle-open-long("", "cms-circle-open-long")
+		+arrow-right("", "cms-arrow-right")
+
 
 block footer
 	include _modules/footer-landing.jade

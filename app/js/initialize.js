@@ -5,6 +5,10 @@ var smoothScrollWindowMinWidth = 1025;
 var inviewTriggerInSmoothScroll = false;
 var pageInitDelay = 0;
 
+// Bring JSON data if page needs it
+if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
+    deserializeBlog();
+}
 
 
 // Trigger functions when the initial HTML document
