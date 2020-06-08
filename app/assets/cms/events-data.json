@@ -1,0 +1,23 @@
+[
+	{
+		"indice": "01.",
+		"titulo": "Bootcamp Online de Construcción de Marca Digital",
+		"resaltar": "Marca",
+		"imagen": "event-01.jpg",
+		"fecha": "5 de Mayo, 2020",
+		"lugar": "Zoom streaming.",
+		"cta": "RSVP",
+		"url": "eventos.html"
+	},
+
+	{
+		"indice": "02.",
+		"titulo": "El poder de la multiestrategia y porqué no es para todos",
+		"resaltar": "multiestrategia",
+		"imagen": "event-02.jpg",
+		"fecha": "2 de Julio, 2020",
+		"lugar": "WeWork Reforma Latino; CDMX, México..",
+		"cta": "Reservar",
+		"url": "eventos.html"
+	}
+]

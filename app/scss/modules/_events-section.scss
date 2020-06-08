@@ -130,7 +130,7 @@
 }
 
 .event-row{
-	&:not(:last-child){
+	&.event-margin{
 		margin-bottom: 80px;
 			
 		@include large-mobile {

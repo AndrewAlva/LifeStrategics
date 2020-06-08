@@ -40,42 +40,7 @@ function formatBlogEntry(entry, container) {
 	var _highSize = _high.length;
 
 	// clone highlight svg according to size needed
-	var _circleHighlight, _circleHighlightClasses;
-	if (_highSize <= 4) {
-		_circleHighlight = hl_circle_open_round.cloneNode(true);
-
-		if (_highSize <= 2) {
-			_circleHighlightClasses = 'dw-highlight circle-open-round bolder lifted-short';
-		} else {
-			_circleHighlightClasses = 'dw-highlight circle-open-round';
-		}
-	
-	} else if (_highSize <= 7) {
-		_circleHighlight = hl_circle_open.cloneNode(true);
-
-		if (_highSize <= 5) {
-			_circleHighlightClasses = 'dw-highlight circle-open offset';
-		} else {
-			_circleHighlightClasses = 'dw-highlight circle-open offset long bolder';
-		}
-	
-	} else if (_highSize <= 11) {
-		_circleHighlight = hl_circle_open_long.cloneNode(true);
-		_circleHighlightClasses = 'dw-highlight circle-open-long lifted bolder larger offset';
-	
-	} else {
-		_circleHighlight = hl_circle_open_long.cloneNode(true);
-		
-		if (_highSize <= 13) {
-			_circleHighlightClasses = 'dw-highlight circle-open-long sublifted';
-		} else if (_highSize <= 17) {
-			_circleHighlightClasses = 'dw-highlight circle-open-long lower';
-		} else {
-			_circleHighlightClasses = 'dw-highlight circle-open-long lower lighter';
-		}
-	}
-
-	_circleHighlight.classList.add('blue');
+	var _circleHighlight = getCircleHighlight(_highSize, 'blue');
 
 
 	// Clone arrow svg
@@ -108,10 +73,10 @@ function formatBlogEntry(entry, container) {
 	// console.log(_titleArray);
 	// console.log(_highStart);
 	// console.log(_titleStart + ".");
-	console.log(_high);
+	// console.log(_high);
 	// console.log(_titleEnd + ".");
-	console.log(_highSize);
-	console.log("");
+	// console.log(_highSize);
+	// console.log("");
 	// console.log("");
 
 	// create DOM elements in order
@@ -163,7 +128,7 @@ function formatBlogEntry(entry, container) {
 
 								// create highlight wrap
 								var _bpInfo_title_highlight = document.createElement('span');
-								_bpInfo_title_highlight.className = _circleHighlightClasses;
+								_bpInfo_title_highlight.className = _circleHighlight.classes;
 								
 									// insert highlighted word
 									var _bpInfo_title_highlight_text = document.createElement('span');
@@ -172,7 +137,7 @@ function formatBlogEntry(entry, container) {
 									_bpInfo_title_highlight.appendChild(_bpInfo_title_highlight_text);
 
 									// insert svg
-									_bpInfo_title_highlight.appendChild(_circleHighlight);
+									_bpInfo_title_highlight.appendChild(_circleHighlight.svg);
 
 								_bpInfo_title.appendChild(_bpInfo_title_highlight);
 
