@@ -1,4 +1,4 @@
-function deserializeEvents() {
+function deserializeEvents(limit) {
 	var container = document.getElementById('json-events-list');
 	var defaultContent = document.getElementById('default-events-list');
 
@@ -10,21 +10,29 @@ function deserializeEvents() {
 	request.send();
 
 	request.onload = function() {
-		// if (defaultContent.parentNode) {
-		// 	defaultContent.parentNode.removeChild(defaultContent);
-		// }
-		
+		if(request.response) {
+			if (defaultContent.parentNode) {
+				defaultContent.parentNode.removeChild(defaultContent);
+			}
+			
 
-		var eventsArray = request.response;
-		for (var i = 0; i < eventsArray.length; i++) {
-			// console.log(eventsArray[i]);
+			var eventsArray = request.response;
+			var _limit;
+			if (limit) {_limit = limit;} else {_limit = eventsArray.length}
+			for (var i = 0; i < _limit; i++) {
+				// console.log(eventsArray[i]);
 
-			formatEventRow(eventsArray[i], container);
+				formatEventRow(eventsArray[i], container, i);
+			}
+
+			removeSVGhelpers();
 		}
 	}
 }
 
-function formatEventRow(entry, container) {
+function formatEventRow(entry, container, index) {
+	var _index = formatIndex(index);
+
 	var _title = entry.titulo;
 	var _high = entry.resaltar;
 	var _img = entry.imagen;
@@ -38,8 +46,7 @@ function formatEventRow(entry, container) {
 	// _circleHighlight.classes;
 
 	// Clone arrow svg
-	var _event_arrow_svg = link_arrow_right.cloneNode(true);
-	_event_arrow_svg.classList.add('yellow');
+	var _event_arrow_svg = getArrowSVG('yellow');
 
 
 
@@ -100,7 +107,7 @@ function formatEventRow(entry, container) {
 							var _erTitle_index = document.createElement('span');
 							_erTitle_index.className = 'p2 _index';
 							_erTitle_index.setAttribute('data-cascade', 'slide-up');
-							_erTitle_index.innerHTML = entry.indice;
+							_erTitle_index.innerHTML = _index;
 
 							_erTitle_wrap.appendChild(_erTitle_index);
 

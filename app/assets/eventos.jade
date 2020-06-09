@@ -5,7 +5,7 @@ block header-nav
 
 block content
 	section#events-section.page-section.inner-padded.preload-hide.events-page
-		.ls-container
+		#events-page.ls-container
 			.ls-row
 				.title-wrap.ls-col-24.ls-col-xs-22.offset-xs-1
 					h1.h1.motion-cascade
@@ -34,249 +34,258 @@ block content
 
 
 			.events-list-container
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 01.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| Bootcamp Online de Construcción de 
-										span.dw-highlight.circle-open.long.bolder.lifted-ascendents.offset
-											span._text Marca
-											+hl-circle-open("#f6eb30")
+				#json-events-list
+				#default-events-list
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 01.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| Bootcamp Online de Construcción de 
+											span.dw-highlight.circle-open.long.bolder.offset
+												span._text Marca
+												+hl-circle-open("#f6eb30")
 
-										|  Digital
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="img/event-01.jpg", alt="Imagen del evento: Bootcamp Online de Construcción de Marca Digital")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 5 de Mayo, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Zoom streaming.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label RSVP
-									span._icon.right
-										+arrow-right("#f6eb30")
+											|  Digital
 
 
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="img/event-01.jpg", alt="Imagen del evento: Bootcamp Online de Construcción de Marca Digital")
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 02.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| El poder de la  
-										span.dw-highlight.circle-open-long.sublifted
-											span._text multiestrategia
-											+hl-circle-open-long("#f6eb30")
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 5 de Mayo, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Zoom streaming.
 
-										|  y porqué no es para todos
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-poder-de-la-multiestrategia-y-porque-no-es-para-todos.jpg", alt="Imagen del evento: El poder de la multiestrategia y porqué no es para todos")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 2 de Julio, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") WeWork Reforma Latino; CDMX, México.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Reservar
-									span._icon.right
-										+arrow-right("#f6eb30")
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label RSVP
+										span._icon.right
+											+arrow-right("#f6eb30")
 
 
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 03.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										span.dw-highlight.circle-open-long.sublifted
-											span._text Emprendimiento 
-											+hl-circle-open-long("#f6eb30")
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 02.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| El poder de la  
+											span.dw-highlight.circle-open-long
+												span._text multiestrategia
+												+hl-circle-open-long("#f6eb30")
 
-										|  informado por Tendencias
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg", alt="Imagen del evento: Emprendimiento informado por Tendencias")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 1 de Septiembre, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Facebook Live.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Más info
-									span._icon.right
-										+arrow-right("#f6eb30")
+											|  y porqué no es para todos
 
 
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-poder-de-la-multiestrategia-y-porque-no-es-para-todos.jpg", alt="Imagen del evento: El poder de la multiestrategia y porqué no es para todos")
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 04.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| Bases para Diseño de 
-										span.dw-highlight.circle-open-long.lifted
-											span._text Promociones
-											+hl-circle-open-long("#f6eb30")
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 2 de Julio, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") WeWork Reforma Latino; CDMX, México.
 
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/todo-suena-muy-bien-desde-la-teoria-lo-arruina-tu-ego.jpg", alt="Imagen del evento: Bases para Diseño de Promociones")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 21 de Noviembre, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Experience Talks; Facebook Live.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Reservar
-									span._icon.right
-										+arrow-right("#f6eb30")
-				
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 05.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| Bootcamp Online de Construcción de 
-										span.dw-highlight.circle-open.long.bolder.lifted-ascendents.offset
-											span._text Marca
-											+hl-circle-open("#f6eb30")
-
-										|  Digital
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="img/event-01.jpg", alt="Imagen del evento: Bootcamp Online de Construcción de Marca Digital")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 5 de Mayo, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Zoom streaming.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label RSVP
-									span._icon.right
-										+arrow-right("#f6eb30")
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Reservar
+										span._icon.right
+											+arrow-right("#f6eb30")
 
 
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 06.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| El poder de la  
-										span.dw-highlight.circle-open-long.sublifted
-											span._text multiestrategia
-											+hl-circle-open-long("#f6eb30")
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 03.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											span.dw-highlight.circle-open-long
+												span._text Emprendimiento 
+												+hl-circle-open-long("#f6eb30")
 
-										|  y porqué no es para todos
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-poder-de-la-multiestrategia-y-porque-no-es-para-todos.jpg", alt="Imagen del evento: El poder de la multiestrategia y porqué no es para todos")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 2 de Julio, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") WeWork Reforma Latino; CDMX, México.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Reservar
-									span._icon.right
-										+arrow-right("#f6eb30")
+											|  informado por Tendencias
 
 
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg", alt="Imagen del evento: Emprendimiento informado por Tendencias")
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 07.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										span.dw-highlight.circle-open-long.sublifted
-											span._text Emprendimiento 
-											+hl-circle-open-long("#f6eb30")
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 1 de Septiembre, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Facebook Live.
 
-										|  informado por Tendencias
-
-
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg", alt="Imagen del evento: Emprendimiento informado por Tendencias")
-
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 1 de Septiembre, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Facebook Live.
-
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Más info
-									span._icon.right
-										+arrow-right("#f6eb30")
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Más info
+										span._icon.right
+											+arrow-right("#f6eb30")
 
 
 
-				.ls-row.event-row
-					a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
-						.ls-row
-							h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
-								span._wrap
-									span.p2._index(data-cascade="slide-up") 08.
-									span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
-										| Bases para Diseño de 
-										span.dw-highlight.circle-open-long.lifted
-											span._text Promociones
-											+hl-circle-open-long("#f6eb30")
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 04.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| Bases para Diseño de 
+											span.dw-highlight.circle-open-long
+												span._text Promociones
+												+hl-circle-open-long("#f6eb30")
 
 
-							._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
-								.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
-									img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/todo-suena-muy-bien-desde-la-teoria-lo-arruina-tu-ego.jpg", alt="Imagen del evento: Bases para Diseño de Promociones")
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/todo-suena-muy-bien-desde-la-teoria-lo-arruina-tu-ego.jpg", alt="Imagen del evento: Bases para Diseño de Promociones")
 
-							._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
-								._info
-									h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 21 de Noviembre, 2020
-									p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Experience Talks; Facebook Live.
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 21 de Noviembre, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Experience Talks; Facebook Live.
 
-								.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-									span._label Reservar
-									span._icon.right
-										+arrow-right("#f6eb30")
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Reservar
+										span._icon.right
+											+arrow-right("#f6eb30")
+					
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 05.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| Bootcamp Online de Construcción de 
+											span.dw-highlight.circle-open.long.bolder.offset
+												span._text Marca
+												+hl-circle-open("#f6eb30")
+
+											|  Digital
+
+
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="img/event-01.jpg", alt="Imagen del evento: Bootcamp Online de Construcción de Marca Digital")
+
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 5 de Mayo, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Zoom streaming.
+
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label RSVP
+										span._icon.right
+											+arrow-right("#f6eb30")
+
+
+
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 06.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| El poder de la  
+											span.dw-highlight.circle-open-long
+												span._text multiestrategia
+												+hl-circle-open-long("#f6eb30")
+
+											|  y porqué no es para todos
+
+
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/el-poder-de-la-multiestrategia-y-porque-no-es-para-todos.jpg", alt="Imagen del evento: El poder de la multiestrategia y porqué no es para todos")
+
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 2 de Julio, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") WeWork Reforma Latino; CDMX, México.
+
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Reservar
+										span._icon.right
+											+arrow-right("#f6eb30")
+
+
+
+					.ls-row.event-row.event-margin
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 07.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											span.dw-highlight.circle-open-long
+												span._text Emprendimiento 
+												+hl-circle-open-long("#f6eb30")
+
+											|  informado por Tendencias
+
+
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/pensamientos-de-evolucion-personal-pt-1.jpg", alt="Imagen del evento: Emprendimiento informado por Tendencias")
+
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 1 de Septiembre, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Facebook Live.
+
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Más info
+										span._icon.right
+											+arrow-right("#f6eb30")
+
+
+
+					.ls-row.event-row
+						a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.motion-cascade.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-21.ls-col-xl-20.offset-xxl-3.ls-col-xxl-18
+							.ls-row
+								h2.h2._title.ls-col-19.ls-col-xs-16.ls-col-sm-10.ls-col-lg-11.ls-col-xl-12.ls-col-xxl-10
+									span._wrap
+										span.p2._index(data-cascade="slide-up") 08.
+										span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") 
+											| Bases para Diseño de 
+											span.dw-highlight.circle-open-long
+												span._text Promociones
+												+hl-circle-open-long("#f6eb30")
+
+
+								._cover.ls-col-9.ls-col-xs-6.offset-sm-1.ls-col-sm-4.offset-xl-1.ls-col-xl-3
+									.image-wrap(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3")
+										img(src="https://lifestrategics.com/blog/wp-content/uploads/2020/04/todo-suena-muy-bien-desde-la-teoria-lo-arruina-tu-ego.jpg", alt="Imagen del evento: Bases para Diseño de Promociones")
+
+								._abstract.offset-1.ls-col-9.offset-xs-4.ls-col-xs-6.offset-sm-1.ls-col-sm-5.ls-col-lg-4.offset-xl-1.ls-col-xl-3
+									._info
+										h4.h4._date(data-cascade="slide-up" data-cascade-delay="4" data-cascade-delay-mobile="4") 21 de Noviembre, 2020
+										p.p3._location(data-cascade="slide-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Experience Talks; Facebook Live.
+
+									.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+										span._label Reservar
+										span._icon.right
+											+arrow-right("#f6eb30")
 				
 				
 
 	
 	.only-mobile.not-scroll-js
 		include _modules/footer.jade
+
+
+	.cms-svgs(style="display: none;")
+		+hl-circle-open("", "cms-circle-open")
+		+hl-circle-open-round("", "cms-circle-open-round")
+		+hl-circle-open-long("", "cms-circle-open-long")
+		+arrow-right("", "cms-arrow-right")
 				
 				
 

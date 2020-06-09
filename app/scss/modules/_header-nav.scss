@@ -143,6 +143,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		cursor: pointer;
 
 		@include small-laptop {
 			display: none;
@@ -172,6 +173,16 @@
 			}
 		}
 
+		&:hover{
+			.burger-btn{
+				._line{
+					&:last-child{
+						@include scale(0.8,1);
+					}
+				}
+			}
+		}
+
 		&.opened {
 			.burger-btn{
 				._line{
@@ -182,6 +193,16 @@
 					}
 					&:last-child{
 						@include scale(0,1);
+					}
+				}
+			}
+
+			&:hover{
+				.burger-btn{
+					._line{
+						&:first-child{
+							@include translate-scale(0, 4px, 0.8,1);
+						}
 					}
 				}
 			}

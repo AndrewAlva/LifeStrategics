@@ -295,7 +295,13 @@
 	}
 }
 
-
+#events-page{
+	.event-row{
+		&.event-margin:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
 
 
 

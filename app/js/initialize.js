@@ -8,6 +8,8 @@ var pageInitDelay = 0;
 // Bring JSON data if page needs it
 if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
     deserializeBlog();
+    deserializeEvents(5);
+} else if (window.location.pathname == "/eventos.html" || window.location.pathname == "eventos") {
     deserializeEvents();
 }
 

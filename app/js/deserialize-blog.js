@@ -1,8 +1,3 @@
-var hl_circle_open = document.getElementsByClassName('cms-circle-open')[0];
-var hl_circle_open_round = document.getElementsByClassName('cms-circle-open-round')[0];
-var hl_circle_open_long = document.getElementsByClassName('cms-circle-open-long')[0];
-var link_arrow_right = document.getElementsByClassName('cms-arrow-right')[0];
-
 function deserializeBlog() {
 	var container = document.getElementById('json-blog-list');
 	var defaultContent = document.getElementById('default-blog-list');
@@ -15,21 +10,25 @@ function deserializeBlog() {
 	request.send();
 
 	request.onload = function() {
-		// if (defaultContent.parentNode) {
-		// 	defaultContent.parentNode.removeChild(defaultContent);
-		// }
-		
+		if(request.response) {
+			if (defaultContent.parentNode) {
+				defaultContent.parentNode.removeChild(defaultContent);
+			}
+			
 
-		var blogArticles = request.response;
-		for (var i = 0; i < blogArticles.length; i++) {
-			// console.log(blogArticles[i]);
+			var blogArticles = request.response;
+			for (var i = 0; i < blogArticles.length; i++) {
+				// console.log(blogArticles[i]);
 
-			formatBlogEntry(blogArticles[i], container);
+				formatBlogEntry(blogArticles[i], container, i);
+			}
 		}
 	}
 }
 
-function formatBlogEntry(entry, container) {
+function formatBlogEntry(entry, container, index) {
+	var _index = formatIndex(index);
+
 	// get title
 	var _title = entry.titulo;
 
@@ -44,8 +43,7 @@ function formatBlogEntry(entry, container) {
 
 
 	// Clone arrow svg
-	var _blogpost_arrow_svg = link_arrow_right.cloneNode(true);
-	_blogpost_arrow_svg.classList.add('blue');
+	var _blogpost_arrow_svg = getArrowSVG('blue');
 
 	
 
@@ -102,7 +100,7 @@ function formatBlogEntry(entry, container) {
 							_bpIText.setAttribute('data-cascade', 'mask-up');
 							_bpIText.setAttribute('data-cascade-delay-mobile', '0');
 							_bpIText.setAttribute('data-cascade-delay', '0');
-							_bpIText.innerHTML = entry.indice;
+							_bpIText.innerHTML = _index;
 
 							_bpIMask.appendChild(_bpIText);
 
