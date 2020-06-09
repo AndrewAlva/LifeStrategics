@@ -2,7 +2,8 @@ function deserializeEvents(limit) {
 	var container = document.getElementById('json-events-list');
 	var defaultContent = document.getElementById('default-events-list');
 
-	var requestURL = "http://192.168.15.5:3000/cms/events-data.json";
+	var requestURL = window.location.origin + "/cms/events-data.json";
+	// var requestURL = "http://192.168.15.5:3000/cms/events-data.json";
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
 

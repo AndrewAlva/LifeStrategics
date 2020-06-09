@@ -58,6 +58,9 @@ function getCircleHighlight(stringLength, drawColor) {
 function getArrowSVG(color) {
 	var link_arrow_right = document.getElementsByClassName('cms-arrow-right')[0];
 	var _arrow_clone = link_arrow_right.cloneNode(true);
+	_arrow_clone.classList.remove('cms-arrow-right');
+	_arrow_clone.classList.remove('yellow');
+	_arrow_clone.classList.remove('blue');
 	_arrow_clone.classList.add(color);
 
 	return _arrow_clone;

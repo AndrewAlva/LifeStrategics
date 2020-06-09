@@ -2,7 +2,8 @@ function deserializeBlog() {
 	var container = document.getElementById('json-blog-list');
 	var defaultContent = document.getElementById('default-blog-list');
 
-	var requestURL = "http://192.168.15.5:3000/cms/blog-data.json";
+	var requestURL = window.location.origin + "/cms/blog-data.json";
+	// var requestURL = "http://192.168.15.5:3000/cms/blog-data.json";
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
 
