@@ -26,7 +26,10 @@ function deserializeEvents(limit) {
 				formatEventRow(eventsArray[i], container, i);
 			}
 
-			removeSVGhelpers();
+			setTimeout(function(){
+				removeSVGhelpers();
+			}, 3000);
+			
 		}
 	}
 }

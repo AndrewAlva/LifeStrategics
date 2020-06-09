@@ -9,7 +9,7 @@ var Preloader = {
 		document.getElementById('header-nav').classList.add('animate');
 
 		if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
-			document.getElementById('hero-section').classList.add('animate');
+			document.getElementById('inicio').classList.add('animate');
 			document.getElementById('hero-animation').classList.add('drawn');
 		}
 	}
