@@ -2,6 +2,7 @@ var Preloader = {
 	init: function() {
 		// setTimeout(this.start, 1000); // for testing locally
 		this.start();
+		console.log("Page fully loaded, remove preloader.");
 	},
 
 	start: function() {

@@ -31,6 +31,9 @@ function deserializeEvents(limit) {
 			}, 3000);
 			
 		}
+
+		// Inview objects animation, linked with "Cascading" system
+        initInView();
 	}
 }
 
