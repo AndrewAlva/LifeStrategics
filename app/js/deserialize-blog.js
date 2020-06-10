@@ -23,6 +23,9 @@ function deserializeBlog() {
 
 				formatBlogEntry(blogArticles[i], container, i);
 			}
+
+			
+			jsonBlogLoaded = true;
 		}
 	}
 }

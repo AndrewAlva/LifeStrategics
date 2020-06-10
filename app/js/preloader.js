@@ -1,11 +1,15 @@
 var Preloader = {
 	init: function() {
-		// setTimeout(this.start, 1000); // for testing locally
-		this.start();
+		// setTimeout(this.remove, 1000); // for testing locally
+		this.remove();
+
+		// Inview objects animation, linked with "Cascading" system
+        initInView();
+		
 		console.log("Page fully loaded, remove preloader.");
 	},
 
-	start: function() {
+	remove: function() {
 		document.getElementById('preloader').classList.add('loaded');
 		document.getElementById('header-nav').classList.add('animate');
 

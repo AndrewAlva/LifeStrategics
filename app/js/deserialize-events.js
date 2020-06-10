@@ -29,11 +29,10 @@ function deserializeEvents(limit) {
 			setTimeout(function(){
 				removeSVGhelpers();
 			}, 3000);
-			
-		}
 
-		// Inview objects animation, linked with "Cascading" system
-        initInView();
+			jsonEventsLoaded = true;
+
+		}
 	}
 }
 
