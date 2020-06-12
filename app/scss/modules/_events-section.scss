@@ -83,7 +83,7 @@
 				width: 100%;
 				height: 1px;
 				margin-bottom: 24px;
-				background-color: #fff;
+				background-color: $body-text-color;
 
 				@include tablet {
 					height: 3px;

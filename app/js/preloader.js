@@ -13,9 +13,13 @@ var Preloader = {
 		document.getElementById('preloader').classList.add('loaded');
 		document.getElementById('header-nav').classList.add('animate');
 
-		if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
+		if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/index") {
 			document.getElementById('inicio').classList.add('animate');
 			document.getElementById('hero-animation').classList.add('drawn');
+		
+		} else if (window.location.pathname == "/creditos.html" || window.location.pathname == "/creditos") {
+			document.getElementById('credits-page').classList.add('animate');
+			document.getElementById('credits-animation').classList.add('drawn');
 		}
 	}
 }
