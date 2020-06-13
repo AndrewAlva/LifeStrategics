@@ -2,24 +2,24 @@ extends _templates/layout.jade
 
 mixin credits-row(url, index, concept, author, address)
 	.ls-row.credits-row
-		a(href="#{url}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-4.ls-col-16
+		a(href="#{url}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xl-4.ls-col-xl-16
 			.ls-row
-				h2.h2.concept.ls-col-xl-12.ls-col-xxl-6
+				h2.h2.concept.ls-col-19.ls-col-xl-12.ls-col-xl-6
 					span._wrap
 						span.p2._index(data-cascade="slide-up") #{index}
 						span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{concept}
 
 
-				.name-wrap.offset-xl-1.ls-col-xl-3
+				.name-wrap.ls-col-19.offset-xl-1.ls-col-xl-3
 					h4.h4._name(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3") #{author}
 
-				.address-wrap.offset-xl-1.ls-col-xl-5
+				.address-wrap.ls-col-19.offset-xl-1.ls-col-xl-5
 					.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
 						span._label #{address}
 						span._icon.right
 							+arrow-right("#55c4f0")
 
-				.ls-col-16
+				.ls-col-19.ls-col-xl-16
 					figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="8" data-cascade-delay-mobile="8")
 
 block header-nav
@@ -39,7 +39,7 @@ block content
 								+hl-underline("#55c4f0")
 
 
-			.ls-row.credits-row
+			//- .ls-row.credits-row
 				a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-4.ls-col-16
 					.ls-row
 						h2.h2.concept.ls-col-xl-12.ls-col-xxl-6
