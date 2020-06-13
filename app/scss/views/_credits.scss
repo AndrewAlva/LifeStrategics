@@ -152,13 +152,16 @@
 	}
 
 	.address-wrap{
-		// @include flexSelf-bottom;
+		@include flexSelf-bottom;
 
 		.arrow-button{
 			padding-right: 40px;
 
-			@include tablet {
+			@include large-mobile {
 				text-align: right;
+			}
+
+			@include tablet {
 				padding-right: 50px;
 			}
 

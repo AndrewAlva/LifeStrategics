@@ -2,24 +2,24 @@ extends _templates/layout.jade
 
 mixin credits-row(url, index, concept, author, address)
 	.ls-row.credits-row
-		a(href="#{url}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xl-4.ls-col-xl-16
+		a(href="#{url}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-20.offset-xxl-4.ls-col-xxl-16
 			.ls-row
-				h2.h2.concept.ls-col-19.ls-col-xl-12.ls-col-xl-6
+				h2.h2.concept.ls-col-19.ls-col-xs-16.ls-col-sm-9.ls-col-md-7.ls-col-xxl-6
 					span._wrap
 						span.p2._index(data-cascade="slide-up") #{index}
 						span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{concept}
 
 
-				.name-wrap.ls-col-19.offset-xl-1.ls-col-xl-3
+				.name-wrap.ls-col-19.ls-col-xs-6.ls-col-sm-4.offset-md-2.offset-xxl-1.ls-col-xxl-3
 					h4.h4._name(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3") #{author}
 
-				.address-wrap.ls-col-19.offset-xl-1.ls-col-xl-5
+				.address-wrap.ls-col-19.offset-xs-2.ls-col-xs-8.offset-sm-0.ls-col-sm-7.offset-md-1.ls-col-md-6.ls-col-xxl-5
 					.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
 						span._label #{address}
 						span._icon.right
 							+arrow-right("#55c4f0")
 
-				.ls-col-19.ls-col-xl-16
+				.ls-col-19.ls-col-xs-16.ls-col-sm-20.ls-col-xxl-16
 					figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="8" data-cascade-delay-mobile="8")
 
 block header-nav
@@ -33,47 +33,95 @@ block content
 					h1.h1
 						span#credits-animation.dw-highlight.underline.long
 							span._text.cascade-mask.inline-block 
-								span(data-cascade="mask-up" data-cascade-delay="5" data-cascade-delay-mobile="5") Créditos
+								span(data-cascade="mask-up" data-cascade-delay="5" data-cascade-delay-mobile="4") Créditos
 
 							span._scaleDownDouble
 								+hl-underline("#55c4f0")
 
 
-			//- .ls-row.credits-row
-				a(href="#" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-4.ls-col-16
+			.ls-row.credits-row
+				a(href="https://andrew.studio/" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-20.offset-xxl-4.ls-col-xxl-16
 					.ls-row
-						h2.h2.concept.ls-col-xl-12.ls-col-xxl-6
+						h2.h2.concept.ls-col-19.ls-col-xs-16.ls-col-sm-9.ls-col-md-7.ls-col-xxl-6
 							span._wrap
-								span.p2._index(data-cascade="slide-up") a.
-								span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") Diseño &
+								span.p2._index(data-cascade="slide-up" data-cascade-delay="7" data-cascade-delay-mobile="5") a.
+								span(data-cascade="slide-up" data-cascade-delay="8" data-cascade-delay-mobile="6") 
+									span._line Diseño &
 									span._line Desarrollo 
 										span.dw-highlight.circle-open-round
-											span._text Web.
+											span._text Web
 												+hl-circle-open-round("#55c4f0")
-
-								//- span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1")
-									span.dw-highlight.circle-open-long.bolder
-										span._text Copywriting
-											+hl-circle-open-long("#55c4f0")
-
-									span._line & Contenido
+										|.
 
 
-						.name-wrap.offset-xl-1.ls-col-xl-3
-							h4.h4._name(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3") Andrew Alva
+						.name-wrap.ls-col-19.ls-col-xs-6.ls-col-sm-4.offset-md-2.offset-xxl-1.ls-col-xxl-3
+							h4.h4._name(data-cascade="slide-up" data-cascade-delay="9" data-cascade-delay-mobile="7") Andrew Alva
 
-						.address-wrap.offset-xl-1.ls-col-xl-5
-							.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
+						.address-wrap.ls-col-19.offset-xs-2.ls-col-xs-8.offset-sm-0.ls-col-sm-7.offset-md-1.ls-col-md-6.ls-col-xxl-5
+							.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="10" data-cascade-delay-mobile="8")
 								span._label andrew.studio
 								span._icon.right
 									+arrow-right("#55c4f0")
 
-						.ls-col-16
-							figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="8" data-cascade-delay-mobile="8")
+						.ls-col-19.ls-col-xs-16.ls-col-sm-20.ls-col-xxl-16
+							figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="11" data-cascade-delay-mobile="9")
 
-			+credits-row("#", "b.", "Copywriting & Contenido.", "Mónica de Salazar", "monixette@me.com")
 
-			+credits-row("https://garagefonts.com/", "c.", "Diseño Tipográfico.", "Freight Neo Pro / GarageFonts", "garagefonts.com")
+			.ls-row.credits-row
+				a(href="mailto:monixette@me.com" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-20.offset-xxl-4.ls-col-xxl-16
+					.ls-row
+						h2.h2.concept.ls-col-19.ls-col-xs-16.ls-col-sm-9.ls-col-md-7.ls-col-xxl-6
+							span._wrap
+								span.p2._index(data-cascade="slide-up" data-cascade-delay="9" data-cascade-delay-mobile="7") b.
+								span(data-cascade="slide-up" data-cascade-delay="10" data-cascade-delay-mobile="8")
+									span.dw-highlight.circle-open-long.bolder
+										span._text Copywriting
+											+hl-circle-open-long("#55c4f0")
+
+									span._line & Contenido.
+
+
+						.name-wrap.ls-col-19.ls-col-xs-6.ls-col-sm-4.offset-md-2.offset-xxl-1.ls-col-xxl-3
+							h4.h4._name(data-cascade="slide-up" data-cascade-delay="11" data-cascade-delay-mobile="9") Mónica de Salazar
+
+						.address-wrap.ls-col-19.offset-xs-2.ls-col-xs-8.offset-sm-0.ls-col-sm-7.offset-md-1.ls-col-md-6.ls-col-xxl-5
+							.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="12" data-cascade-delay-mobile="10")
+								span._label monixette@me.com
+								span._icon.right
+									+arrow-right("#55c4f0")
+
+						.ls-col-19.ls-col-xs-16.ls-col-sm-20.ls-col-xxl-16
+							figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="13" data-cascade-delay-mobile="11")
+
+
+			.ls-row.credits-row
+				a(href="https://garagefonts.com/" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-20.offset-xxl-4.ls-col-xxl-16
+					.ls-row
+						h2.h2.concept.ls-col-19.ls-col-xs-16.ls-col-sm-9.ls-col-md-7.ls-col-xxl-6
+							span._wrap
+								span.p2._index(data-cascade="slide-up" data-cascade-delay="11" data-cascade-delay-mobile="9") c.
+								span(data-cascade="slide-up" data-cascade-delay="12" data-cascade-delay-mobile="10")
+									span._line Diseño 
+
+									span.dw-highlight.circle-open-long.bolder
+										span._text Tipográfico.
+											+hl-circle-open-long("#55c4f0")
+
+
+
+						.name-wrap.ls-col-19.ls-col-xs-6.ls-col-sm-4.offset-md-2.offset-xxl-1.ls-col-xxl-3
+							h4.h4._name(data-cascade="slide-up" data-cascade-delay="13" data-cascade-delay-mobile="11") Freight Neo Pro / GarageFonts
+
+						.address-wrap.ls-col-19.offset-xs-2.ls-col-xs-8.offset-sm-0.ls-col-sm-7.offset-md-1.ls-col-md-6.ls-col-xxl-5
+							.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="14" data-cascade-delay-mobile="12")
+								span._label garagefonts.com
+								span._icon.right
+									+arrow-right("#55c4f0")
+
+						.ls-col-19.ls-col-xs-16.ls-col-sm-20.ls-col-xxl-16
+							figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="15" data-cascade-delay-mobile="13")
+
+
 
 
 	.only-mobile.not-scroll-js

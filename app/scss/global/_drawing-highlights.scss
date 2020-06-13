@@ -146,7 +146,7 @@
 			}
 
 			&#credits-animation{
-				$credits-drawing-data-cascade-delay: 2;
+				$credits-drawing-data-cascade-delay: 3;
 				path, line{
 					&:first-child{@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 0) + ($cascade_interval * $credits-drawing-data-cascade-delay) + $cascade_trans_duration) );}
 					&:nth-child(2){@include trans-ease-delay($underline-long-draw-speed, 	( ($underline-long-draw-speed * 1) + ($cascade_interval * $credits-drawing-data-cascade-delay) + $cascade_trans_duration) );}
