@@ -1,0 +1,178 @@
+mixin index-navcol(page)
+	.nav-col.understand.ls-col-9.offset-2.ls-col-xs-6.offset-xs-4.offset-md-2.ls-col-md-4.ls-col-xl-4.offset-xl-3
+		h4.p2._title Acerca de nosotros
+		ul
+			if (page == 'landing')
+				li
+					a(href="inicio").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 Inicio
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="enfoque").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 i. Nuestro enfoque
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="servicios").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 ii. Lo que te ofrecemos
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="especialidades").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 iii. Especialidades por Área
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="proyectos").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 iv. Proyectos y Participaciones
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="blog").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 v. Nuestro Blog
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="eventos").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 vi. Próximos Eventos
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+				li
+					a(href="contacto").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-blue
+						span._label.p3 vii. Contacto
+						span._icon.sm.up
+							+arrow-up("#ffffff")
+
+			else
+				li
+					a(href="/").arrow-button.semihidden-arrow
+						span._label.p3 Inicio
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#enfoque").arrow-button.semihidden-arrow
+						span._label.p3 i. Nuestro enfoque
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#servicios").arrow-button.semihidden-arrow
+						span._label.p3 ii. Lo que te ofrecemos
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#especialidades").arrow-button.semihidden-arrow
+						span._label.p3 iii. Especialidades por Área
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#proyectos").arrow-button.semihidden-arrow
+						span._label.p3 iv. Proyectos y Participaciones
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#blog").arrow-button.semihidden-arrow
+						span._label.p3 v. Nuestro Blog
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#eventos").arrow-button.semihidden-arrow
+						span._label.p3 vi. Próximos Eventos
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#contacto").arrow-button.semihidden-arrow
+						span._label.p3 vii. Contacto
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+
+
+
+mixin index-navcol-menu(page)
+	.nav-col.understand.offset-2.ls-col-20.ls-col-xs-8.ls-col-sm-7
+		h4._title Acerca de nosotros
+		ul
+			if (page == 'landing')
+				li
+					a(href="inicio").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label Inicio
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="enfoque").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label i. Nuestro enfoque
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="servicios").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label ii. Lo que te ofrecemos
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="especialidades").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label iii. Especialidades por Área
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="proyectos").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label iv. Proyectos y Participaciones
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="blog").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label v. Nuestro Blog
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="eventos").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label vi. Próximos Eventos
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+				li
+					a(href="contacto").scroll-to-js.arrow-button.mob-menu-page-scroll
+						span._label vii. Contacto
+						span._icon.sm.down
+							+arrow-down("#ffffff")
+
+			else
+				li
+					a(href="/").arrow-button
+						span._label Inicio
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#enfoque").arrow-button
+						span._label i. Nuestro enfoque
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#servicios").arrow-button
+						span._label ii. Lo que te ofrecemos
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#especialidades").arrow-button
+						span._label iii. Especialidades por Área
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#proyectos").arrow-button
+						span._label iv. Proyectos y Participaciones
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#blog").arrow-button
+						span._label v. Nuestro Blog
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#eventos").arrow-button
+						span._label vi. Próximos Eventos
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+				li
+					a(href="/#contacto").arrow-button
+						span._label vii. Contacto
+						span._icon.sm.right
+							+arrow-right("#ffffff")
+

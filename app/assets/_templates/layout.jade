@@ -85,8 +85,11 @@ html(class='no-js' lang="es-MX")
 
 
 		//- Mixins
-		include ../_modules/svg-mixins.jade
-		include ../_modules/header-nav.jade
+		include ../_modules/_svg-mixins.jade
+		include ../_modules/_nav-cols-mixin.jade
+		include ../_modules/_header-nav-mixin.jade
+		include ../_modules/_mobile-menu-mixin.jade
+		include ../_modules/_footer-mixin.jade
 
 		
 		//- Preloader screen
@@ -95,11 +98,11 @@ html(class='no-js' lang="es-MX")
 
 		//- mobile menu window
 		block mobile-menu
-			include ../_modules/mobile-menu.jade
+			+mobile-menu
 
 		//- header
 		block header-nav
-			+header-nav('home')
+			+header-nav
 
 		//- content
 		#main-wrapper
@@ -108,7 +111,7 @@ html(class='no-js' lang="es-MX")
 
 			.footer-fixed-holder
 				block footer
-					include ../_modules/footer.jade
+					+footer
 
 		//- scripts
 		script(src='js/app.js')

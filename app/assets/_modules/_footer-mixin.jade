@@ -1,0 +1,78 @@
+mixin footer(page)
+	.landing-footer
+		.ls-container
+			.ls-row
+				.info-col.ls-col-11.offset-1.ls-col-md-6.offset-md-1
+					p.p2 En LifeStrategics, facilitamos creatividad estratégica, herramientas y procesos al servicio de proyectos y negocios.
+
+					._copyright
+						img(src="img/lifestrategics_iso_opt.png" alt="LifeStrategics brand isotype")
+						p.p3 Copyright © LifeStrategics 2020
+
+				+index-navcol(page)
+
+
+				.nav-col.decide.ls-col-11.offset-1.ls-col-xs-6.ls-col-md-4.ls-col-xl-3.offset-xl-1
+					h4.p2._title Más contenido
+					ul
+						li
+							a(href="https://lifestrategics.com/blog/").arrow-button.semihidden-arrow.slogan-highlight-yellow
+								span._label.p3 Blog
+								span._icon.sm.right
+									+arrow-right("#ffffff")
+						li
+							if (page == 'eventos')
+								a(href="eventos").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-yellow
+									span._label.p3 Eventos
+									span._icon.sm.right
+										+arrow-right("#ffffff")
+
+							else
+								a(href="eventos.html").arrow-button.semihidden-arrow.slogan-highlight-yellow
+									span._label.p3 Eventos
+									span._icon.sm.right
+										+arrow-right("#ffffff")
+						
+						li
+							if (page == 'creditos')
+								a(href="credits-page").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-yellow
+									span._label.p3 Créditos
+									span._icon.sm.right
+										+arrow-right("#ffffff")
+
+							else
+								a(href="creditos.html").arrow-button.semihidden-arrow.slogan-highlight-yellow
+									span._label.p3 Créditos
+									span._icon.sm.right
+										+arrow-right("#ffffff")
+
+
+				.nav-col.takeaction.ls-col-9.offset-2.ls-col-xs-6.offset-xs-9.offset-md-1.ls-col-md-4.ls-col-xl-3.offset-xl-1
+					h4.p2._title Síguenos
+					ul
+						li
+							a(href="https://www.instagram.com/lifestrategics/" target="_blank" rel="nofollow noopener noreferrer").arrow-button.semihidden-arrow.slogan-highlight-red
+								span._label.p3 Instagram
+								span._icon.sm.right
+									+arrow-right("#ffffff")
+						li
+							a(href="https://twitter.com/lifestrategics" target="_blank" rel="nofollow noopener noreferrer").arrow-button.semihidden-arrow.slogan-highlight-red
+								span._label.p3 Twitter
+								span._icon.sm.right
+									+arrow-right("#ffffff")
+						li
+							a(href="https://www.linkedin.com/company/lifestrategics/" target="_blank" rel="nofollow noopener noreferrer").arrow-button.semihidden-arrow.slogan-highlight-red
+								span._label.p3 LinkedIn
+								span._icon.sm.right
+									+arrow-right("#ffffff")
+						li
+							a(href="https://www.facebook.com/LifeStrategics/" target="_blank" rel="nofollow noopener noreferrer").arrow-button.semihidden-arrow.slogan-highlight-red
+								span._label.p3 Facebook
+								span._icon.sm.right
+									+arrow-right("#ffffff")
+
+
+
+
+
+

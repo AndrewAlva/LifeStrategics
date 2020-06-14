@@ -1,7 +1,17 @@
 extends _templates/layout.jade
 
+
+block title
+	title Eventos | LifeStrategics
+
+
+block mobile-menu
+	+mobile-menu('eventos')
+
+
 block header-nav
 	+header-nav('events')
+
 
 block content
 	section#eventos.page-section.inner-padded.preload-hide.events-page
@@ -20,9 +30,6 @@ block content
 
 							span.cascade-mask.inline-block 
 								span(data-cascade="mask-up" data-cascade-delay="2" data-cascade-delay-mobile="2") y 
-
-							//- span.cascade-mask.inline-block 
-								span(data-cascade="mask-up" data-cascade-delay="3" data-cascade-delay-mobile="3") upcoming 
 
 							span#talks-animation.dw-highlight.underline.long
 								span._text.cascade-mask.inline-block 
@@ -278,7 +285,7 @@ block content
 
 	
 	.only-mobile.not-scroll-js
-		include _modules/footer.jade
+		+footer('eventos')
 
 
 	.cms-svgs(style="display: none;")
@@ -286,7 +293,11 @@ block content
 		+hl-circle-open-round("", "cms-circle-open-round")
 		+hl-circle-open-long("", "cms-circle-open-long")
 		+arrow-right("", "cms-arrow-right")
-				
-				
+	
+
+
+block footer
+	+footer('eventos')
+
 
 

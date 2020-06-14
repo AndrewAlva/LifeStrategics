@@ -1,7 +1,8 @@
 extends _templates/layout.jade
 
 block mobile-menu
-	include _modules/mobile-menu-landing.jade
+	//- include _modules/mobile-menu-landing.jade
+	+mobile-menu('landing')
 
 block header-nav
 	+header-nav('home')
@@ -19,7 +20,7 @@ block content
 	include _modules/contact-section.jade
 	
 	.only-mobile.not-scroll-js
-		include _modules/footer-landing.jade
+		+footer('landing')
 
 	.cms-svgs(style="display: none;")
 		+hl-circle-open("", "cms-circle-open")
@@ -29,4 +30,4 @@ block content
 
 
 block footer
-	include _modules/footer-landing.jade
+	+footer('landing')

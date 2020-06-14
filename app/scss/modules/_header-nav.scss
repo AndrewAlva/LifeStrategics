@@ -143,7 +143,6 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		cursor: pointer;
 
 		@include small-laptop {
 			display: none;
@@ -154,6 +153,7 @@
 			background: none;
 			border: 0;
 			border-radius: 0;
+			cursor: pointer;
 
 			._line{
 				display: block;

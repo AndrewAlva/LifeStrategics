@@ -1,29 +1,13 @@
 extends _templates/layout.jade
 
-mixin credits-row(url, index, concept, author, address)
-	.ls-row.credits-row
-		a(href="#{url}" target="_blank" rel="nofollow noopener noreferrer").link-container.offset-3.ls-col-19.offset-xs-4.ls-col-xs-16.offset-sm-2.ls-col-sm-20.offset-xxl-4.ls-col-xxl-16
-			.ls-row
-				h2.h2.concept.ls-col-19.ls-col-xs-16.ls-col-sm-9.ls-col-md-7.ls-col-xxl-6
-					span._wrap
-						span.p2._index(data-cascade="slide-up") #{index}
-						span(data-cascade="slide-up" data-cascade-delay="1" data-cascade-delay-mobile="1") #{concept}
+
+block title
+	title Créditos | LifeStrategics
 
 
-				.name-wrap.ls-col-19.ls-col-xs-6.ls-col-sm-4.offset-md-2.offset-xxl-1.ls-col-xxl-3
-					h4.h4._name(data-cascade="slide-up" data-cascade-delay="3" data-cascade-delay-mobile="3") #{author}
+block mobile-menu
+	+mobile-menu('creditos')
 
-				.address-wrap.ls-col-19.offset-xs-2.ls-col-xs-8.offset-sm-0.ls-col-sm-7.offset-md-1.ls-col-md-6.ls-col-xxl-5
-					.arrow-button._cta(data-cascade="slide-up" data-cascade-delay="6" data-cascade-delay-mobile="6")
-						span._label #{address}
-						span._icon.right
-							+arrow-right("#55c4f0")
-
-				.ls-col-19.ls-col-xs-16.ls-col-sm-20.ls-col-xxl-16
-					figure._bottom-line(data-cascade="scale-x-left-normal" data-cascade-delay="8" data-cascade-delay-mobile="8")
-
-block header-nav
-	+header-nav
 
 block content
 	section#credits-page.page-section.inner-padded.preload-hide
@@ -125,13 +109,14 @@ block content
 
 
 	.only-mobile.not-scroll-js
-		include _modules/footer.jade
+		+footer('creditos')
 
 
 
 
 
-
+block footer
+	+footer('creditos')
 
 
 
