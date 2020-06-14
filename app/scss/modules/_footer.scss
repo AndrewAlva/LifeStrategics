@@ -16,7 +16,7 @@
 		// height: 480px;
 	}
 
-	.landing-footer{
+	.page-footer{
 		@include small-laptop {
 			position: fixed;
 			bottom: 0;
@@ -29,7 +29,7 @@
 	}
 }
 
-.landing-footer{
+.page-footer{
 	pointer-events: auto;
 	position: relative;
 	width: 100%;

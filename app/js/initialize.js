@@ -50,10 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     clickScroll.init();
 
     // Slogan highlighting interaction
-    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
-        var LandingSlogan = new Slogan();
-        LandingSlogan.init();
-    }
+    var LandingSlogan = new Slogan();
+    LandingSlogan.init();
+
 });
 
 

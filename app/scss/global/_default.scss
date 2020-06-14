@@ -132,7 +132,7 @@ ul{
 			&.not-scroll-js{height: 0;}
 		}
 
-		.landing-footer{
+		.page-footer{
 			@include small-laptop {
 				pointer-events: none;
 			}

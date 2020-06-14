@@ -89,6 +89,7 @@
 			margin: auto;
 			left: 0; right: 0;
 			text-align: center;
+			cursor: default;
 
 			._blue, ._yellow, ._red{@include transitions-ease(.4s);}
 

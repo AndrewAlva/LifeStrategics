@@ -19,16 +19,16 @@ var Slogan = function() {
 
 	this.setTriggers = function(){
 		// Default triggers
-		_self.defaultTriggers[0] = document.getElementById('inicio');
-		var footers = document.getElementsByClassName('landing-footer');
+		// _self.defaultTriggers[0] = document.getElementById('inicio');
+		var footers = document.getElementsByClassName('slogan-highlight-default');
 		for (var i = 0; i < footers.length; i++) {
 			_self.defaultTriggers.push(footers[i]);
 		}
 
 		// Blue triggers
-		_self.blueTriggers[0] = document.getElementById('enfoque');
-		_self.blueTriggers[1] = document.getElementById('especialidades');
-		_self.blueTriggers[2] = document.getElementById('blog');
+		// _self.blueTriggers[0] = document.getElementById('enfoque');
+		// _self.blueTriggers[1] = document.getElementById('especialidades');
+		// _self.blueTriggers[2] = document.getElementById('blog');
 		var blue_links = document.getElementsByClassName('slogan-highlight-blue');
 		for (var i = 0; i < blue_links.length; i++) {
 			_self.blueTriggers.push(blue_links[i]);
@@ -36,16 +36,16 @@ var Slogan = function() {
 
 
 		// Yellow triggers
-		_self.yellowTriggers[0] = document.getElementById('servicios');
-		_self.yellowTriggers[1] = document.getElementById('proyectos');
-		_self.yellowTriggers[2] = document.getElementById('eventos');
+		// _self.yellowTriggers[0] = document.getElementById('servicios');
+		// _self.yellowTriggers[1] = document.getElementById('proyectos');
+		// _self.yellowTriggers[2] = document.getElementById('eventos');
 		var yellow_links = document.getElementsByClassName('slogan-highlight-yellow');
 		for (var i = 0; i < yellow_links.length; i++) {
 			_self.yellowTriggers.push(yellow_links[i]);
 		}
 
 		// Red triggers
-		_self.redTriggers[0] = document.getElementById('contacto');
+		// _self.redTriggers[0] = document.getElementById('contacto');
 		var red_links = document.getElementsByClassName('slogan-highlight-red');
 		for (var i = 0; i < red_links.length; i++) {
 			_self.redTriggers.push(red_links[i]);
