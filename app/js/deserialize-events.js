@@ -159,10 +159,12 @@ function formatEventRow(entry, container, index) {
 
 							// img
 							var _erCover_img = document.createElement('img');
+							_erCover_img.className = 'lazyload';
 							_erCover_img_alt = 'Imagen del evento: ' + _title;
 							_erCover_img_src = 'cms/events-images/' + _img;
 							_erCover_img.setAttribute('alt', _erCover_img_alt);
-							_erCover_img.src = _erCover_img_src;
+							_erCover_img.setAttribute('data-src', _erCover_img_src);
+							// _erCover_img.src = _erCover_img_src;
 							_erCover_wrap.appendChild(_erCover_img);
 					
 						_erCover.appendChild(_erCover_wrap);
