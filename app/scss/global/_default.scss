@@ -12,17 +12,17 @@
 	@include border-box;
 }
 
-.tester{
-	z-index: 999999;
-	display: block;
-	background-color: rgba(0,255,0, 0.3);
-	position: fixed;
+// .tester{
+// 	z-index: 999999;
+// 	display: block;
+// 	background-color: rgba(0,255,0, 0.3);
+// 	position: fixed;
 	
-	right: 130px;
+// 	right: 130px;
 
-	width: 251px;
-	height: 100%;
-}
+// 	width: 251px;
+// 	height: 100%;
+// }
 
 body{
 	font-family: $main-font;
