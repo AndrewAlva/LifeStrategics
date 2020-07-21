@@ -62,6 +62,11 @@ window.onload = function() {
     // console.log("Page fully loaded.");
     // console.log("Initialize.js");
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./sw.js');
+    }
+
     // Animiation frame loop at 60fps to enable "toTop()" function
     RAF.init();
 

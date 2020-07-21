@@ -8,6 +8,9 @@ html(class='no-js' lang="es-MX")
 		block title
 			title LifeStrategics | Understand · Decide · Take Action
 
+		//- PWA
+		link(rel="manifest" href="manifest.json")
+
 		//- metatags
 		block google_metatags
 			meta(name='description', content='La mejor estrategia es la que responde a las necesidades de tu proyecto o negocio. Nos interesa conocer lo que deseas lograr para diseñar contigo la solución a la medida de tus objetivos.')
@@ -29,7 +32,13 @@ html(class='no-js' lang="es-MX")
 		link(rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png")
 		link(rel="mask-icon" href="safari-pinned-tab.svg" color="#262627")
 		meta(name="msapplication-TileColor" content="#da532c")
-		meta(name="theme-color" content="#ffffff")
+		meta(name="theme-color" content="#262627")
+
+		//- PWA additional setup
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="#262627")
+		meta(name="apple-mobile-web-app-title" content="LifeStrategics | Acerca de")
+		meta(name="msapplication-TileImage" content="icons/ls-icon-144.png")
 
 		//- stylesheets
 		link(rel='stylesheet', href='css/app.css')
