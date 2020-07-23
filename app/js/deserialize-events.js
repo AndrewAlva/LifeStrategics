@@ -180,7 +180,7 @@ function formatEventRow(entry, container, index) {
 						_erInfo_wrap.className = '_info';
 
 							// h4
-							var _erInfo_date = document.createElement('h4');
+							var _erInfo_date = document.createElement('p');
 							_erInfo_date.className = 'h4 _date';
 							_erInfo_date.setAttribute('data-cascade', 'slide-up');
 							_erInfo_date.setAttribute('data-cascade-delay-mobile', '4');

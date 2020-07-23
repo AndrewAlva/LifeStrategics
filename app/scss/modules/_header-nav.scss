@@ -62,13 +62,8 @@
 
 		a{
 			display: block;
-		}
-
-		img{
-			pointer-events: none;
 			height: 20px;
-			vertical-align: middle;
-
+			
 			@include tablet {
 				height: 25px;
 			}
@@ -76,6 +71,12 @@
 			@include laptop {
 				height: 30px;
 			}
+		}
+
+		img{
+			pointer-events: none;
+			vertical-align: middle;
+			height: 100%;
 		}
 	}
 
