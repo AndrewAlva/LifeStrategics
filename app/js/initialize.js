@@ -9,11 +9,11 @@ var jsonEventsLoaded = false;
 var scrolledReady = false;
 
 function checkPreloaderTriggers() {
-    console.log('checking Preloader Triggers');
+    // console.log('checking Preloader Triggers');
     if (jsonBlogLoaded && jsonEventsLoaded && scrolledReady ) {
         clearInterval(loadedInterval);
 
-        console.log('cleared interval');
+        // console.log('cleared interval');
 
         // Remove preloader
         Preloader.init();

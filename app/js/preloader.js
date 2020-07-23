@@ -6,7 +6,7 @@ var Preloader = {
 		// Inview objects animation, linked with "Cascading" system
         initInView();
 		
-		console.log("Page fully loaded, remove preloader.");
+		// console.log("Page fully loaded, remove preloader.");
 	},
 
 	remove: function() {
