@@ -164,6 +164,7 @@ function formatEventRow(entry, container, index) {
 							_erCover_img_src = 'cms/events-images/' + _img;
 							_erCover_img.setAttribute('alt', _erCover_img_alt);
 							_erCover_img.setAttribute('data-src', _erCover_img_src);
+							_erCover_img.src = 'img/img-placeholder.svg';
 							// _erCover_img.src = _erCover_img_src;
 							_erCover_wrap.appendChild(_erCover_img);
 					

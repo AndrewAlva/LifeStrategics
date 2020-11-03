@@ -98,6 +98,19 @@
 					width: auto;
 					// height: 80px;
 				}
+
+				// &.tester{
+				&.lazyload, &.lazyloading{
+					width: 80px !important;
+					
+					@include tablet {
+						width: 100px !important;
+					}
+					
+					@include laptop {
+						width: 120px !important;
+					}
+				}
 			}
 
 
