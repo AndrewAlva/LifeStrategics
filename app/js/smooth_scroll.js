@@ -1,7 +1,7 @@
 var SmoothScroll = function(args){
 	if (!args) args = {};
 
-	var _self = this;
+	var _this = this;
 	
 	this.ui = {
 		el: document.querySelector('.js-scroll'),
@@ -26,13 +26,13 @@ var SmoothScroll = function(args){
    
 
 	this.init = function(){
-		this.bindAll();
-		this.setInitial();
-		this.addListeners();
+		_this.bindAll();
+		_this.setInitial();
+		_this.addListeners();
 
 		setTimeout(function(){
-			_self.setFakeHeight();
-		}, _self.state.initDelay);
+			_this.setFakeHeight();
+		}, _this.state.initDelay);
 
 		// Remove special classes from not-scroll-js elements
 		var _notScrollElements = document.getElementsByClassName('not-scroll-js');
@@ -43,25 +43,25 @@ var SmoothScroll = function(args){
 
 	this.bindAll = function(){
 		['onScroll', 'onResize', 'render'].forEach(function (fn) {
-			return _self[fn] = _self[fn].bind(_self);
+			return _this[fn] = _this[fn].bind(_this);
 		});
 	}
 
 	this.render = function(){
-		var scroll = this.state.scroll;
+		var scroll = _this.state.scroll;
 
-		this.state.displacement = (scroll.target - scroll.current) * scroll.ease;
-		scroll.current += this.state.displacement;
+		_this.state.displacement = (scroll.target - scroll.current) * scroll.ease;
+		scroll.current += _this.state.displacement;
 
 		if (scroll.current < .1) {
 			scroll.current = 0;
 		}
 
-		this.translateContainer();
+		_this.translateContainer();
 
 		// After smooth scroll has been completed,
 		// scroll a tiny bit to trigger inview animations 
-		if (inviewTriggerInSmoothScroll == true && this.state.displacement < 1 && this.state.displacement > -1) {
+		if (inviewTriggerInSmoothScroll == true && _this.state.displacement < 1 && _this.state.displacement > -1) {
 			window.scroll(0, window.scrollY + 1);
 			inviewTriggerInSmoothScroll = false;
 			// console.log('window scrolled a little bit more')
@@ -69,17 +69,17 @@ var SmoothScroll = function(args){
 	}
 
 	this.translateContainer = function() {
-		var _state = this.state;
+		var _state = _this.state;
 		var isResizing = _state.isResizing;
 		var scroll = _state.scroll;
 
 		var translate = "translate3d(0, " + -scroll.current + "px, 0)";
 
-		_self.ui.el.style.transform = translate;
+		_this.ui.el.style.transform = translate;
 	}
 
 	this.setInitial = function(){
-		var el = this.ui.el;
+		var el = _this.ui.el;
 
 		Object.assign(el.style, {
 			position: 'fixed',
@@ -92,40 +92,41 @@ var SmoothScroll = function(args){
 	}
 
 	this.setFakeHeight = function(){
-		var _state = this.state;
+		// console.log('setFakeHeight');
+		var _state = _this.state;
 		var bounds = _state.bounds;
 
 
-		if (!this.ui.heightEl) {
-			this.ui.heightEl = document.createElement('div');
-			this.ui.heightEl.classList.add('js-fake-scroll');
-			document.body.appendChild(this.ui.heightEl);
+		if (!_this.ui.heightEl) {
+			_this.ui.heightEl = document.createElement('div');
+			_this.ui.heightEl.classList.add('js-fake-scroll');
+			document.body.appendChild(_this.ui.heightEl);
 		}
 
-		var bottom = _self.ui.el.getBoundingClientRect().height;
+		var bottom = _this.ui.el.getBoundingClientRect().height;
 
 		bounds.scrollHeight = bottom;
 
-		this.ui.heightEl.style.height = bottom + 'px';
+		_this.ui.heightEl.style.height = bottom + 'px';
 	}
 
 	this.onScroll = function(){
-		var scroll = this.state.scroll;
+		var scroll = _this.state.scroll;
 		scroll.target = window.scrollY;
 	}
 
 	this.onResize = function(){
-		this.state.isResizing = true;
+		_this.state.isResizing = true;
 
-		this.setFakeHeight();
-		this.translateContainer();
+		_this.setFakeHeight();
+		_this.translateContainer();
 
-		this.state.isResizing = false;
+		_this.state.isResizing = false;
 	}
 
 	this.addListeners = function(){
-		window.addEventListener('scroll', this.onScroll);
-		window.addEventListener('resize', debounce(this.onResize, 1000));
+		window.addEventListener('scroll', _this.onScroll);
+		window.addEventListener('resize', debounce(_this.onResize, 1000));
 	}
 
 }

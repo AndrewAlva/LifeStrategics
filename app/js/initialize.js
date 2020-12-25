@@ -17,6 +17,9 @@ function checkPreloaderTriggers() {
 
         // Remove preloader
         Preloader.init();
+        
+        // Connect PageSmoothScroll with LazySizes to update "Fake Height" when needed
+        LazyFakeHeight.init();
     }
 }
 
@@ -122,11 +125,6 @@ window.onload = function() {
         scrolledReady = true;
     }
 
-    // setTimeout(function(){
-    //     // Remove preloader
-    //     Preloader.init();
-
-    // }, pageInitDelay);
 
 }
 

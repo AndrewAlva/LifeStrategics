@@ -31,7 +31,6 @@ function deserializeEvents(limit) {
 			}, 3000);
 
 			jsonEventsLoaded = true;
-
 		}
 	}
 }
@@ -233,30 +232,4 @@ function formatEventRow(entry, container, index) {
 	// insert Event Row into container
 	container.appendChild(_eventRow);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
