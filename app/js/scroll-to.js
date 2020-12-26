@@ -7,16 +7,23 @@ var Scroll_To = function() {
 	this.displacement = 0;
 	this.newPosition = 0;
 
-	this.intervalSpeed = 15;
+	this.intervalSpeed = 16;
 	this.scrollInterval;
 	this.scrollTarget;
 	this.scrollSpeed = 0;
 	this.interpolatedScrollPosition = 0;
 
+	this.cFrame = 0;
+	this.cFrameSpeed = 0;
+	this.startPosition = 0;
+	this.easeDisplace = 0;
+	this.easeDuration = 2000; // In miliseconds
+
 	this.triggers = document.getElementsByClassName('scroll-to-js');
 
 	this.init = function() {
 		this.addListeners();
+		_self.cFrameSpeed = 1 / (_self.easeDuration / _self.intervalSpeed);
 	}
 
 	this.addListeners = function() {
@@ -69,26 +76,23 @@ var Scroll_To = function() {
 
 	this.getTo = function() {
 		_self.getCurrentPosition();
-		_self.getDisplacement(_self.scrollTarget);
 		_self.getNewPosition();
-		// console.log("_self.currentPosition: " + _self.currentPosition + ". _self.displacement: " + _self.displacement + ". _self.newPosition: " + _self.newPosition);
-		// console.log("_self.newPosition: " + _self.newPosition);
-
-		_self.interpolatedScrollPosition = _self.currentPosition;
-		_self.scrollSpeed = (_self.newPosition - _self.currentPosition ) * _self.cof;
-		// if ( Math.abs(_self.scrollSpeed) < 1 ) _self.scrollSpeed = _self.scrollSpeed / Math.abs(_self.scrollSpeed);
+		_self.getDisplacement(_self.scrollTarget);
 
 		if (_self.displacement < 1 && _self.displacement > -1) {
 			_self.stopInterval();
 
 		} else {
-			_self.interpolatedScrollPosition += _self.scrollSpeed;
-			// console.log('speed: ' + _self.scrollSpeed);
+			// console.log(_self.cFrame, _self.startPosition, _self.easeDisplace, 1);
+			var _easePosition = _self.easeOutQuint(_self.cFrame, _self.startPosition, _self.easeDisplace, 1);
+			window.scroll(0, _easePosition);
 
+			_self.cFrame += _self.cFrameSpeed;
+			// console.log(_easePosition);
 		}
 
 
-		window.scroll(0, _self.interpolatedScrollPosition);
+		
 	}
 
 
@@ -96,11 +100,34 @@ var Scroll_To = function() {
 		// console.log('init interval');
 		_self.scrollTarget = target;
 		_self.stopInterval();
+
+		_self.startPosition = window.pageYOffset;
+		_self.easeDisplace = target.getBoundingClientRect().y;
+		// console.log(_self.startPosition, _self.easeDisplace);
 		_self.scrollInterval = setInterval(_self.getTo, _self.intervalSpeed);
 	}
 
 	this.stopInterval = function() {
+		// console.log('stopped interval');
 		clearInterval(_self.scrollInterval);
-		// console.log('stopped interval')
+		_self.cFrame = 0;
+	}
+
+	this.easeInOutCubic = function (t, b, c, d) {
+		if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+		return c / 2 * ((t -= 2) * t * t + 2) + b;
+	}
+
+	this.easeInOutCubic = function (t, b, c, d) {
+		if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+		return c / 2 * ((t -= 2) * t * t + 2) + b;
+	}
+
+	this.easeOutQuart = function (t, b, c, d) {
+		return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+	}
+
+	this.easeOutQuint = function (t, b, c, d) {
+		return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
 	}
 }
