@@ -24,7 +24,7 @@ var LazyFakeHeight = {
         for (var i = 0; i < LazyFakeHeight.images.length; i++) {
             var el = LazyFakeHeight.images[i];
             
-            el.addEventListener('load', PageSmoothScroll.setFakeHeight);
+            if (PageSmoothScroll) el.addEventListener('load', PageSmoothScroll.setFakeHeight);
         }
     }
     
