@@ -53,10 +53,12 @@ const Canvas = {
         draw: function(_pos) {
             Canvas.ctx.globalAlpha= this.alpha;
             Canvas.ctx.fillStyle= this.color;
+            Canvas.ctx.strokeStyle= '#000000';
             
             this.shape( _pos );
             
             Canvas.ctx.fill();
+            Canvas.ctx.stroke();
             
             // this.context.globalCompositeOperation = 'source-in';
             // this.context.drawImage(Canvas.img, 0, 0);

@@ -68,7 +68,7 @@ const Mouse = {
 
         history: [],
         maxHistory: 100,
-        spacing: 7,
+        spacing: 1,
         lastPos: {x: 0, y: 0},
 
 
