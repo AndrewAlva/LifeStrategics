@@ -44,34 +44,42 @@ const Canvas = {
     },
 
 
+    // Drawing objects
+    line: {
+        alpha: 1,
+        color: 'white',
+        width: 6,
+
+        draw: function(_pos) {
+            Canvas.ctx.globalAlpha= this.alpha;
+            Canvas.ctx.fillStyle= this.color;
+            
+            this.shape( _pos );
+            
+            Canvas.ctx.fill();
+            
+            // this.context.globalCompositeOperation = 'source-in';
+            // this.context.drawImage(Canvas.img, 0, 0);
+        },
+
+        shape: function(_pos) {
+            Canvas.ctx.beginPath();
+            Canvas.ctx.arc(_pos.x, _pos.y, this.width, 0, PI2, false);
+            Canvas.ctx.closePath();
+        }
+    },
+
+
     // Drawing methods
     render: function() {
         // Main function being executed 60fps
         Canvas.ctx.clearRect(0, 0, Canvas.element.width, Canvas.element.height);
-        Canvas.circlesLine.update();
-    },
-
-    circlesLine: {
-        x: 0,
-        y: 0,
-        cof: 0.1,
-        radius: 5,
-        color: 'white',
-        alpha: 1,
-
-        update: function() {
-            this.x += (Mouse.x - this.x) * this.cof;
-            this.y += (Mouse.y - this.y) * this.cof;
-            this.draw();
-        },
         
-        draw: function() {
-            Canvas.ctx.beginPath();
-            Canvas.ctx.globalAlpha= this.alpha;
-            Canvas.ctx.fillStyle= this.color;
-            Canvas.ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
-            Canvas.ctx.fill();
-            Canvas.ctx.closePath();
+        for (var i = 0; i < Mouse.cursor.history.length; i++) {
+            let _step = Mouse.cursor.history[i];
+            Canvas.line.draw(_step);
         }
+
+        Mouse.render();
     }
 }
