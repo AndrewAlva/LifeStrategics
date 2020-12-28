@@ -2,6 +2,10 @@ const PI2 = Math.PI * 2;
 
 const Canvas = {
     element: undefined,
+    pattern: undefined,
+    tex: undefined,
+    texSrc: '../img/chalk-tex.png',
+    ready: true, 
 
     init: function() {
         console.log('init Canvas');
@@ -12,8 +16,9 @@ const Canvas = {
         Canvas.create();
         // Ingresar canvas en DOM
         Canvas.append();
-        // Resizear canvas cuando sea necesario
-        Canvas.resize();
+
+        // Cargar imagen
+        Canvas.loadTexture();
 
         Canvas.addListeners();
     },
@@ -39,49 +44,35 @@ const Canvas = {
         Canvas.element.height = window.innerHeight;
     },
 
+    loadTexture: function() {
+        Canvas.tex = new Image();
+        Canvas.tex.onload = function() {
+            Canvas.ready = true;
+            console.log('texture loaded');
+            Canvas.pattern = Canvas.ctx.createPattern(Canvas.tex, 'repeat');
+        };
+        Canvas.tex.src = Canvas.texSrc;
+    },
+
     addListeners: function() {
         window.addEventListener( 'resize', debounce(Canvas.resize, 300) );
     },
 
 
-    // Drawing objects
-    line: {
-        alpha: 1,
-        color: 'white',
-        width: 6,
-
-        draw: function(_pos) {
-            Canvas.ctx.globalAlpha= this.alpha;
-            Canvas.ctx.fillStyle= this.color;
-            Canvas.ctx.strokeStyle= '#000000';
-            
-            this.shape( _pos );
-            
-            Canvas.ctx.fill();
-            Canvas.ctx.stroke();
-            
-            // this.context.globalCompositeOperation = 'source-in';
-            // this.context.drawImage(Canvas.img, 0, 0);
-        },
-
-        shape: function(_pos) {
-            Canvas.ctx.beginPath();
-            Canvas.ctx.arc(_pos.x, _pos.y, this.width, 0, PI2, false);
-            Canvas.ctx.closePath();
-        }
-    },
-
 
     // Drawing methods
     render: function() {
         // Main function being executed 60fps
+        if (!Canvas.ready) return
+
         Canvas.ctx.clearRect(0, 0, Canvas.element.width, Canvas.element.height);
+        Canvas.ctx.globalCompositeOperation = 'source-out';
+        // Canvas.ctx.drawImage(Canvas.tex, 0, 0);
         
-        for (var i = 0; i < Mouse.cursor.history.length; i++) {
-            let _step = Mouse.cursor.history[i];
-            Canvas.line.draw(_step);
-        }
+        Canvas.ctx.fillStyle = Canvas.pattern;
+        Canvas.ctx.fillRect(0, 0, Canvas.element.width, Canvas.element.height);
 
         Mouse.render();
+        Canvas.ctx.drawImage(Mouse.cursor.canvas, 0, 0);
     }
 }

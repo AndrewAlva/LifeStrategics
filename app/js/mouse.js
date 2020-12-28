@@ -22,8 +22,17 @@ const Mouse = {
 
     /** MOUSE Methods */
     update: function(e) {
-        Mouse.x = e.clientX;
-        Mouse.y = e.clientY;
+        // console.log(e);
+
+        // Detect touch
+        if (e.changedTouches) {
+            Mouse.x = e.changedTouches[0].clientX;
+            Mouse.y = e.changedTouches[0].clientY;
+        } else {
+            Mouse.x = e.clientX;
+            Mouse.y = e.clientY;
+        }
+        
         // console.log(Mouse.x, Mouse.y);
     },
 
@@ -31,12 +40,14 @@ const Mouse = {
 
     /** Event Handlers */
     addListeners() {
-        window.addEventListener('mousemove', throttle(Mouse.update, 50).bind(this) );
         // window.addEventListener('mousemove', throttle(Mouse.onMove, 30).bind(this) );
+        window.addEventListener('mousemove', throttle(Mouse.onMove, 50).bind(this) );
+        
+        window.addEventListener('touchstart', throttle(Mouse.onMove, 50).bind(this) );
+        window.addEventListener('touchmove', throttle(Mouse.onMove, 50).bind(this) );
     },
 
     onMove(e) {
-        Mouse.cleanEnabled = false;
         Mouse.update(e);
     },
 
@@ -48,8 +59,8 @@ const Mouse = {
         x: 0,
         y: 0,
         cof: 0.1,
-        radius: Canvas.line.width,
-        color: '#000000',
+        radius: 6,
+        color: '#ffffff',
         alpha: 1,
         cFrame: 0,
 
@@ -71,14 +82,29 @@ const Mouse = {
         spacing: 1,
         lastPos: {x: 0, y: 0},
 
+        canvas: undefined,
+        ctx: undefined,
+
 
         /** Initializer */
         init: function() {
+            this.setupCanvas();
+
             this.updateAnchor();
             this.updateHistory();
+
+            this.addListeners();
+        },
+
+        setupCanvas: function() {
+            this.canvas = document.createElement('canvas');
+            this.ctx = this.canvas.getContext('2d');
+            this.resize();
         },
 
         render: function() {
+            Mouse.cursor.ctx.clearRect(0, 0, Mouse.cursor.canvas.width, Mouse.cursor.canvas.height);
+
             // this.cofAnimation();
             this.orbitAnimation();
 
@@ -93,16 +119,34 @@ const Mouse = {
 
             this.cFrame++;
         },
+
+        resize: function () {
+            Mouse.cursor.canvas.width = window.innerWidth;
+            Mouse.cursor.canvas.height = window.innerHeight;
+
+            Mouse.cursor.ctx.globalAlpha= Mouse.cursor.alpha;
+            Mouse.cursor.ctx.fillStyle= Mouse.cursor.color;
+        },
+
+        addListeners: function () {
+            addEventListener( 'resize', debounce(Mouse.cursor.resize, 300) );
+        },
         
 
         /** CURSOR Methods */
         draw: function() {
-            Canvas.ctx.globalAlpha= this.alpha;
-            Canvas.ctx.fillStyle= this.color;
-            Canvas.ctx.beginPath();
-            Canvas.ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
-            Canvas.ctx.closePath();
-            Canvas.ctx.fill();
+            
+            for (var i = 0; i < Mouse.cursor.history.length; i++) {
+                let _step = Mouse.cursor.history[i];
+                
+                Mouse.cursor.ctx.beginPath();
+                Mouse.cursor.ctx.arc(_step.x, _step.y, Mouse.cursor.radius, 0, PI2, false);
+                Mouse.cursor.ctx.closePath();
+                Mouse.cursor.ctx.fill();
+            }
+            
+            // Mouse.cursor.ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
+
         },
 
         cofAnimation: function() {
