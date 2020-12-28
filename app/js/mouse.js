@@ -59,7 +59,7 @@ const Mouse = {
         x: 0,
         y: 0,
         cof: 0.1,
-        radius: 4,
+        radius: 0,
         color: '#ffffff',
         alpha: 1,
         cFrame: 0,
@@ -68,14 +68,8 @@ const Mouse = {
         velocity: {x: 0, y: 0},
         acceleration: {x: 0, y: 0},
         accelerationNormal: {x: 0, y: 0},
-        accelerationScale: {
-            x: .58,
-            y: .5
-        },
-        limit: {
-            x: 12,
-            y: 4
-        },
+        accelerationScale: { x: 0, y: 0 },
+        limit: { x: 0, y: 0 },
 
         history: [],
         maxHistory: 100,
