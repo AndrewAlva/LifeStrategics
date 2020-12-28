@@ -87,6 +87,9 @@ const Mouse = {
         init: function() {
             this.updateAnchor();
             this.updateHistory();
+
+            this.resize();
+            window.addEventListener( 'resize', debounce(Mouse.cursor.resize, 300) );
         },
 
         render: function() {
@@ -103,6 +106,31 @@ const Mouse = {
             this.updateLimit();
 
             this.cFrame++;
+        },
+
+        resize: function() {
+            if (window.innerWidth < 768) {
+                Mouse.cursor.radius = 2;
+
+                Mouse.cursor.limit.x = 6;
+                Mouse.cursor.limit.y = 3;
+                
+                Mouse.cursor.accelerationScale = {
+                    x: .38,
+                    y: .3
+                }
+                
+            } else {
+                Mouse.cursor.radius = 4;
+
+                Mouse.cursor.limit.x = 12;
+                Mouse.cursor.limit.y = 4;
+                
+                Mouse.cursor.accelerationScale = {
+                    x: .58,
+                    y: .5
+                }
+            }
         },
         
 

@@ -27,8 +27,8 @@ const Canvas = {
 
     create: function() {
         Canvas.element = document.createElement('canvas');
-        Canvas.resize();
         Canvas.ctx = Canvas.element.getContext('2d');
+        Canvas.resize();
 
         Canvas.element.style.position = 'fixed';
         Canvas.element.style.top = 0;
@@ -42,8 +42,13 @@ const Canvas = {
     },
 
     resize: function() {
-        Canvas.element.width = window.innerWidth;
-        Canvas.element.height = window.innerHeight;
+        let _dpr = window.devicePixelRatio || 1;
+        Canvas.element.style.width = window.innerWidth + 'px';
+        Canvas.element.style.height = window.innerHeight + 'px';
+
+        Canvas.element.width = window.innerWidth * _dpr;
+        Canvas.element.height = window.innerHeight * _dpr;
+        Canvas.ctx.scale (_dpr, _dpr);
     },
 
     loadTextures: function() {
@@ -52,7 +57,7 @@ const Canvas = {
         
         
         Canvas.texSrcs.forEach( (tex, i) => {
-            Canvas.tex[i] = new Image();
+            Canvas.tex[i] = new Image(5, 5);
             Canvas.tex[i].onload = function() {
                 _texsLoaded++;
                 Canvas.patterns[i] = Canvas.ctx.createPattern(Canvas.tex[i], 'repeat');
@@ -92,5 +97,6 @@ const Canvas = {
         // Canvas.ctx.fillStyle = '#ff6600';
 
         Mouse.render();
+        // Canvas.ctx.fillRect(0, 0, Canvas.element.width, Canvas.element.height);
     }
 }
