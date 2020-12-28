@@ -82,29 +82,14 @@ const Mouse = {
         spacing: 1,
         lastPos: {x: 0, y: 0},
 
-        canvas: undefined,
-        ctx: undefined,
-
 
         /** Initializer */
         init: function() {
-            this.setupCanvas();
-
             this.updateAnchor();
             this.updateHistory();
-
-            this.addListeners();
-        },
-
-        setupCanvas: function() {
-            this.canvas = document.createElement('canvas');
-            this.ctx = this.canvas.getContext('2d');
-            this.resize();
         },
 
         render: function() {
-            Mouse.cursor.ctx.clearRect(0, 0, Mouse.cursor.canvas.width, Mouse.cursor.canvas.height);
-
             // this.cofAnimation();
             this.orbitAnimation();
 
@@ -119,34 +104,20 @@ const Mouse = {
 
             this.cFrame++;
         },
-
-        resize: function () {
-            Mouse.cursor.canvas.width = window.innerWidth;
-            Mouse.cursor.canvas.height = window.innerHeight;
-
-            Mouse.cursor.ctx.globalAlpha= Mouse.cursor.alpha;
-            Mouse.cursor.ctx.fillStyle= Mouse.cursor.color;
-        },
-
-        addListeners: function () {
-            addEventListener( 'resize', debounce(Mouse.cursor.resize, 300) );
-        },
         
 
         /** CURSOR Methods */
         draw: function() {
-            
             for (var i = 0; i < Mouse.cursor.history.length; i++) {
                 let _step = Mouse.cursor.history[i];
                 
-                Mouse.cursor.ctx.beginPath();
-                Mouse.cursor.ctx.arc(_step.x, _step.y, Mouse.cursor.radius, 0, PI2, false);
-                Mouse.cursor.ctx.closePath();
-                Mouse.cursor.ctx.fill();
+                Canvas.ctx.beginPath();
+                Canvas.ctx.arc(_step.x, _step.y, Mouse.cursor.radius, 0, PI2, false);
+                Canvas.ctx.closePath();
+                Canvas.ctx.fill();
             }
             
-            // Mouse.cursor.ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
-
+            Canvas.ctx.arc(this.x, this.y, this.radius, 0, PI2, false);
         },
 
         cofAnimation: function() {

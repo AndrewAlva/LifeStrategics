@@ -4,8 +4,8 @@ const Canvas = {
     element: undefined,
     pattern: undefined,
     tex: undefined,
-    texSrc: '../img/chalk-tex.png',
-    ready: true, 
+    texSrc: '../img/chalk-i.png',
+    ready: false,
 
     init: function() {
         console.log('init Canvas');
@@ -66,13 +66,9 @@ const Canvas = {
         if (!Canvas.ready) return
 
         Canvas.ctx.clearRect(0, 0, Canvas.element.width, Canvas.element.height);
-        Canvas.ctx.globalCompositeOperation = 'source-out';
-        // Canvas.ctx.drawImage(Canvas.tex, 0, 0);
-        
         Canvas.ctx.fillStyle = Canvas.pattern;
-        Canvas.ctx.fillRect(0, 0, Canvas.element.width, Canvas.element.height);
+        // Canvas.ctx.fillStyle = '#ff6600';
 
         Mouse.render();
-        Canvas.ctx.drawImage(Mouse.cursor.canvas, 0, 0);
     }
 }
