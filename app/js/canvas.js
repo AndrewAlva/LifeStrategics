@@ -57,7 +57,7 @@ const Canvas = {
         
         
         Canvas.texSrcs.forEach( (tex, i) => {
-            Canvas.tex[i] = new Image(5, 5);
+            Canvas.tex[i] = new Image();
             Canvas.tex[i].onload = function() {
                 _texsLoaded++;
                 Canvas.patterns[i] = Canvas.ctx.createPattern(Canvas.tex[i], 'repeat');
