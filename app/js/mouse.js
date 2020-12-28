@@ -59,7 +59,7 @@ const Mouse = {
         x: 0,
         y: 0,
         cof: 0.1,
-        radius: 6,
+        radius: 4,
         color: '#ffffff',
         alpha: 1,
         cFrame: 0,

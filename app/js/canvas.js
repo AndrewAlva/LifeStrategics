@@ -2,9 +2,11 @@ const PI2 = Math.PI * 2;
 
 const Canvas = {
     element: undefined,
-    pattern: undefined,
-    tex: undefined,
-    texSrc: '../img/chalk-i.png',
+    
+    patterns: [],
+    tex: [],
+    texSrcs: ['../img/chalk/chalk-w.png', '../img/chalk/chalk-b.png', '../img/chalk/chalk-y.png', '../img/chalk/chalk-r.png'],
+    currentTex: 0,
     ready: false,
 
     init: function() {
@@ -18,7 +20,7 @@ const Canvas = {
         Canvas.append();
 
         // Cargar imagen
-        Canvas.loadTexture();
+        Canvas.loadTextures();
 
         Canvas.addListeners();
     },
@@ -44,14 +46,34 @@ const Canvas = {
         Canvas.element.height = window.innerHeight;
     },
 
-    loadTexture: function() {
-        Canvas.tex = new Image();
-        Canvas.tex.onload = function() {
-            Canvas.ready = true;
-            console.log('texture loaded');
-            Canvas.pattern = Canvas.ctx.createPattern(Canvas.tex, 'repeat');
-        };
-        Canvas.tex.src = Canvas.texSrc;
+    loadTextures: function() {
+        let _totalTex = Canvas.texSrcs.length;
+        let _texsLoaded = 0;
+        
+        
+        Canvas.texSrcs.forEach( (tex, i) => {
+            Canvas.tex[i] = new Image();
+            Canvas.tex[i].onload = function() {
+                _texsLoaded++;
+                Canvas.patterns[i] = Canvas.ctx.createPattern(Canvas.tex[i], 'repeat');
+
+                if (_texsLoaded >= _totalTex) {
+                    Canvas.ready = true;
+                    console.log('textures loaded');
+                }
+            }
+            
+        });
+
+        Canvas.tex[0].src = Canvas.texSrcs[0];
+        Canvas.tex[1].src = Canvas.texSrcs[1];
+        Canvas.tex[2].src = Canvas.texSrcs[2];
+        Canvas.tex[3].src = Canvas.texSrcs[3];
+    },
+
+    shiftTexture: function(_index) {
+        Canvas.currentTex = _index;
+        Mouse.cursor.history = [];
     },
 
     addListeners: function() {
@@ -66,7 +88,7 @@ const Canvas = {
         if (!Canvas.ready) return
 
         Canvas.ctx.clearRect(0, 0, Canvas.element.width, Canvas.element.height);
-        Canvas.ctx.fillStyle = Canvas.pattern;
+        Canvas.ctx.fillStyle = Canvas.patterns[Canvas.currentTex];
         // Canvas.ctx.fillStyle = '#ff6600';
 
         Mouse.render();
