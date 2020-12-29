@@ -118,22 +118,6 @@
 						// @include scale-rotate(1, 0.85, 90deg);
 					}
 				}
-
-				.circle-open{
-					path{
-						@include ani-name("circle-open--in");
-					}
-				}
-				.circle-open-round{
-					path{
-						@include ani-name("circle-round--in");
-					}
-				}
-				.circle-open-long{
-					path{
-						@include ani-name("circle-long--in");
-					}
-				}
 			}
 		}
 

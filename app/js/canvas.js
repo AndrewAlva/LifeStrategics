@@ -64,7 +64,7 @@ const Canvas = {
 
                 if (_texsLoaded >= _totalTex) {
                     Canvas.ready = true;
-                    console.log('textures loaded');
+                    // console.log('textures loaded');
                 }
             }
             

@@ -94,7 +94,8 @@ function formatEventRow(entry, container, index) {
 			_erLink.setAttribute('href', entry.url);
 			_erLink.setAttribute('target', '_blank');
 			_erLink.setAttribute('rel', 'nofollow noopener noreferrer');
-			_erLink.className = 'link-container motion-cascade offset-3 ls-col-19 offset-xs-4 ls-col-xs-16 offset-sm-2 ls-col-sm-21 ls-col-xl-20 offset-xxl-3 ls-col-xxl-18';
+			_erLink.setAttribute('data-color', 'yellow');
+			_erLink.className = 'link-container dw-trigger motion-cascade offset-3 ls-col-19 offset-xs-4 ls-col-xs-16 offset-sm-2 ls-col-sm-21 ls-col-xl-20 offset-xxl-3 ls-col-xxl-18';
 
 				// div
 				var _erRow = document.createElement('div');

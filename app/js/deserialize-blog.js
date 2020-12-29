@@ -89,7 +89,8 @@ function formatBlogEntry(entry, container, index) {
 			_bpLink.setAttribute('href', entry.url);
 			_bpLink.setAttribute('target', '_blank');
 			_bpLink.setAttribute('rel', 'nofollow noopener noreferrer');
-			_bpLink.className = 'link-container offset-2 ls-col-20 offset-xs-4 ls-col-xs-16 offset-sm-2 ls-col-sm-21 offset-lg-3 ls-col-lg-18 offset-xxl-4 ls-col-xxl-16 motion-cascade';
+			_bpLink.setAttribute('data-color', 'blue');
+			_bpLink.className = 'link-container dw-trigger offset-2 ls-col-20 offset-xs-4 ls-col-xs-16 offset-sm-2 ls-col-sm-21 offset-lg-3 ls-col-lg-18 offset-xxl-4 ls-col-xxl-16 motion-cascade';
 
 				var _bpRow = document.createElement('div');
 				_bpRow.className = 'ls-row'

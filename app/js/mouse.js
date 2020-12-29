@@ -76,21 +76,26 @@ const Mouse = {
         spacing: 1,
         lastPos: {x: 0, y: 0},
 
+        triggers: [],
+        targetEnabled: false,
+
 
         /** Initializer */
         init: function() {
-            this.updateAnchor();
+            this.anchorToMouse();
             this.updateHistory();
 
             this.resize();
             window.addEventListener( 'resize', debounce(Mouse.cursor.resize, 300) );
+
+            this.initTriggers();
         },
 
         render: function() {
             // this.cofAnimation();
             this.orbitAnimation();
 
-            this.updateAnchor();
+            this.anchorToMouse();
 
             let _dist = Mouse.getDistance(Mouse.cursor.x, Mouse.cursor.y,   Mouse.cursor.lastPos.x, Mouse.cursor.lastPos.y);
             if (_dist > Mouse.cursor.spacing) Mouse.cursor.updateHistory();
@@ -125,6 +130,19 @@ const Mouse = {
                     y: .5
                 }
             }
+        },
+
+        initTriggers: function() {
+            let _domTriggers = document.getElementsByClassName('dw-trigger');
+
+            for (let i = 0; i < _domTriggers.length; i++) {
+                Mouse.cursor.triggers.push(_domTriggers[i]);
+            }
+
+            Mouse.cursor.triggers.forEach((el) => {
+                el.addEventListener( 'mouseenter', Mouse.cursor.setTargetAnchor.bind(this) );
+                el.addEventListener( 'mouseleave', Mouse.cursor.releaseTargetAnchor.bind(this) );
+            });
         },
         
 
@@ -194,9 +212,58 @@ const Mouse = {
             this.lastPos.y = this.y;
         },
 
-        updateAnchor: function() {
+        anchorToMouse: function() {
+            if (Mouse.cursor.targetEnabled) return
+
             this.anchor.x = Mouse.x;
             this.anchor.y = Mouse.y;
+        },
+
+        setTargetAnchor: function(e) {
+            // console.log('setTargetAnchor', e);
+            Mouse.cursor.targetEnabled = true;
+
+            // let _circles = document.getElementsByClassName('circle-open');
+            // let _circlesLong = document.getElementsByClassName('circle-open-long');
+            // let _circlesRound = document.getElementsByClassName('circle-open-round');
+
+            let _highlight = e.target.querySelector('.dw-highlight');
+            let _bound = _highlight.getBoundingClientRect();
+            let _center = {
+                x: _bound.left + (_bound.width / 2),
+                y: _bound.top + (_bound.height / 2)
+            }
+
+            Mouse.cursor.anchor.x = _center.x;
+            Mouse.cursor.anchor.y = _center.y;
+
+            let _color = e.target.getAttribute('data-color');
+            let _colorIndex = Mouse.cursor.setColorIndex(_color);
+            Canvas.shiftTexture(_colorIndex);
+        },
+
+        setColorIndex: function(_string) {
+            let _index;
+            
+            switch(_string) {
+                case 'blue':
+                    _index = 1;
+                    break;
+                case 'yellow':
+                    _index = 2;
+                    break;
+                case 'red':
+                    _index = 3;
+                    break;
+            }
+
+            return _index
+        },
+
+        releaseTargetAnchor: function(e) {
+            // console.log('releaseTargetAnchor', e);
+            Mouse.cursor.targetEnabled = false;
+            Canvas.shiftTexture(0);
         },
 
 
