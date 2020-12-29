@@ -365,6 +365,32 @@
 			}
 		}
 	}
+
+	// Demo purposes
+	&.non-hover {
+		.dw-highlight:after{
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			// background-color: #f60;
+		}
+
+		&[data-color='blue']{
+			.dw-highlight:after{ background-color: $blue; }
+		}
+
+		&[data-color='yellow']{
+			.dw-highlight:after{ background-color: $yellow; }
+		}
+
+		&[data-color='red']{
+			.dw-highlight:after{ background-color: $red; }
+		}
+	}
 }
 
 

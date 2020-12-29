@@ -45,10 +45,16 @@ const Mouse = {
         
         window.addEventListener('touchstart', throttle(Mouse.onMove, 50).bind(this) );
         window.addEventListener('touchmove', throttle(Mouse.onMove, 50).bind(this) );
+
+        window.addEventListener('scroll', throttle(Mouse.onScroll, 100).bind(this) );
     },
 
     onMove(e) {
         Mouse.update(e);
+    },
+
+    onScroll(e) {
+        Mouse.cursor.cleanHistory();
     },
 
 
@@ -78,11 +84,15 @@ const Mouse = {
 
         triggers: [],
         targetEnabled: false,
+        target: {
+            el: undefined,
+            x: 0, y: 0
+        },
 
 
         /** Initializer */
         init: function() {
-            this.anchorToMouse();
+            this.updateAnchor();
             this.updateHistory();
 
             this.resize();
@@ -95,7 +105,7 @@ const Mouse = {
             // this.cofAnimation();
             this.orbitAnimation();
 
-            this.anchorToMouse();
+            this.updateAnchor();
 
             let _dist = Mouse.getDistance(Mouse.cursor.x, Mouse.cursor.y,   Mouse.cursor.lastPos.x, Mouse.cursor.lastPos.y);
             if (_dist > Mouse.cursor.spacing) Mouse.cursor.updateHistory();
@@ -218,34 +228,39 @@ const Mouse = {
             this.lastPos.y = this.y;
         },
 
-        anchorToMouse: function() {
-            if (Mouse.cursor.targetEnabled) return
+        updateAnchor: function() {
+            if (!Mouse.cursor.targetEnabled) {
+                // console.log('anchor on mouse');
+                Mouse.cursor.anchor.x = Mouse.x;
+                Mouse.cursor.anchor.y = Mouse.y;
+            } else {
+                // console.log('anchor on target');
+                Mouse.cursor.getTargetPosition();
 
-            this.anchor.x = Mouse.x;
-            this.anchor.y = Mouse.y;
+                Mouse.cursor.anchor.x = Mouse.cursor.target.x
+                Mouse.cursor.anchor.y = Mouse.cursor.target.y
+            }
+            
         },
 
         setTargetAnchor: function(e) {
             // console.log('setTargetAnchor', e);
-            Mouse.cursor.targetEnabled = true;
 
-            // let _circles = document.getElementsByClassName('circle-open');
-            // let _circlesLong = document.getElementsByClassName('circle-open-long');
-            // let _circlesRound = document.getElementsByClassName('circle-open-round');
-
-            let _highlight = e.target.querySelector('.dw-highlight');
-            let _bound = _highlight.getBoundingClientRect();
-            let _center = {
-                x: _bound.left + (_bound.width / 2),
-                y: _bound.top + (_bound.height / 2)
-            }
-
-            Mouse.cursor.anchor.x = _center.x;
-            Mouse.cursor.anchor.y = _center.y;
+            Mouse.cursor.target.el = e.target.querySelector('.dw-highlight');
 
             let _color = e.target.getAttribute('data-color');
             let _colorIndex = Mouse.cursor.setColorIndex(_color);
             Canvas.shiftTexture(_colorIndex);
+
+            Mouse.cursor.targetEnabled = true;
+        },
+
+        getTargetPosition: function() {
+            let _bound = Mouse.cursor.target.el.getBoundingClientRect();
+            
+            Mouse.cursor.target.x = _bound.left + (_bound.width / 2);
+            Mouse.cursor.target.y = _bound.top + (_bound.height / 2);
+
         },
 
         setColorIndex: function(_string) {
@@ -288,6 +303,10 @@ const Mouse = {
 
             // console.log(Mouse.x, Mouse.y);
             // console.log(Mouse.history);
+        },
+        
+        cleanHistory: function() {
+            Mouse.cursor.history = [];
         }
     },
 
