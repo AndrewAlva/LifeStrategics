@@ -137,10 +137,16 @@ const Mouse = {
 
             for (let i = 0; i < _domTriggers.length; i++) {
                 Mouse.cursor.triggers.push(_domTriggers[i]);
+
+                _domTriggers[i].classList.add('non-hover');
             }
 
+            window.addEventListener( 'touchstart', Mouse.cursor.releaseTargetAnchor.bind(this) );
+            
             Mouse.cursor.triggers.forEach((el) => {
                 el.addEventListener( 'mouseenter', Mouse.cursor.setTargetAnchor.bind(this) );
+                el.addEventListener( 'touchstart', Mouse.cursor.setTargetAnchor.bind(this) );
+
                 el.addEventListener( 'mouseleave', Mouse.cursor.releaseTargetAnchor.bind(this) );
             });
         },
