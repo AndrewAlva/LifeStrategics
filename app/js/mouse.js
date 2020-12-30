@@ -76,6 +76,14 @@ const Mouse = {
         accelerationNormal: {x: 0, y: 0},
         accelerationScale: { x: 0, y: 0 },
         limit: { x: 0, y: 0 },
+        minLimitX: { 
+            mobile: 6,
+            desktop: 12
+        },
+        minLimitY: { 
+            mobile: 3,
+            desktop: 4
+        },
 
         history: [],
         maxHistory: 100,
@@ -112,8 +120,6 @@ const Mouse = {
 
             this.draw();
 
-            this.updateLimit();
-
             this.cFrame++;
         },
 
@@ -121,8 +127,8 @@ const Mouse = {
             if (window.innerWidth < 768) {
                 Mouse.cursor.radius = 2;
 
-                Mouse.cursor.limit.x = 6;
-                Mouse.cursor.limit.y = 3;
+                Mouse.cursor.limit.x = Mouse.cursor.minLimitX.mobile;
+                Mouse.cursor.limit.y = Mouse.cursor.minLimitY.mobile;
                 
                 Mouse.cursor.accelerationScale = {
                     x: .38,
@@ -132,8 +138,8 @@ const Mouse = {
             } else {
                 Mouse.cursor.radius = 4;
 
-                Mouse.cursor.limit.x = 12;
-                Mouse.cursor.limit.y = 4;
+                Mouse.cursor.limit.x = Mouse.cursor.minLimitX.desktop;
+                Mouse.cursor.limit.y = Mouse.cursor.minLimitY.desktop;
                 
                 Mouse.cursor.accelerationScale = {
                     x: .58,
@@ -214,14 +220,6 @@ const Mouse = {
                 this.velocity.y = -this.limit.y;
             }
         },
-        
-        updateLimit: function() {
-            this.limit.x += Math.sin(this.cFrame/30) / 10;
-            this.limit.y += Math.cos(this.cFrame/60) / 30;
-
-            this.accelerationScale.x += Math.sin(this.cFrame/100) / 2000;
-            // console.log(this.accelerationScale.x);
-        },
 
         updateLastPos: function() {
             this.lastPos.x = this.x;
@@ -252,6 +250,8 @@ const Mouse = {
             let _colorIndex = Mouse.cursor.setColorIndex(_color);
             Canvas.shiftTexture(_colorIndex);
 
+            Mouse.cursor.resetMotion();
+
             Mouse.cursor.targetEnabled = true;
         },
 
@@ -280,11 +280,27 @@ const Mouse = {
 
             return _index
         },
+        
+        resetMotion: function() {
+            let _bound = Mouse.cursor.target.el.getBoundingClientRect();
+            Mouse.cursor.limit.x = Math.max((_bound.width * .05), Mouse.cursor.minLimitX.desktop);
+            Mouse.cursor.velocity.x = Mouse.cursor.limit.x;
+
+            // console.log(Mouse.cursor.limit.x);
+            
+            Mouse.cursor.velocity.y = Mouse.cursor.limit.y;
+        },
 
         releaseTargetAnchor: function(e) {
             // console.log('releaseTargetAnchor', e);
             Mouse.cursor.targetEnabled = false;
             Canvas.shiftTexture(0);
+
+            if (window.innerWidth < 768) {
+                Mouse.cursor.limit.x = Mouse.cursor.minLimitX.mobile;
+            } else {
+                Mouse.cursor.limit.x = Mouse.cursor.minLimitX.desktop;
+            }
         },
 
 
