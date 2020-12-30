@@ -65,6 +65,7 @@
 		._copyright{
 			position: absolute;
 			bottom: 10px;
+			cursor: help;
 
 			@include tablet {
 				bottom: 5px;

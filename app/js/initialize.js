@@ -21,8 +21,8 @@ function checkPreloaderTriggers() {
         // Connect PageSmoothScroll with LazySizes to update "Fake Height" when needed
         LazyFakeHeight.init();
 
-        // Drawing canvas
-        RAF.add(Canvas);
+        // Enable easter egg trigger
+        EasterEgg.init();
     }
 }
 

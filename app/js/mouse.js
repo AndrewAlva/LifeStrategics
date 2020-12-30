@@ -107,6 +107,7 @@ const Mouse = {
             window.addEventListener( 'resize', debounce(Mouse.cursor.resize, 300) );
 
             this.initTriggers();
+            this.disableSVGAnimations();
         },
 
         render: function() {
@@ -153,18 +154,28 @@ const Mouse = {
 
             for (let i = 0; i < _domTriggers.length; i++) {
                 Mouse.cursor.triggers.push(_domTriggers[i]);
-
-                _domTriggers[i].classList.add('non-hover');
             }
 
             window.addEventListener( 'touchstart', Mouse.cursor.onTouchStart.bind(this) );
             
             Mouse.cursor.triggers.forEach((el) => {
                 el.addEventListener( 'mouseenter', Mouse.cursor.setTargetAnchor.bind(this) );
-                // el.addEventListener( 'touchstart', Mouse.cursor.setTargetAnchor.bind(this) );
-
                 el.addEventListener( 'mouseleave', Mouse.cursor.releaseTargetAnchor.bind(this) );
             });
+        },
+
+        disableSVGAnimations: function() {
+            for (i = 0; i < Mouse.cursor.triggers.length; i++) {
+                const el = Mouse.cursor.triggers[i];
+                el.classList.add('non-hover');
+            }
+        },
+
+        enableSVGAnimations: function() {
+            for (i = 0; i < Mouse.cursor.triggers.length; i++) {
+                const el = Mouse.cursor.triggers[i];
+                el.classList.remove('non-hover');
+            }
         },
 
         /** Event handlers */
