@@ -63,7 +63,7 @@ const Mouse = {
     /** CURSOR */
     cursor: {
         x: 0,
-        y: 0,
+        y: window.innerHeight,
         cof: 0.1,
         radius: 0,
         color: '#ffffff',
@@ -125,7 +125,7 @@ const Mouse = {
 
         resize: function() {
             if (window.innerWidth < 768) {
-                Mouse.cursor.radius = 2;
+                Mouse.cursor.radius = 3;
 
                 Mouse.cursor.limit.x = Mouse.cursor.minLimitX.mobile;
                 Mouse.cursor.limit.y = Mouse.cursor.minLimitY.mobile;
@@ -157,14 +157,26 @@ const Mouse = {
                 _domTriggers[i].classList.add('non-hover');
             }
 
-            window.addEventListener( 'touchstart', Mouse.cursor.releaseTargetAnchor.bind(this) );
+            window.addEventListener( 'touchstart', Mouse.cursor.onTouchStart.bind(this) );
             
             Mouse.cursor.triggers.forEach((el) => {
                 el.addEventListener( 'mouseenter', Mouse.cursor.setTargetAnchor.bind(this) );
-                el.addEventListener( 'touchstart', Mouse.cursor.setTargetAnchor.bind(this) );
+                // el.addEventListener( 'touchstart', Mouse.cursor.setTargetAnchor.bind(this) );
 
                 el.addEventListener( 'mouseleave', Mouse.cursor.releaseTargetAnchor.bind(this) );
             });
+        },
+
+        /** Event handlers */
+        onTouchStart: function(e) {
+            // console.log('user touch start', e);
+
+            if(e.target.classList.contains('dw-trigger')) {
+                // console.log('dw-trigger element touched!');
+                Mouse.cursor.setTargetAnchor(e);
+            } else {
+                Mouse.cursor.releaseTargetAnchor(e);
+            }
         },
         
 
@@ -283,11 +295,15 @@ const Mouse = {
         
         resetMotion: function() {
             let _bound = Mouse.cursor.target.el.getBoundingClientRect();
-            Mouse.cursor.limit.x = Math.max((_bound.width * .05), Mouse.cursor.minLimitX.desktop);
-            Mouse.cursor.velocity.x = Mouse.cursor.limit.x;
 
-            // console.log(Mouse.cursor.limit.x);
+            if (window.innerWidth < 768) {
+                Mouse.cursor.limit.x = Math.max((_bound.width * .05), Mouse.cursor.minLimitX.mobile);
+            } else {
+                Mouse.cursor.limit.x = Math.max((_bound.width * .05), Mouse.cursor.minLimitX.desktop);
+            }
             
+            
+            Mouse.cursor.velocity.x = Mouse.cursor.limit.x;
             Mouse.cursor.velocity.y = Mouse.cursor.limit.y;
         },
 
