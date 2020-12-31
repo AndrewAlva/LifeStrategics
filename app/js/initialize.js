@@ -23,6 +23,7 @@ function checkPreloaderTriggers() {
 
         // Enable easter egg trigger
         EasterEgg.init();
+        // RAF.add(Canvas);
     }
 }
 

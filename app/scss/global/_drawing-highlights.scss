@@ -366,6 +366,13 @@
 		}
 	}
 
+	// Our Focus special styles
+	&.non-hover{
+		._outline{
+			opacity: 0.1 !important;
+		}
+	}
+
 	// Demo purposes
 	// &.non-hover {
 	// 	.dw-highlight:after{
