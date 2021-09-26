@@ -378,7 +378,7 @@
 					z-index: 2;
 					._outline{
 						opacity: 1;
-						@include drawShadow(2px, 2px, 5px, 2px, #202020)
+						@include drawShadow(2px, 2px, 5px, 2px, #202020);
 					}
 
 					.h3{
@@ -398,7 +398,7 @@
 					opacity: 1;
 					border-color: transparent;
 					// border-color: $yellow;
-					@include drawShadow(2px, 2px, 5px, 2px, #202020)
+					@include drawShadow(2px, 2px, 5px, 2px, #202020);
 
 					svg{
 						stroke-dashoffset: 0;
