@@ -39,6 +39,23 @@
 	}
 }
 
+.credits-list-wrapper{
+	@include laptop {
+		pointer-events: none;
+		&:hover{
+			.link-container{
+				opacity: .35;
+			}
+		}
+
+		.link-container{
+			pointer-events: auto;
+			@include transitions-ease(.4s);
+			&:hover{opacity: 1;}
+		}
+	}
+}
+
 .credits-row{
 	&:not(:last-child){
 		margin-bottom: 80px;

@@ -1,8 +1,8 @@
 {
-	"name": "Mbrt-Brunch-Boilerplate",
-	"description": "First boilerplate made from scratch by Mandelbrot Studio.",
+	"name": "Andrew-Brunch-Boilerplate",
+	"description": "First boilerplate made from scratch to handle simple pages (specially one pages).",
 	"private": true,
-	"author": "Mbrt Studio",
+	"author": "Andrew Alva",
 	"version": "0.0.1",
 	"repository": "",
 	"scripts": {

@@ -7,7 +7,7 @@ mixin footer(page)
 
 					._copyright.egg-trigger
 						img.lazyload(src="img/lifestrategics_iso_opt.svg" alt="LifeStrategics brand isotype")
-						p.p3 Copyright © LifeStrategics 2020
+						p.p3 Copyright © LifeStrategics 2021
 
 				+index-navcol(page)
 
@@ -16,11 +16,12 @@ mixin footer(page)
 					p.p2._title Más contenido
 					ul
 						li
-							a(href="https://lifestrategics.com/blog/").arrow-button.semihidden-arrow.slogan-highlight-yellow
+							//- a(href="https://lifestrategics.com/blog/").arrow-button.semihidden-arrow.slogan-highlight-yellow
+							a(href="https://monixette.medium.com/").arrow-button.semihidden-arrow.slogan-highlight-yellow
 								span._label.p3 Blog
 								span._icon.sm.right
 									+arrow-right("#ffffff")
-						li
+						//- li
 							if (page == 'eventos')
 								a(href="eventos").scroll-to-js.arrow-button.semihidden-arrow.slogan-highlight-yellow
 									span._label.p3 Eventos

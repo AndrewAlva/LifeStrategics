@@ -19,12 +19,13 @@ mixin header-nav(location)
 
 			ul.pages-wrap
 				li(data-cascade="slide-down" data-cascade-delay="3" data-cascade-delay-mobile="3")
-					a.arrow-button.hidden-arrow(href="https://lifestrategics.com/blog/").slogan-highlight-blue
+					//- a.arrow-button.hidden-arrow(href="https://lifestrategics.com/blog/").slogan-highlight-blue
+					a.arrow-button.hidden-arrow(href="https://monixette.medium.com/").slogan-highlight-blue
 						span._label Blog.
 						span._icon.right
 							+arrow-right("#55c4f0")
 				
-				li(data-cascade="slide-down" data-cascade-delay="4" data-cascade-delay-mobile="4")
+				//- li(data-cascade="slide-down" data-cascade-delay="4" data-cascade-delay-mobile="4")
 					if (location == 'events')
 						a.arrow-button.hidden-arrow(href="eventos").scroll-to-js.mob-menu-page-scroll.slogan-highlight-yellow
 							span._label Eventos.

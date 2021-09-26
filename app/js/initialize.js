@@ -5,12 +5,13 @@ var smoothScrollWindowMinWidth = 1025;
 var inviewTriggerInSmoothScroll = false;
 var pageInitDelay = 0;
 var jsonBlogLoaded = false;
-var jsonEventsLoaded = false;
+// var jsonEventsLoaded = false;
 var scrolledReady = false;
 
 function checkPreloaderTriggers() {
     // console.log('checking Preloader Triggers');
-    if (jsonBlogLoaded && jsonEventsLoaded && scrolledReady ) {
+    // if (jsonBlogLoaded && jsonEventsLoaded && scrolledReady ) { // Hide events section
+    if (jsonBlogLoaded && scrolledReady ) {
         clearInterval(loadedInterval);
 
         // console.log('cleared interval');
@@ -31,15 +32,16 @@ var loadedInterval = setInterval(checkPreloaderTriggers, 50);
 
 // Bring JSON data if page needs it
 if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "index") {
-    deserializeBlog();
-    deserializeEvents(5);
+    // deserializeBlog();
+    jsonBlogLoaded = true;
+    // deserializeEvents(5);
 
 } else if (window.location.pathname == "/eventos.html" || window.location.pathname == "eventos") {
     jsonBlogLoaded = true;
     deserializeEvents();
 } else {
     jsonBlogLoaded = true;
-    jsonEventsLoaded = true;
+    // jsonEventsLoaded = true;
 }
 
 
