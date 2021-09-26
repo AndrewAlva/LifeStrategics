@@ -1,3 +1,4 @@
+@use "sass:math";
 // "Un-nestable" version
 // meaning, using 'vw' units instead of '%'
 
@@ -12,9 +13,9 @@
 // Grid variables
 	$ls-grid__maxWidth: 2600px;
 	$ls-grid__gutterWidth-mob: 6px;
-	$ls-grid__gutterHalfWidth-mob: $ls-grid__gutterWidth-mob / 2;
+	$ls-grid__gutterHalfWidth-mob: math.div($ls-grid__gutterWidth-mob, 2);
 	$ls-grid__gutterWidth: 10px;
-	$ls-grid__gutterHalfWidth: $ls-grid__gutterWidth / 2;
+	$ls-grid__gutterHalfWidth: math.div($ls-grid__gutterWidth, 2);
 
 	$mobile-large-min-width: 576px; // xs
 	$mobile-max-width: 767px;
