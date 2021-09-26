@@ -7,12 +7,21 @@ var Services_List = function() {
 	this.triggers = document.getElementsByClassName('toggle-wrap');
 	this.text_wraps = [];
 
-	this.init = function() {
-		this.setTextWraps();
+	this.init = async function() {
+		await this.setTextWraps();
 		this.addListeners();
 	}
 
-	this.setTextWraps = function() {
+	this.setTextWraps = async function() {
+		let _promise = Promise.create();
+		window.requestAnimationFrame(_ => {
+			setTimeout(() => {
+				_promise.resolve();
+			}, 1000);
+		});
+
+		await _promise;
+
 		// Save all text wraps
 		for (var i = 0; i < _self.triggers.length; i++) {
 			var _textWrap = _self.triggers[i].nextElementSibling;
@@ -37,6 +46,8 @@ var Services_List = function() {
 
 		// Show first service
 		// _self.text_wraps[0].el.style.height = _self.text_wraps[0].height + "px";
+
+		return _promise;
 	}
 
 	this.addListeners = function() {

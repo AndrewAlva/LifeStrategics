@@ -8,6 +8,19 @@ var jsonBlogLoaded = false;
 // var jsonEventsLoaded = false;
 var scrolledReady = false;
 
+window.Promise = window.Promise || {};
+Promise.create = function() {
+    const promise = new Promise((resolve, reject) => {
+        this.temp_resolve = resolve;
+        this.temp_reject = reject;
+    });
+    promise.resolve = this.temp_resolve;
+    promise.reject = this.temp_reject;
+    delete this.temp_resolve;
+    delete this.temp_reject;
+    return promise;
+};
+
 function checkPreloaderTriggers() {
     // console.log('checking Preloader Triggers');
     // if (jsonBlogLoaded && jsonEventsLoaded && scrolledReady ) { // Hide events section
