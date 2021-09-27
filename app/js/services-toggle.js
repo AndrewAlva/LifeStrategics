@@ -13,14 +13,14 @@ var Services_List = function() {
 	}
 
 	this.setTextWraps = async function() {
-		let _promise = Promise.create();
-		window.requestAnimationFrame(_ => {
-			setTimeout(() => {
-				_promise.resolve();
-			}, 1000);
-		});
+		// let _promise = Promise.create();
+		// window.requestAnimationFrame(_ => {
+		// 	setTimeout(() => {
+		// 		_promise.resolve();
+		// 	}, 1000);
+		// });
 
-		await _promise;
+		// await _promise;
 
 		// Save all text wraps
 		for (var i = 0; i < _self.triggers.length; i++) {
@@ -47,7 +47,7 @@ var Services_List = function() {
 		// Show first service
 		// _self.text_wraps[0].el.style.height = _self.text_wraps[0].height + "px";
 
-		return _promise;
+		// return _promise;
 	}
 
 	this.addListeners = function() {
@@ -60,6 +60,9 @@ var Services_List = function() {
 				if( _parent.getAttribute('data-show') == "true" ) {
 					_self.hideService(_index);
 				} else {
+					_self.getInfoHeight();
+					_self.updateHeight();
+
 					_self.hideAllServices();
 					_self.showService(_index);
 					_self.updateIndex(_index);
@@ -67,7 +70,7 @@ var Services_List = function() {
 
 				// Smooth Scroll resize
 				if (PageSmoothScroll != undefined) {
-					setTimeout(function(){PageSmoothScroll.onResize();}, 1000)
+					setTimeout(function(){ PageSmoothScroll.onResize() }, 1000)
 				}
 			});
 		}
